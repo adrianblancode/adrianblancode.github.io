@@ -7,7 +7,7 @@
   top: 0;
   left: 0;
 
-  font-size: 1.3em;
+  font-size: 22px;
   letter-spacing: 1.1px;
 }
 
@@ -91,6 +91,10 @@ body.home nav li.about a, body.portfolio nav li.portfolio a, body.cv nav li.cv a
 nav a:hover {
   color: #E22;
 }   
+
+i .fa {
+  color: #E22;
+}
 
 /*Desktops*/
 @media only screen and (max-width: 1400px) {
