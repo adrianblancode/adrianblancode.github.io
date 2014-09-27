@@ -52,8 +52,12 @@ a {
   text-decoration:none;
 }
 
-a.white, i.hamburger {
-  color: white;
+a.white, a i.hamburger {
+  color: #FFF;
+}
+
+i.fa, a, a:hover, body.home nav li.about a, body.portfolio nav li.portfolio a, body.cv nav li.cv a, body.contact nav li.contact a{
+  color: #E22;
 }
 
 ul {
@@ -79,9 +83,6 @@ nav ul li a {
   color: #FFF;
 }
 
-i.fa, a, a:hover, body.home nav li.about a, body.portfolio nav li.portfolio a, body.cv nav li.cv a, body.contact nav li.contact a{
-  color: #E22;
-}
 
 /* Desktops */
 @media only screen and (max-width: 1400px) {
