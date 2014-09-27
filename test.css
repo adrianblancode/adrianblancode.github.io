@@ -93,7 +93,7 @@ nav ul li a {
   color: #FFF;
 }
 
-body.home nav li.about a, body.portfolio nav li.portfolio, body.cv nav li.cv, body.contact nav li.contact{
+body.home nav li.about a, body.portfolio nav li.portfolio a, body.cv nav li.cv a, body.contact nav li.contact a{
   color: #E22;
 }
 
