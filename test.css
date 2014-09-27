@@ -29,11 +29,11 @@
 
 .logo {
   display: block;
-  background-image: url('./images/logo.svg');
+  background-image: url('/images/logo.svg');
 }
 
 .logo:hover {
-  background-image: url('./images/logored.svg');
+  background-image: url('/images/logored.svg');
 }
 
 .circular {

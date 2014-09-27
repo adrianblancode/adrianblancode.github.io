@@ -17,10 +17,10 @@ function toggleLogo(color){
     var ml = document.getElementById("ml");
 
     if(color == 'red'){
-        ml.src = "images/logored.svg";
-        dl.src = "images/logored.svg";
+        ml.src = "/images/logored.svg";
+        dl.src = "/images/logored.svg";
     } else {
-        ml.src = "images/logo.svg";
-        dl.src = "images/logo.svg";
+        ml.src = "/images/logo.svg";
+        dl.src = "/images/logo.svg";
     }
 }
