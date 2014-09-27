@@ -1,0 +1,34 @@
+<div id="sidebar">
+  <div id="desktop-logo">
+    <a href="/" class="white" onmouseover="toggleLogo('red')" onmouseout="toggleLogo('white')">
+      <img id="dl" src="images/logo.svg" onerror="this.src='images/logo.png'" width="160px"/>
+      <div>Adrian <b>Blanco</b></div>
+    </a>
+  </div>
+  <div id="mobile-logo">
+    <a href="/" onmouseover="toggleLogo('red')" onmouseout="toggleLogo('white')">
+      <img id="ml" src="images/logo.svg" onerror="this.src='images/logo.png'" width="35px"/>
+    </a>
+  </div>
+  <div id="mobile-nav">
+    <a href="#" onclick="toggle('categories')" class="white">MENU</a>
+  </div>
+  <nav id="categories" role="navigation">
+    <div class="menu">
+      <ul>
+        <li class="about">
+          <a href="/">About</a>
+        </li>
+        <li class="portfolio">
+          <a href="/">Portfolio</a>
+        </li>
+        <li class="cv">
+          <a href="/">CV</a>
+        </li>
+        <li class="contact">
+          <a href="/">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>

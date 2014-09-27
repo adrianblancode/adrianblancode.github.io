@@ -1,0 +1,11 @@
+<!doctype html>
+<html>
+  {% include head.html %}
+  <body class="{% page.url %}">
+    {{% include navigation.html %}}
+    {{content}}
+  </body>
+  
+  <script src="javascripts/scale.fix.js"></script>
+  <script src="javascripts/scripts.js"></script>
+</html>
