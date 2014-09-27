@@ -52,11 +52,11 @@ a {
   text-decoration:none;
 }
 
-a.white, a i.hamburger {
+a.white, a.hamburger {
   color: #FFF;
 }
 
-i.fa, a, a:hover, a i.hamburger:hover, body.home nav li.about a, body.portfolio nav li.portfolio a, body.cv nav li.cv a, body.contact nav li.contact a {
+i.fa, a, a:hover, a.hamburger:hover, body.home nav li.about a, body.portfolio nav li.portfolio a, body.cv nav li.cv a, body.contact nav li.contact a {
   color: #E22;
 }
 
