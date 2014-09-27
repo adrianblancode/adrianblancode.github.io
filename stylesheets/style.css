@@ -47,15 +47,6 @@
   margin-bottom: 9px;
 }
 
-a {
-  font-weight:400;
-  text-decoration:none;
-}
-
-#sidebar a {
-  color: white;
-}
-
 ul {
   list-style: none;
 }
@@ -79,8 +70,17 @@ nav ul li a {
   color: #FFF;
 }
 
-i.fa, a, a:hover, body.home nav li.about a, body.portfolio nav li.portfolio a, body.cv nav li.cv a, body.contact nav li.contact a{
+a, a:hover, i.fa, body.home nav li.about a, body.portfolio nav li.portfolio a, body.cv nav li.cv a, body.contact nav li.contact a{
   color: #E22;
+}
+
+a {
+  font-weight:400;
+  text-decoration:none;
+}
+
+#sidebar a {
+  color: white;
 }
 
 /* Desktops */
