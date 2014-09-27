@@ -11,7 +11,7 @@
   letter-spacing: 1px;
 }
 
-#large-logo {
+#desktop-logo {
   float: right;
   margin-top: 70px;
   margin-right: 50px;
@@ -19,7 +19,7 @@
   font-size: 1.2em;
 }
 
-#small-logo {
+#mobile-logo {
   display: none;
   position: absolute;
   float: left;
@@ -71,7 +71,7 @@ nav {
 }
 
 nav ul li {
- margin-bottom: 12px;
+ margin-bottom: 20px;
 }
 
 nav a {
@@ -97,11 +97,11 @@ nav a:hover {
     height: 50px;
   }
 
-  #large-logo {
+  #desktop-logo {
     display: none;
   }
 
-  #small-logo {
+  #mobile-logo {
     display: block;
   }
 

@@ -100,9 +100,9 @@ img {
 }
 
 header {
-  width:270px;
-  float:left;
-  position:fixed;
+  width:75%;
+  float:right;
+  position:relative;
 }
 
 header ul {
@@ -248,6 +248,10 @@ footer {
   
   header ul {
     display:none;
+  }
+
+  div.wrapper {
+    margin-top: 40px;
   }
 }
 

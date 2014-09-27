@@ -15,15 +15,15 @@
   </head>
   <body>
     <div id="sidebar">
-      <div id="large-logo">
-        <a href="/" class="white">
-          <img src="images/logo.svg" onmouseover="this.src='images/logored.svg'" onmouseout="this.src='images/logo.svg'" width="160px"/>
+      <div id="desktop-logo">
+        <a href="/" class="white" onmouseover="toggleLogo('red')" onmouseout="toggleLogo('white')">
+          <img id="dl" src="images/logo.svg"  width="160px"/>
           <div>Adrian <b>Blanco</b></div>
         </a>
       </div>
-      <div id="small-logo">
-        <a href="/">
-          <img src="images/logo.svg" onmouseover="this.src='images/logored.svg'" onmouseout="this.src='images/logo.svg'" width="35px"/>
+      <div id="mobile-logo">
+        <a href="/" onmouseover="toggleLogo('red')" onmouseout="toggleLogo('white')">
+          <img id="ml" src="images/logo.svg" width="35px"/>
         </a>
       </div>
       <div id="mobile-nav">
@@ -50,9 +50,10 @@
     </div>
 
     <div class="wrapper">
+      <header>
+        <h1>Adrian Blanco, Software Developer</h1>
+      </header>
       <section>
-      <h1>Adrian Blanco - Software Developer</h1>
-
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
 <pre><code>$ cd your_repo_root/repo_name
