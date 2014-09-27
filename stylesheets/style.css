@@ -52,7 +52,7 @@ a {
   text-decoration:none;
 }
 
-a.white {
+a.white, i.hamburger {
   color: white;
 }
 
