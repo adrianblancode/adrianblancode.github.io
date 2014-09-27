@@ -44,21 +44,16 @@
   text-align: right;
   margin-top: 8px;
   margin-right: 20px;
-  margin-bottom: 11px;
+  margin-bottom: 9px;
 }
 
 a {
-  color:#e22;
   font-weight:400;
   text-decoration:none;
 }
 
-a.white {
+#sidebar a {
   color: white;
-}
-
-a:hover {
-  color: #E22;
 }
 
 ul {
@@ -84,26 +79,18 @@ nav ul li a {
   color: #FFF;
 }
 
-body.home nav li.about a, body.portfolio nav li.portfolio a, body.cv nav li.cv a, body.contact nav li.contact a{
+i.fa, a, a:hover, body.home nav li.about a, body.portfolio nav li.portfolio a, body.cv nav li.cv a, body.contact nav li.contact a{
   color: #E22;
 }
 
-nav a:hover {
-  color: #E22;
-}   
-
-i.fa {
-  color: #E22;
-}
-
-/*Desktops*/
+/* Desktops */
 @media only screen and (max-width: 1400px) {
   #sidebar {
     width: 20%;
   }
 }
 
-/*Tablets*/
+/* Tablets */
 @media only screen and (max-width: 1200px) {
   #sidebar {
     width: 100%;
@@ -139,7 +126,7 @@ i.fa {
   }
 }
 
-/*Mobile*/
+/* Mobile */
 @media only screen and (max-width: 767px){
   #mobile-nav {
     display: block;
@@ -154,6 +141,7 @@ i.fa {
     top: inherit;
     left: inherit;
     width: 100%;
+    padding-top: 4px;
   }
 
   nav ul li{
