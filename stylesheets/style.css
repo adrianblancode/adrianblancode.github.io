@@ -33,7 +33,7 @@
   border-radius: 150px;
   -webkit-border-radius: 150px;
   -moz-border-radius: 150px;
-  background: url(./images/me.jpg) no-repeat;
+  background: url(/images/me.jpg) no-repeat;
   background-size: 200px 200px;
   margin: auto;
   margin-bottom: 20px;
