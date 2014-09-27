@@ -7,8 +7,8 @@
   top: 0;
   left: 0;
 
-  font-size: 1.5em;
-  letter-spacing: 1px;
+  font-size: 1.3em;
+  letter-spacing: 1.1px;
 }
 
 #desktop-logo {
@@ -34,6 +34,18 @@
 
 .logo:hover {
   background-image: url('./images/logored.svg');
+}
+
+.circular {
+  width: 200px;
+  height: 200px;
+  border-radius: 150px;
+  -webkit-border-radius: 150px;
+  -moz-border-radius: 150px;
+  background: url(./images/me.jpg) no-repeat;
+  background-size: 200px 200px;
+  margin: auto;
+  margin-bottom: 20px;
 }
 
 #mobile-nav {
