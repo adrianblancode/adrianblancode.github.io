@@ -45,7 +45,9 @@
 }
 
 a {
-  text-decoration: none;
+  color:#e22;
+  font-weight:400;
+  text-decoration:none;
 }
 
 a.white {
@@ -74,9 +76,13 @@ nav ul li {
  margin-bottom: 20px;
 }
 
-nav a {
+nav ul li a {
   text-transform: uppercase;
   color: #FFF;
+}
+
+body.home nav li.about a, body.portfolio nav li.portfolio, body.cv nav li.cv, body.contact nav li.contact{
+  color: #E22;
 }
 
 nav a:hover {

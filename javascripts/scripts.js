@@ -10,6 +10,7 @@ function toggle(id){
     }
 }
 
+//Toggles the color of the logo when mouseover
 function toggleLogo(color){
 
     var dl = document.getElementById("dl");
