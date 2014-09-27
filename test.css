@@ -39,6 +39,9 @@
 #mobile-nav {
   display: none;
   text-align: right;
+  margin-top: 8px;
+  margin-right: 20px;
+  margin-bottom: 11px;
 }
 
 a {
@@ -124,26 +127,25 @@ nav a:hover {
 }
 
 /*Mobile*/
-/*@media only screen and (max-width: 767px){
+@media only screen and (max-width: 767px){
   #mobile-nav {
     display: block;
   }
 
   nav {
-    display: block;
+    display: none;
     position: relative;
     height: 160px;
     float: none;
-    margin: auto;
-    bottom: inherit;
+    margin: 0;
+    top: inherit;
     left: inherit;
     width: 100%;
   }
 
   nav ul li{
     float: none;
-    margin: 0px;
     margin-bottom: 20px;
-    text-align: left;
+    text-align: right;
   }
-}*/
+}
