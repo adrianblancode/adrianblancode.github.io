@@ -27,15 +27,6 @@
   margin-left: 7px;
 }
 
-.logo {
-  display: block;
-  background-image: url('/images/logo.svg');
-}
-
-.logo:hover {
-  background-image: url('/images/logored.svg');
-}
-
 .circular {
   width: 200px;
   height: 200px;
