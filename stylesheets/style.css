@@ -56,7 +56,12 @@ a.white {
   color: #FFF;
 }
 
-i.fa, a, a:hover, body.home nav li.about a, body.portfolio nav li.portfolio a, body.cv nav li.cv a, body.contact nav li.contact a {
+i.fa, a, a:hover {
+  color: #E22;
+}
+
+/* Used for displaying active tab on navigation */
+body.home nav li.about a, body.portfolio nav li.portfolio a, body.cv nav li.cv a, body.contact nav li.contact a {
   color: #E22;
 }
 
