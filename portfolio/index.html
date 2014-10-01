@@ -44,6 +44,12 @@ nav: portfolio
 
 <script type="text/javascript">
   $(document).ready(function() {
-    $(".fancybox").fancybox();
+    $(".fancybox").fancybox(
+      helpers: {
+        title : {
+          type : 'float'
+        }
+      }
+    );
   });
 </script>
