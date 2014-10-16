@@ -1,0 +1,43 @@
+---
+layout: default
+title: Graphics | adrianblan.co
+nav: Graphics
+---
+
+<div class="wrapper">
+  <header>
+    <h1>Graphics</h1>
+  </header>
+  <section>
+    <h2>Kattr</h2>
+    <a href="/images/kattr-showcase.jpg" class="fancybox" title="Kattr showcase">
+      <img src="/images/kattr-showcase.jpg" alt="Kattr showcase"/>
+    </a>
+    <p>Example mockup for an Android app using Material Design.</p>
+  </section>
+  <section>
+    <h2>QWait</h2>
+    <a href="/images/qwait-logo.jpg" class="fancybox" title="QWait logo">
+      <img src="/images/qwait-logo.jpg" alt="QWait logo"/>
+    </a>
+    <p>Logo used for 
+      <a href="http://qwait.csc.kth.se" title="QWait">QWait</a>.
+    </p>
+  </section>
+</div>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript" src="/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script type="text/javascript" src="/fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $(".fancybox").fancybox({
+      helpers: {
+        title : {
+          type : 'inside'
+        }
+      }
+    });
+  });
+</script>
