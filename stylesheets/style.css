@@ -1,10 +1,12 @@
 /* All highlights become red */
 ::selection {
   background: #E22;
+  color: #FFF;
 }
 
 ::-moz-selection {
   background: #E22;
+  color: #FFF
 }
 
 #sidebar {
@@ -131,7 +133,7 @@ nav ul li a {
     float: left;
     margin: 0px;
     position: absolute;
-    bottom: 15px;
+    bottom: 14px;
     left: 70px;
   }
 
