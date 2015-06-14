@@ -80,6 +80,10 @@ ul {
   list-style: none;
 }
 
+section img {
+  margin-bottom: 0.5em;
+}
+
 nav {
   display: block;
   float: right;
