@@ -9,9 +9,14 @@ body {
   font-weight:300;
 }
 
+b {
+  font-weight: 500;
+}
+
 h1, h2, h3, h4, h5, h6 {
   color:#222;
   margin:0 0 20px;
+  font-weight: 500;
 }
 
 a h1, a h2, a h3, a h4, a h5, a h6 {
