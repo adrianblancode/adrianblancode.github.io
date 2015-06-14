@@ -209,11 +209,11 @@ footer {
     margin:0 0 20px;
   }
 
-  section:first-child {
+  section:first-of-type {
   	border-top: 1px solid #e5e5e5;
   }
 
-  section:last-child {
+  section:last-of-type {
   	border-bottom: none; 
   }
   
