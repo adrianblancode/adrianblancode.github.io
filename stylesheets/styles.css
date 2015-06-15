@@ -51,8 +51,9 @@ a small {
 }
 
 .wrapper {
-  width:860px;
+  width:800px;
   margin:0 auto;
+  overflow: hidden;
 }
 
 blockquote {
