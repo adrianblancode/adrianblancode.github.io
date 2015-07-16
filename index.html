@@ -125,7 +125,7 @@ nav: home
 <script type="text/javascript">
   function onScroll(event){
     var scrollPos = $(document).scrollTop();
-    $('#sidebar a').each(function () {
+    $('#sidebar a:not(#mobile-nav a)').each(function () {
         var currLink = $(this);
         var refElement = $(currLink.attr("href"));
         if (refElement.selector != "#" && refElement.position().top <= scrollPos + 80 && refElement.position().top + refElement.height() > scrollPos) {
