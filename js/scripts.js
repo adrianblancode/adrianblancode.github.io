@@ -13,14 +13,11 @@ function toggle(id){
 //Toggles the color of the logo when mouseover
 function toggleLogo(color){
 
-    var dl = document.getElementById("dl");
-    var ml = document.getElementById("ml");
+    var logo = document.getElementById("logo");
 
     if(color == 'red'){
-        ml.src = "/images/logored.svg";
-        dl.src = "/images/logored.svg";
+        logo.src = "/images/logored.png";
     } else {
-        ml.src = "/images/logo.svg";
-        dl.src = "/images/logo.svg";
+        logo.src = "/images/logo.png";
     }
 }

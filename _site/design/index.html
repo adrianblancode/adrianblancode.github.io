@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <title>Design | adrianblan.co</title>
+  <link rel="stylesheet" href="/stylesheets/adrianblanco.css">
+  <link rel="stylesheet" href="/stylesheets/github.css">
+  <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500' rel='stylesheet' type='text/css'>
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+  <link rel="stylesheet" href="/fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
+  <!--link rel="stylesheet" href="/stylesheets/pygment_trac.css"-->
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta name="theme-color" content="#F44336"> 
+  <!--[if lt IE 9]>
+  <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+  <body class="Design">
+    <div id="sidebar">
+  <div id="mobile-logo">
+    <a href="/" onmouseover="toggleLogo('red')" onmouseout="toggleLogo('white')">
+      <img id="logo" src="/images/logo.png" onerror="this.src='/images/logo.png'"/>
+    </a>
+  </div>
+  <div id="mobile-nav">
+    <a href="#" onclick="toggle('categories')" class="white">MENU</a>
+  </div>
+  <nav id="categories" role="navigation">
+    <div class="menu">
+      <ul>
+        <li class="about">
+          <a href="/">Introduction</a>
+        </li>
+        <li class="portfolio">
+          <a href="/portfolio/">Portfolio</a>
+        </li>
+        <li class="cv">
+          <a href="/cv/">CV</a>
+        </li>
+        <li class="contact">
+          <a href="/contact/">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+    <div class="wrapper">
+  <header>
+    <h1>Design</h1>
+  </header>
+  <section>
+    <h2>Kattr</h2>
+    <a href="/images/kattr-showcase.jpg" class="fancybox" title="Kattr showcase">
+      <img src="/images/kattr-showcase.jpg" alt="Kattr showcase"/>
+    </a>
+    <p>Example mockup for an Android app using Material Design.</p>
+  </section>
+  <section>
+    <h2>Materialist</h2>
+    <a href="/images/materialist-logo.png" class="fancybox" title="Materialist logo">
+      <img src="/images/materialist-logo.png" alt="Materialist logo"/>
+    </a>
+    <p>Old logo for Materialist
+    </p>
+  </section>
+  <section>
+    <h2>QWait</h2>
+    <a href="/images/qwait-logo.png" class="fancybox" title="QWait logo">
+      <img src="/images/qwait-logo.png" alt="QWait logo"/>
+    </a>
+    <p>Logo used for 
+      <a href="http://qwait.csc.kth.se" title="QWait">QWait</a>.
+    </p>
+  </section>
+</div>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript" src="/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script type="text/javascript" src="/fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $(".fancybox").fancybox({
+      helpers: {
+        title : {
+          type : 'inside'
+        }
+      }
+    });
+  });
+</script>
+
+  </body>
+  <!---->
+  <script src="/js/scale.fix.js"></script>
+  <script src="/js/scripts.js"></script>
+  <script src="/js/coverr.js"></script>
+</html>

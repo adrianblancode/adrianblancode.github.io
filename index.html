@@ -3,33 +3,116 @@ layout: default
 title: adrianblan.co
 nav: home
 ---
-<div class="homepage-hero-module">
-    <div class="video-container">
-        <div class="filter"></div>
-        <video autoplay loop class="fillWidth">
-            <source src="/coverr/typing.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
-            <source src="/coverr/typing.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
-        </video>
-        <div class="poster hidden">
-            <img src="/coverr/typing.jpg" alt="">
-        </div>
-    </div>
+<div class="header">
+  <video autoplay loop class="coverr">
+      <source src="/images/typing.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+      <source src="/images/typing.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
+  </video>
+  <div class="profile">
+    <img class="circular" src="/images/me.jpg" alt="Profile image"/>
+    <h1>Adrian Blanco,<br>Software Developer</h1>
+  </div>
+  <div class="down-arrow">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="43px" height="33px" viewBox="0 0 43 33" enable-background="new 0 0 43 33" xml:space="preserve">
+      <g>
+        <path fill="#FFFFFF" d="M0.093,1.294c0,3.176,0,7.686,0,8.77l21.408,21.502l21.406-21.502c0-0.836,0-6.08,0-8.77L21.501,22.796   L0.093,1.294z"></path>
+      </g>
+    </svg>
+  </div>
 </div>
 <div class="wrapper">
-  <header>
-    <img class="circular" src="/images/me.jpg" alt="Profile image"/>
-    <h1>Adrian Blanco, Software Developer</h1>
-  </header>
   <section>
+    <h2>Introduction</h2>
     <p>Hi! My name is Adrian Blanco, I'm 23 years old and currently studying my fifth and final year towards my masters degree in Computer Science at the Royal Institute of Technology (KTH) in Stockholm, Sweden. What do I do? I code. I started my programming journey in high school with a calculator, and since that day I knew my true calling.</p>
 
     <p>I have a strong theoretical background in Computer Science, so Java and C/C++ are my weapons of choice for solving problems. Whether it's high level or low level I love getting my hands dirty and making things work, especially if it involves learning new concepts. One of my passions is Human Computer Interaction, which is what I'm specializing in as a track in my degree. I'm always tinkering with something, whether it's coding with HTML/CSS, doing cool things with JavaScript, or just experimenting with Android development.
     </p>
 
+    <!--
     <p>Other notable (and less notable) relevant skills include: AngularJS, Node.js, OpenGL, Go, MATLAB, SQL, Haskell, Prolog, Python, PHP</p>
-
     <h3>Other interests</h3>
-
     <p>I've always had a passion for music, everything from Blues to Metal. In my free time I play guitar, and hopefully one day I will also learn how to play piano. When I'm feeling energetic I like to go the gym and lift heavy things up and down.</p>
+    -->
   </section>
+
 </div>
+<div class="wrapper">
+  <header>
+    <h1>Portfolio</h1>
+  </header>
+  <section>
+    <a href="https://play.google.com/store/apps/details?id=co.adrianblan.materialist"><h2>Materialist</h2></a>
+    <a href="/images/materialist.png" class="fancybox"  title="Materialist showcase">
+      <img src="/images/materialist.png" alt="Materialist showcase"/>
+    </a>
+    <p>Materialist is a task list for Android using Material Design, it has been created to provide a simple, minimalist and intuitive experience that's in the way as little as possible.</p>
+    <a href="https://play.google.com/store/apps/details?id=co.adrianblan.materialist"><img src="http://developer.android.com/images/brand/en_generic_rgb_wo_45.png"/></a>
+  </section>
+  <section>
+    <a href="https://github.com/adrianblp/Noraoke"><h2>Noraoke</h2></a>
+    <a href="/images/noraoke.jpg" class="fancybox" title="Noraoke showcase">
+      <img src="/images/noraoke.jpg" alt="Noraoke showcase"/>
+    </a>
+    <p>Noraoke is an Android karaoke app prototype combining experiences and interactions of western karaoke and korean norebang. It explores the concept of having groups interacting through a shared playlist, with audio synchronizing across all devices through websockets for a more social karaoke experience.</p>
+
+    <p><a href="/content/Noraoke.apk">Download Noraoke</a></p>
+  </section>
+  <section>
+    <a href="http://qwait.csc.kth.se"><h2>QWait <i class="fa fa-external-link"></i></h2></a>
+    <a href="/images/qwait-showcase.jpg" class="fancybox" title="QWait showcase">
+      <img src="/images/qwait-showcase.jpg" alt="QWait showcase"/>
+    </a>
+    <p>QWait is a responsive, web based queueing system which is used for lab sessions at KTH by both students and assistants. Among my responsibilities included frontend development (AngularJS, HTML, CSS) to provide a consistent and intuitive experience for all types of users and devices.</p>
+  </section>
+  <section>
+    <a href="/content/Adrian_Blanco_Candidate_Thesis.pdf" title="My candidate thesis"><h2>Observing co-evolution in simulated bacteria <i class="fa fa-file-pdf-o"></i></h2></a>
+    <p>For my candidate thesis I developed a program which through genetic algorithms simulates an environment with artificial bacteria, which over time evolve to better adapt to their environments. The aim of this research was to observe co-evolution into stable ecosystems with heterogenous species.</p>
+  </section>
+  <section>
+    <a href="https://github.com/hlilje/dgi14-voxels" title="Voxel Renderer"><h2>Voxel Renderer <i class="fa fa-external-link"></i></h2></a>
+    <a href="/images/voxel-renderer.png" class="fancybox" title="Voxel Renderer">
+      <img src="/images/voxel-renderer.png" alt="Voxel Renderer"/>
+    </a>
+    <p>For the course Digital Graphics and Interaction at KTH, I and Hampus Liljekvist created a voxel renderer using C++, OpenGL and GLUT. It uses perlin noise to generate natural looking terrain using texturized voxels in a visual style similar to a popular mining and crafting simulator. This landscape can then be altered by adding or removing blocks in various ways.</p>
+  </section>
+
+  <!--section>
+    <p>The rest of my projects can be seen at <a href="https://github.com/adrianblp" title="My github profile">github.com/adrianblp</a></p>
+  </section-->
+
+  <header>
+    <h1>Curriculum Vitae</h1>
+  </header>
+  <section>
+    <h3>
+      <a href="/content/Adrian_Blanco_CV.pdf" title="English CV">English CV <i class="fa fa-file-pdf-o"></i></a>
+    </h3>
+  </section>
+
+  <header>
+    <h1>Contact</h1>
+  </header>
+  <section>
+    <h3><a href="mailto:adrianblp@gmail.com" title="My mail address"><i class="fa fa-envelope-o"></i> adrianblp@gmail.com</a></h3>
+    <h3><a href="https://github.com/adrianblp" title="My github profile"><i class="fa fa-github-alt"></i> github.com/adrianblp</a></h3>
+    <h3><a href="http://facebook.com/adrianblp" title="My facebook profile"><i class="fa fa-facebook-square"></i> facebook.com/adrianblp</a></h3>
+    <h3><a href="https://www.linkedin.com/profile/view?id=139504600" title="My linkedin profile"><i class="fa fa-linkedin-square"></i> linkedin.com</a></h3>
+  </section>
+
+</div>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript" src="/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script type="text/javascript" src="/fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $(".fancybox").fancybox({
+      helpers: {
+        title : {
+          type : 'inside'
+        }
+      }
+    });
+  });
+</script>
