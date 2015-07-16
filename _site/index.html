@@ -45,13 +45,14 @@
   </nav>
 </div>
     <div id="home" class="header">
-  <video autoplay loop class="coverr">
+  <video autoplay loop class="coverr" poster="/images/typing.jpg">
       <source src="/images/typing.mp4" type="video/mp4" />
       <source src="/images/typing.webm" type="video/webm" />
       <img src="/images/typing.jpg" title="Your browser does not support the <video> tag">
   </video>
   <div class="profile">
-
+    <img class="circular" src="/images/me.jpg" alt="Profile image"/>
+    <h1>Adrian Blanco,<br>Software Developer</h1>
   </div>
   <div class="down-arrow" onclick="$(window).scrollTo($('#introduction'), 400, {offset: -50});">
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="43px" height="33px" viewBox="0 0 43 33" enable-background="new 0 0 43 33" xml:space="preserve">
@@ -146,6 +147,14 @@
 
 <script type="text/javascript">
   $(document).ready(function() {
+    if(!Modernizr.touch){
+
+    }
+  });
+</script>
+
+<script type="text/javascript">
+  $(document).ready(function() {
     $(document).on("scroll", onScroll);
   });
 </script>
@@ -173,15 +182,9 @@
             currLink.addClass("active");
 
             if(refElement.selector == "#home"){
-              toggleLogo("red");
-              
-
-
               $("#sidebar").removeClass("scrolled");
 
             } else {
-              toggleLogo("white");
-
               $("#sidebar").addClass("scrolled");
             }
         }
@@ -193,6 +196,7 @@
 </script>
   </body>
   <script src="/js/scale.fix.js"></script>
+<script src="/js/modernizr.js"></script>
 <script src="/js/scripts.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.0/jquery.scrollTo.min.js"></script>
 </html>
