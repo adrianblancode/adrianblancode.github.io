@@ -1,12 +1,14 @@
-//Toggles the visibility of the element specified by id
-function toggle(id){
+//Toggles the visibility of the menu
+function toggleMenu(){
 
-    var elem = document.getElementById(id);
+    var elem = document.getElementById('categories');
     
     if(elem.style.display != "block"){
         elem.style.display = "block";
+        $("#sidebar").addClass("open");
     } else {
         elem.style.display = "none";
+        $("#sidebar").removeClass("open");
     }
 }
 

@@ -32,7 +32,6 @@
   position: absolute;
   bottom: 0;
   width: 50%;
-  z-index: 100;
   border-bottom: 40px solid #fff;
   -moz-transform: rotate(0.000001deg);
   -webkit-transform: rotate(0.000001deg);
@@ -50,7 +49,6 @@
   margin-left: -22px;
   margin-bottom: 20px;
   cursor: pointer;
-  z-index: 101;
   -webkit-transition: 0.3s margin-bottom ease;
   -moz-transition: 0.3s margin-bottom ease;
   -ms-transition: 0.3s margin-bottom ease;
@@ -63,7 +61,7 @@
   top: 50%;
   left: 50%;
   min-width: 100%;
-  min-height: 100%;
+  min-height: 540px;
   width: auto;
   height: auto;
   z-index: -100;
@@ -101,8 +99,6 @@
 }
 
 #sidebar {
-  background: rgba(0, 0, 0, 0.4);
-  color: #FFF;
   width: 100%;
   height: 50px;
   position: fixed;
@@ -110,8 +106,20 @@
   left: 0;
   z-index: 100;
 
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #FFF;
   font-size: 22px;
   letter-spacing: 1.1px;
+}
+
+#sidebar.scrolled {
+  background-color: rgba(0, 0, 0, 1);
+  -webkit-transition: background-color 800ms;
+  transition: background-color 800ms;
+}
+
+#sidebar.open, #sidebar.open nav {
+  background-color: rgba(0, 0, 0, 1) !important;
 }
 
 #mobile-logo {
@@ -134,6 +142,10 @@
   margin-bottom: 8px;
 }
 
+#categories ul li a.active {
+  color: #E22;
+}
+
 a {
   font-weight: 300;
   text-decoration:none;
@@ -144,11 +156,6 @@ a.white {
 }
 
 i.fa, a, a:hover {
-  color: #E22;
-}
-
-/* Used for displaying active tab on navigation */
-body.home nav li.about a, body.portfolio nav li.portfolio a, body.cv nav li.cv a, body.contact nav li.contact a {
   color: #E22;
 }
 
@@ -188,30 +195,13 @@ nav ul li a {
   font-weight: 400;
 }
 
-/* Mobile */
-@media only screen and (max-width: 767px){
-  #mobile-nav {
-    display: block;
+@media print, screen and (min-width: 2000px) {
+  .down-arrow{
+    margin-bottom: 50px;
   }
+}
 
-  nav {
-    display: none;
-    position: relative;
-    height: 160px;
-    float: none;
-    margin: 0;
-    top: inherit;
-    left: inherit;
-    width: 100%;
-    padding-top: 4px;
-  }
-
-  nav ul li{
-    float: none;
-    margin-bottom: 20px;
-    text-align: right;
-  }
-
+@media print, screen and (max-width: 1200px) {
   .profile {
     width: 300px;
     top: calc(50% - 150px);
@@ -228,5 +218,30 @@ nav ul li a {
     border-radius: 150px;
     -webkit-border-radius: 150px;
     -moz-border-radius: 150px;
+  }
+}
+
+/* Mobile */
+@media only screen and (max-width: 767px){
+  #mobile-nav {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    position: relative;
+    height: 118px;
+    float: none;
+    margin: 0;
+    top: inherit;
+    left: inherit;
+    width: 100%;
+    padding-top: 4px;
+  }
+
+  nav ul li{
+    float: none;
+    margin-bottom: 20px;
+    text-align: right;
   }
 }

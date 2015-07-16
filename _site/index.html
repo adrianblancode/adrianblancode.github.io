@@ -21,33 +21,30 @@
   <body class="home">
     <div id="sidebar">
   <div id="mobile-logo">
-    <a href="/" onmouseover="toggleLogo('red')" onmouseout="toggleLogo('white')">
+    <a href="#home" onmouseover="toggleLogo('red')" onmouseout="toggleLogo('white')" onclick="$(window).scrollTo($('#home'), 400);">
       <img id="logo" src="/images/logo.png" onerror="this.src='/images/logo.png'"/>
     </a>
   </div>
   <div id="mobile-nav">
-    <a href="#" onclick="toggle('categories')" class="white">MENU</a>
+    <a href="#" onclick="toggleMenu()" class="white">MENU</a>
   </div>
   <nav id="categories" role="navigation">
     <div class="menu">
       <ul>
-        <li class="about">
-          <a href="/">Introduction</a>
+        <li class="introduction">
+          <a href="#introduction" onclick="$(window).scrollTo($('#introduction'), 400, {offset: -50});">Introduction</a>
         </li>
         <li class="portfolio">
-          <a href="/portfolio/">Portfolio</a>
-        </li>
-        <li class="cv">
-          <a href="/cv/">CV</a>
+          <a href="#portfolio" onclick="$(window).scrollTo($('#portfolio'), 400, {offset: -50});">Portfolio</a>
         </li>
         <li class="contact">
-          <a href="/contact/">Contact</a>
+          <a href="#contact" onclick="$(window).scrollTo($('#contact'), 400, {offset: -50});">Contact</a>
         </li>
       </ul>
     </div>
   </nav>
 </div>
-    <div class="header">
+    <div id="home" class="header">
   <video autoplay loop class="coverr">
       <source src="/images/typing.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
       <source src="/images/typing.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
@@ -56,7 +53,7 @@
     <img class="circular" src="/images/me.jpg" alt="Profile image"/>
     <h1>Adrian Blanco,<br>Software Developer</h1>
   </div>
-  <div class="down-arrow">
+  <div class="down-arrow" onclick="$(window).scrollTo($('#introduction'), 400, {offset: -50});">
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="43px" height="33px" viewBox="0 0 43 33" enable-background="new 0 0 43 33" xml:space="preserve">
       <g>
         <path fill="#FFFFFF" d="M0.093,1.294c0,3.176,0,7.686,0,8.77l21.408,21.502l21.406-21.502c0-0.836,0-6.08,0-8.77L21.501,22.796   L0.093,1.294z"></path>
@@ -64,7 +61,8 @@
     </svg>
   </div>
 </div>
-<div class="wrapper">
+
+<div id="introduction" class="wrapper">
   <section>
     <h2>Introduction</h2>
     <p>Hi! My name is Adrian Blanco, I'm 23 years old and currently studying my fifth and final year towards my masters degree in Computer Science at the Royal Institute of Technology (KTH) in Stockholm, Sweden. What do I do? I code. I started my programming journey in high school with a calculator, and since that day I knew my true calling.</p>
@@ -78,11 +76,11 @@
     <p>I've always had a passion for music, everything from Blues to Metal. In my free time I play guitar, and hopefully one day I will also learn how to play piano. When I'm feeling energetic I like to go the gym and lift heavy things up and down.</p>
     -->
   </section>
-
 </div>
-<div class="wrapper">
+
+<div id="portfolio" class="wrapper">
   <header>
-    <h1>Portfolio</h1>
+    <h2>Portfolio</h2>
   </header>
   <section>
     <a href="https://play.google.com/store/apps/details?id=co.adrianblan.materialist"><h2>Materialist</h2></a>
@@ -123,20 +121,17 @@
   <!--section>
     <p>The rest of my projects can be seen at <a href="https://github.com/adrianblp" title="My github profile">github.com/adrianblp</a></p>
   </section-->
+</div>
 
+<div id="contact" class="wrapper">
   <header>
-    <h1>Curriculum Vitae</h1>
+    <h2>Contact</h2>
   </header>
   <section>
     <h3>
       <a href="/content/Adrian_Blanco_CV.pdf" title="English CV">English CV <i class="fa fa-file-pdf-o"></i></a>
     </h3>
-  </section>
 
-  <header>
-    <h1>Contact</h1>
-  </header>
-  <section>
     <h3><a href="mailto:adrianblp@gmail.com" title="My mail address"><i class="fa fa-envelope-o"></i> adrianblp@gmail.com</a></h3>
     <h3><a href="https://github.com/adrianblp" title="My github profile"><i class="fa fa-github-alt"></i> github.com/adrianblp</a></h3>
     <h3><a href="http://facebook.com/adrianblp" title="My facebook profile"><i class="fa fa-facebook-square"></i> facebook.com/adrianblp</a></h3>
@@ -151,6 +146,12 @@
 
 <script type="text/javascript">
   $(document).ready(function() {
+    $(document).on("scroll", onScroll);
+  });
+</script>
+
+<script type="text/javascript">
+  $(document).ready(function() {
     $(".fancybox").fancybox({
       helpers: {
         title : {
@@ -161,9 +162,37 @@
   });
 </script>
 
+<script type="text/javascript">
+  function onScroll(event){
+    var scrollPos = $(document).scrollTop();
+    $('#sidebar a').each(function () {
+        var currLink = $(this);
+        var refElement = $(currLink.attr("href"));
+        if (refElement.selector != "#" && refElement.position().top <= scrollPos + 80 && refElement.position().top + refElement.height() > scrollPos) {
+            $('#categories ul li a').removeClass("active");
+            currLink.addClass("active");
+
+            if(refElement.selector == "#home"){
+              toggleLogo("red");
+              
+
+
+              $("#sidebar").removeClass("scrolled");
+
+            } else {
+              toggleLogo("white");
+
+              $("#sidebar").addClass("scrolled");
+            }
+        }
+        else{
+            currLink.removeClass("active");
+        }
+    });
+}
+</script>
   </body>
-  <!---->
   <script src="/js/scale.fix.js"></script>
-  <script src="/js/scripts.js"></script>
-  <script src="/js/coverr.js"></script>
+<script src="/js/scripts.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.0/jquery.scrollTo.min.js"></script>
 </html>

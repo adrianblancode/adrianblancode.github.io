@@ -1,26 +1,23 @@
 <div id="sidebar">
   <div id="mobile-logo">
-    <a href="/" onmouseover="toggleLogo('red')" onmouseout="toggleLogo('white')">
+    <a href="#home" onmouseover="toggleLogo('red')" onmouseout="toggleLogo('white')" onclick="$(window).scrollTo($('#home'), 400);">
       <img id="logo" src="/images/logo.png" onerror="this.src='/images/logo.png'"/>
     </a>
   </div>
   <div id="mobile-nav">
-    <a href="#" onclick="toggle('categories')" class="white">MENU</a>
+    <a href="#" onclick="toggleMenu()" class="white">MENU</a>
   </div>
   <nav id="categories" role="navigation">
     <div class="menu">
       <ul>
-        <li class="about">
-          <a href="/">Introduction</a>
+        <li class="introduction">
+          <a href="#introduction" onclick="$(window).scrollTo($('#introduction'), 400, {offset: -50});">Introduction</a>
         </li>
         <li class="portfolio">
-          <a href="/portfolio/">Portfolio</a>
-        </li>
-        <li class="cv">
-          <a href="/cv/">CV</a>
+          <a href="#portfolio" onclick="$(window).scrollTo($('#portfolio'), 400, {offset: -50});">Portfolio</a>
         </li>
         <li class="contact">
-          <a href="/contact/">Contact</a>
+          <a href="#contact" onclick="$(window).scrollTo($('#contact'), 400, {offset: -50});">Contact</a>
         </li>
       </ul>
     </div>
