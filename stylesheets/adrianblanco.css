@@ -69,6 +69,11 @@
   transform: translateX(-50%) translateY(0%);
 }
 
+#videowrapper {
+  background: url(/images/fallback.jpg);
+  background-size: cover;
+}
+
 .profile {
   position: absolute;
   width: 400px;

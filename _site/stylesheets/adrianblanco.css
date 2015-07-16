@@ -67,7 +67,10 @@
   z-index: -100;
   -webkit-transform: translateX(-50%) translateY(0%);
   transform: translateX(-50%) translateY(0%);
-  background: url(/images/fallback.jpg) no-repeat;
+}
+
+#videowrapper {
+  background: url(/images/fallback.jpg);
   background-size: cover;
 }
 

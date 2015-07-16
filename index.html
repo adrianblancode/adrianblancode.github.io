@@ -4,11 +4,13 @@ title: adrianblan.co
 nav: home
 ---
 <div id="home" class="header">
-  <video autoplay loop class="coverr" poster="/images/fallback.jpg">
-      <source src="/images/typing.mp4" type="video/mp4" />
-      <source src="/images/typing.webm" type="video/webm" />
-      <img src="/images/fallback.jpg" title="Your browser does not support the <video> tag">
-  </video>
+  <div id="videowrapper">
+    <video autoplay loop class="coverr">
+        <source src="/images/typing.mp4" type="video/mp4" />
+        <source src="/images/typing.webm" type="video/webm" />
+        <img src="/images/fallback.jpg" title="Your browser does not support the <video> tag">
+    </video>
+  </div>
   <div class="profile">
     <img class="circular" src="/images/me.jpg" alt="Profile image"/>
     <h1>Adrian Blanco,<br>Software Developer</h1>
@@ -103,6 +105,18 @@ nav: home
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script type="text/javascript" src="/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 <script type="text/javascript" src="/fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    if(Modernizr.touch){
+      $("#videowrapper video").hide();
+      $("#videowrapper").css("background", "linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)), url(/images/fallback.jpg)")
+      .css("background-position", "center center")
+      .css("background-size", "cover")
+      .css("min-height", "545px");
+    }
+  });
+</script>
 
 <script type="text/javascript">
   $(document).ready(function() {
