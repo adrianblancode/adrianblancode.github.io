@@ -1,6 +1,6 @@
 //Toggles the visibility of the menu
 function toggleMenu(){
-
+    
     var elem = document.getElementById('categories');
     
     if(elem.style.display != "block"){

@@ -67,7 +67,7 @@
   z-index: -100;
   -webkit-transform: translateX(-50%) translateY(0%);
   transform: translateX(-50%) translateY(0%);
-  background: url(/images/typing.jpg) no-repeat;
+  background: url(/images/fallback.jpg) no-repeat;
   background-size: cover;
 }
 
@@ -120,6 +120,10 @@
 
 #sidebar.open, #sidebar.open nav {
   background-color: rgba(0, 0, 0, 1) !important;
+}
+
+#sidebar a {
+  font-weight: 400;
 }
 
 #mobile-logo {
@@ -192,7 +196,6 @@ nav ul li {
 nav ul li a {
   text-transform: uppercase;
   color: #FFF;
-  font-weight: 400;
 }
 
 @media print, screen and (min-width: 2000px) {
