@@ -25,6 +25,7 @@ function toggleLogo(color){
 //Determines which navigation to highlight
 function onScroll(event){
     var scrollPos = $(document).scrollTop();
+    var scrolled = false;
     $('#sidebar a:not(#mobile-nav a)').each(function () {
         var currLink = $(this);
         var refElement = $(currLink.attr("href"));
@@ -37,18 +38,20 @@ function onScroll(event){
             $('#categories ul li a').removeClass("active");
             currLink.addClass("active");
 
-            //We remove the transparency on the meny when scrolled down far enough
-            if(refElement.selector == "#home"){
-              $("#sidebar").removeClass("scrolled");
-
-            } else {
-              $("#sidebar").addClass("scrolled");
-            }
+            //We remove the transparency on the menu if we have left the home area
+            scrolled = !(refElement.selector == "#home");
         }
         else{
             currLink.removeClass("active");
         }
     });
+
+    //This fulhaxx is required to stop flashing at certain parts
+    if(scrolled){
+        $("#sidebar").addClass("scrolled");
+    } else {
+        $("#sidebar").removeClass("scrolled");
+    }
 }
 
 // Initially, we're not waiting, we return a throttled function

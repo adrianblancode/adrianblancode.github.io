@@ -4,14 +4,12 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <title>adrianblan.co</title>
-  <link rel="stylesheet" href="/stylesheets/adrianblanco.css">
-  <link rel="stylesheet" href="/stylesheets/github.css">
+  <link rel="stylesheet" href="/css/adrianblanco.css">
+  <link rel="stylesheet" href="/css/github.css">
   <link href='http://fonts.googleapis.com/css?family=Oswald:300,400,500' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.1.1/css/material-design-iconic-font.min.css">
-  <link rel="stylesheet" href="/fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
-  <link rel="stylesheet" href="/fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
-  <!--link rel="stylesheet" href="/stylesheets/pygment_trac.css"-->
+  <link rel="stylesheet" href="/css/lightbox.css" type="text/css" media="screen" />
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
   <meta name="theme-color" content="#F44336"> 
   <!--[if lt IE 9]>
@@ -84,7 +82,7 @@
   </header>
   <section>
     <a href="https://play.google.com/store/apps/details?id=co.adrianblan.materialist"><h2>Materialist</h2></a>
-    <a href="/images/materialist.png" class="fancybox"  title="Materialist showcase">
+    <a href="/images/materialist.png" data-lightbox="/images/materialist.png" data-title="Materialist showcase">
       <img src="/images/materialist.png" alt="Materialist showcase"/>
     </a>
     <p>Materialist is a task list for Android using Material Design, it has been created to provide a simple, minimalist and intuitive experience that's in the way as little as possible.</p>
@@ -92,7 +90,7 @@
   </section>
   <section>
     <a href="https://github.com/adrianblp/Noraoke"><h2>Noraoke</h2></a>
-    <a href="/images/noraoke.jpg" class="fancybox" title="Noraoke showcase">
+    <a href="/images/noraoke.jpg" data-lightbox="/images/noraoke.jpg" data-title="Noraoke showcase">
       <img src="/images/noraoke.jpg" alt="Noraoke showcase"/>
     </a>
     <p>Noraoke is an Android karaoke app prototype combining experiences and interactions of western karaoke and korean norebang. It explores the concept of having groups interacting through a shared playlist, with audio synchronizing across all devices through websockets for a more social karaoke experience.</p>
@@ -101,7 +99,7 @@
   </section>
   <section>
     <a href="http://qwait.csc.kth.se"><h2>QWait</h2></a>
-    <a href="/images/qwait-showcase.jpg" class="fancybox" title="QWait showcase">
+    <a href="/images/qwait-showcase.jpg" data-lightbox="/images/qwait-showcase.jpg" data-title="QWait showcase">
       <img src="/images/qwait-showcase.jpg" alt="QWait showcase"/>
     </a>
     <p>QWait is a responsive, web based queueing system which is used for lab sessions at KTH by both students and assistants. Among my responsibilities included frontend development (AngularJS, HTML, CSS) to provide a consistent and intuitive experience for all types of users and devices.</p>
@@ -112,7 +110,7 @@
   </section>
   <section>
     <a href="https://github.com/hlilje/dgi14-voxels" title="Voxel Renderer"><h2>Voxel Renderer</h2></a>
-    <a href="/images/voxel-renderer.png" class="fancybox" title="Voxel Renderer">
+    <a href="/images/voxel-renderer.png" data-lightbox="/images/voxel-renderer.jpg" data-title="Voxel Renderer">
       <img src="/images/voxel-renderer.png" alt="Voxel Renderer"/>
     </a>
     <p>For the course Digital Graphics and Interaction at KTH, I and Hampus Liljekvist created a voxel renderer using C++, OpenGL and GLUT. It uses perlin noise to generate natural looking terrain using texturized voxels in a visual style similar to a popular mining and crafting simulator. This landscape can then be altered by adding or removing blocks in various ways.</p>
@@ -140,10 +138,12 @@
 </div>
 
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script type="text/javascript" src="/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-<script type="text/javascript" src="/fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<script type="text/javascript" src="/js/lightbox.js"></script>
 
 <script type="text/javascript">
+
+  // Used to make sure that if the user is on mobile, 
+  // they will have a fallback image instead of video
   $(document).ready(function() {
     if(Modernizr.touch){
       $("#videowrapper video").hide();
@@ -157,21 +157,16 @@
 
 <script type="text/javascript">
   $(document).ready(function() {
-    $(document).on("scroll", throttle(onScroll, 200));
+    $(document).on("scroll", throttle(onScroll, 50));
   });
 </script>
 
-<script type="text/javascript">
-  $(document).ready(function() {
-    $(".fancybox").fancybox({
-      helpers: {
-        title : {
-          type : 'inside'
-        }
-      }
-    });
-  });
+<script>
+    lightbox.option({
+      'resizeDuration': 0,
+    })
 </script>
+
   </body>
   <script src="/js/scale.fix.js"></script>
 <script src="/js/modernizr.js"></script>
