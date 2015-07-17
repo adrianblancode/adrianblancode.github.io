@@ -25,7 +25,7 @@ function toggleLogo(color){
 //Determines which navigation to highlight
 function onScroll(event){
     var scrollPos = $(document).scrollTop();
-    var scrolled = false;
+    var scrolled = true;
     $('#sidebar a:not(#mobile-nav a)').each(function () {
         var currLink = $(this);
         var refElement = $(currLink.attr("href"));
