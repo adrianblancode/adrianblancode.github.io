@@ -137,6 +137,7 @@
   opacity: 1;
   -webkit-transition: opacity 400ms ease-out;
   transition: opacity 400ms ease-out;
+  pointer-events: auto;
 }
 
 #sidebar a {
@@ -263,10 +264,13 @@ nav ul li a {
     top: inherit;
     left: inherit;
     width: 100%;
+
+
     padding-top: 4px;
     background-color: rgba(17, 17, 17, 1);
     -webkit-transition: opacity 400ms ease-out;
     transition: opacity 400ms ease-out;
+    pointer-events: none;
   }
 
   nav ul li{
