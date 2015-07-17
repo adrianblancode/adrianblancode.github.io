@@ -114,7 +114,7 @@
   left: 0;
   z-index: 100;
 
-  background-color: rgba(17, 17, 17, 0.7);
+  background-color: rgba(17, 17, 17, 0.5);
   color: #FFF;
   font-size: 22px;
   letter-spacing: 1.1px;
@@ -122,12 +122,18 @@
 
 #sidebar.scrolled {
   background-color: rgba(17, 17, 17, 1);
-  -webkit-transition: background-color 200ms;
-  transition: background-color 200ms;
+  -webkit-transition: background-color 600ms;
+  transition: background-color 600ms;
 }
 
 #sidebar.open, #sidebar.open nav {
-  background-color: rgba(0, 0, 0, 1) !important;
+  background-color: rgba(17, 17, 17, 1);
+  -webkit-transition: background-color 600ms;
+  transition: background-color 600ms;
+}
+
+#sidebar.open nav {
+  opacity: 1;
 }
 
 #sidebar a {
@@ -189,6 +195,7 @@ section img {
 nav {
   display: block;
   float: left;
+
   text-align: right;
   background: none;
   position: absolute;
@@ -245,7 +252,7 @@ nav ul li a {
   }
 
   nav {
-    display: none;
+    opacity: 0;
     position: relative;
     height: 118px;
     float: none;
@@ -254,6 +261,7 @@ nav ul li a {
     left: inherit;
     width: 100%;
     padding-top: 4px;
+    background-color: rgba(17, 17, 17, 0.5);
   }
 
   nav ul li{

@@ -1,14 +1,12 @@
 //Toggles the visibility of the menu
 function toggleMenu(){
 
-    var elem = document.getElementById('categories');
+    var nav = $('#sidebar');
     
-    if(elem.style.display != "block"){
-        elem.style.display = "block";
-        $("#sidebar").addClass("open");
+    if(!nav.hasClass("open")){
+        nav.addClass("open");
     } else {
-        elem.style.display = "none";
-        $("#sidebar").removeClass("open");
+        nav.removeClass("open");
     }
 }
 
@@ -51,4 +49,20 @@ function onScroll(event){
             currLink.removeClass("active");
         }
     });
+}
+
+// Initially, we're not waiting, we return a throttled function
+// If we're not waiting, execute users function prevent future invocations
+// After a period of time, and allow future invocations
+function throttle (callback, limit) {
+    var wait = false;
+    return function () {
+        if (!wait) {
+            callback.call();
+            wait = true;
+            setTimeout(function () {
+                wait = false;
+            }, limit);
+        }
+    }
 }

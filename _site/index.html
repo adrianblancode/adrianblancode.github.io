@@ -69,7 +69,7 @@
 <div id="introduction" class="wrapper">
   <section>
     <h2>Introduction</h2>
-    <p>Hi! My name is Adrian Blanco, I'm 23 years old and currently studying my fifth and final year towards my masters degree in Computer Science at the Royal Institute of Technology (KTH) in Stockholm, Sweden. What do I do? I code. I started my programming journey in high school with a calculator, and since that day I knew my true calling.</p>
+    <p>My name is Adrian Blanco, I'm 23 years old and currently studying my fifth and final year towards my masters degree in Computer Science at the Royal Institute of Technology (KTH) in Stockholm, Sweden. What do I do? I code. I started my programming journey in high school with a calculator, and since that day I knew my true calling.</p>
 
     <p>I have a strong theoretical background in Computer Science, so Java and C/C++ are my weapons of choice for solving problems. Whether it's high level or low level I love getting my hands dirty and making things work, especially if it involves learning new concepts. One of my passions is Human Computer Interaction, which is what I'm specializing in as a track in my degree. I'm always tinkering with something, whether it's coding with HTML/CSS, doing cool things with JavaScript, or just experimenting with Android development.
     </p>
@@ -118,9 +118,9 @@
     <p>For the course Digital Graphics and Interaction at KTH, I and Hampus Liljekvist created a voxel renderer using C++, OpenGL and GLUT. It uses perlin noise to generate natural looking terrain using texturized voxels in a visual style similar to a popular mining and crafting simulator. This landscape can then be altered by adding or removing blocks in various ways.</p>
   </section>
 
-  <!--section>
+  <section>
     <p>The rest of my projects can be seen at <a href="https://github.com/adrianblp" title="My github profile">github.com/adrianblp</a></p>
-  </section-->
+  </section>
 </div>
 
 <div id="contact" class="wrapper">
@@ -137,7 +137,6 @@
     <h3><a href="http://facebook.com/adrianblp" title="My facebook profile"><i class="zmdi zmdi-facebook-box"></i> facebook.com/adrianblp</a></h3>
     <h3><a href="http://linkedin.com/in/adrianblp" title="My linkedin profile"><i class="zmdi zmdi-linkedin-box"></i> linkedin.com/in/adrianblp</a></h3>
   </section>
-
 </div>
 
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
@@ -158,7 +157,7 @@
 
 <script type="text/javascript">
   $(document).ready(function() {
-    $(document).on("scroll", onScroll);
+    $(document).on("scroll", throttle(onScroll, 200));
   });
 </script>
 
