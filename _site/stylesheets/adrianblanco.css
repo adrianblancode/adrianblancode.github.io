@@ -56,6 +56,16 @@
   transition: 0.3s margin-bottom ease;
 }
 
+.down-arrow:hover {
+  margin-bottom: 10px;
+}
+
+.down-arrow:hover svg path {
+  fill: #E22;
+  -webkit-transition: fill 800ms;
+  transition: fill 800ms;
+}
+
 .coverr {
   position: relative;
   top: 50%;
@@ -122,8 +132,8 @@
 
 #sidebar a {
   font-weight: 400;
-  -webkit-transition: color 800ms;
-  transition: color 800ms;
+  -webkit-transition: color 600ms;
+  transition: color 600ms;
 }
 
 #mobile-logo {
@@ -161,6 +171,10 @@ a.white {
 
 i.fa, a, a:hover {
   color: #E22;
+}
+
+section a:hover {
+  text-decoration: underline;
 }
 
 ul {

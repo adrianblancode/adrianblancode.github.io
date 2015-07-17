@@ -58,18 +58,18 @@ nav: home
     <p><a href="/content/Noraoke.apk">Download Noraoke</a></p>
   </section>
   <section>
-    <a href="http://qwait.csc.kth.se"><h2>QWait <i class="fa fa-external-link"></i></h2></a>
+    <a href="http://qwait.csc.kth.se"><h2>QWait</h2></a>
     <a href="/images/qwait-showcase.jpg" class="fancybox" title="QWait showcase">
       <img src="/images/qwait-showcase.jpg" alt="QWait showcase"/>
     </a>
     <p>QWait is a responsive, web based queueing system which is used for lab sessions at KTH by both students and assistants. Among my responsibilities included frontend development (AngularJS, HTML, CSS) to provide a consistent and intuitive experience for all types of users and devices.</p>
   </section>
   <section>
-    <a href="/content/Adrian_Blanco_Candidate_Thesis.pdf" title="My candidate thesis"><h2>Observing co-evolution in simulated bacteria <i class="fa fa-file-pdf-o"></i></h2></a>
+    <a href="/content/Adrian_Blanco_Candidate_Thesis.pdf" title="My candidate thesis"><h2>Observing co-evolution in simulated bacteria <i class="zmdi zmdi-collection-pdf"></i></h2></a>
     <p>For my candidate thesis I developed a program which through genetic algorithms simulates an environment with artificial bacteria, which over time evolve to better adapt to their environments. The aim of this research was to observe co-evolution into stable ecosystems with heterogenous species.</p>
   </section>
   <section>
-    <a href="https://github.com/hlilje/dgi14-voxels" title="Voxel Renderer"><h2>Voxel Renderer <i class="fa fa-external-link"></i></h2></a>
+    <a href="https://github.com/hlilje/dgi14-voxels" title="Voxel Renderer"><h2>Voxel Renderer</h2></a>
     <a href="/images/voxel-renderer.png" class="fancybox" title="Voxel Renderer">
       <img src="/images/voxel-renderer.png" alt="Voxel Renderer"/>
     </a>
@@ -87,13 +87,13 @@ nav: home
   </header>
   <section>
     <h3>
-      <a href="/content/Adrian_Blanco_CV.pdf" title="English CV"><i class="fa fa-file-pdf-o"></i> Curriculum Vitae</a>
+      <a href="/content/Adrian_Blanco_CV.pdf" title="English CV"><i class="zmdi zmdi-collection-pdf"></i> Curriculum Vitae</a>
     </h3>
 
-    <h3><a href="mailto:adrianblp@gmail.com" title="My mail address"><i class="fa fa-envelope-o"></i> adrianblp@gmail.com</a></h3>
-    <h3><a href="https://github.com/adrianblp" title="My github profile"><i class="fa fa-github-alt"></i> github.com/adrianblp</a></h3>
-    <h3><a href="http://facebook.com/adrianblp" title="My facebook profile"><i class="fa fa-facebook-square"></i> facebook.com/adrianblp</a></h3>
-    <h3><a href="http://linkedin.com/in/adrianblp" title="My linkedin profile"><i class="fa fa-linkedin-square"></i> linkedin.com/in/adrianblp</a></h3>
+    <h3><a href="mailto:adrianblp@gmail.com" title="My mail address"><i class="zmdi zmdi-email"></i> adrianblp@gmail.com</a></h3>
+    <h3><a href="https://github.com/adrianblp" title="My github profile"><i class="zmdi zmdi-github-box"></i> github.com/adrianblp</a></h3>
+    <h3><a href="http://facebook.com/adrianblp" title="My facebook profile"><i class="zmdi zmdi-facebook-box"></i> facebook.com/adrianblp</a></h3>
+    <h3><a href="http://linkedin.com/in/adrianblp" title="My linkedin profile"><i class="zmdi zmdi-linkedin-box"></i> linkedin.com/in/adrianblp</a></h3>
   </section>
 
 </div>
@@ -130,28 +130,4 @@ nav: home
       }
     });
   });
-</script>
-
-<script type="text/javascript">
-  function onScroll(event){
-    var scrollPos = $(document).scrollTop();
-    $('#sidebar a:not(#mobile-nav a)').each(function () {
-        var currLink = $(this);
-        var refElement = $(currLink.attr("href"));
-        if (refElement.selector != "#" && refElement.position().top <= scrollPos + 80 && refElement.position().top + refElement.height() > scrollPos) {
-            $('#categories ul li a').removeClass("active");
-            currLink.addClass("active");
-
-            if(refElement.selector == "#home"){
-              $("#sidebar").removeClass("scrolled");
-
-            } else {
-              $("#sidebar").addClass("scrolled");
-            }
-        }
-        else{
-            currLink.removeClass("active");
-        }
-    });
-}
 </script>
