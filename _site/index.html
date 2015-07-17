@@ -6,6 +6,7 @@
   <title>adrianblan.co</title>
   <link rel="stylesheet" href="/stylesheets/adrianblanco.css">
   <link rel="stylesheet" href="/stylesheets/github.css">
+  <link href='http://fonts.googleapis.com/css?family=Oswald:300,400,500' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500' rel='stylesheet' type='text/css'>
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
@@ -46,10 +47,10 @@
 </div>
     <div id="home" class="header">
   <div id="videowrapper">
-    <video autoplay loop class="coverr">
+    <video autoplay loop class="coverr" poster="/images/typing.jpg">
         <source src="/images/typing.mp4" type="video/mp4" />
         <source src="/images/typing.webm" type="video/webm" />
-        <img src="/images/fallback.jpg" title="Your browser does not support the <video> tag">
+        <img src="/images/fallback3.jpg" title="Your browser does not support the <video> tag">
     </video>
   </div>
   <div class="profile">
@@ -73,11 +74,7 @@
     <p>I have a strong theoretical background in Computer Science, so Java and C/C++ are my weapons of choice for solving problems. Whether it's high level or low level I love getting my hands dirty and making things work, especially if it involves learning new concepts. One of my passions is Human Computer Interaction, which is what I'm specializing in as a track in my degree. I'm always tinkering with something, whether it's coding with HTML/CSS, doing cool things with JavaScript, or just experimenting with Android development.
     </p>
 
-    <!--
-    <p>Other notable (and less notable) relevant skills include: AngularJS, Node.js, OpenGL, Go, MATLAB, SQL, Haskell, Prolog, Python, PHP</p>
-    <h3>Other interests</h3>
     <p>I've always had a passion for music, everything from Blues to Metal. In my free time I play guitar, and hopefully one day I will also learn how to play piano. When I'm feeling energetic I like to go the gym and lift heavy things up and down.</p>
-    -->
   </section>
 </div>
 
@@ -132,13 +129,13 @@
   </header>
   <section>
     <h3>
-      <a href="/content/Adrian_Blanco_CV.pdf" title="English CV">English CV <i class="fa fa-file-pdf-o"></i></a>
+      <a href="/content/Adrian_Blanco_CV.pdf" title="English CV"><i class="fa fa-file-pdf-o"></i> Curriculum Vitae</a>
     </h3>
 
     <h3><a href="mailto:adrianblp@gmail.com" title="My mail address"><i class="fa fa-envelope-o"></i> adrianblp@gmail.com</a></h3>
     <h3><a href="https://github.com/adrianblp" title="My github profile"><i class="fa fa-github-alt"></i> github.com/adrianblp</a></h3>
     <h3><a href="http://facebook.com/adrianblp" title="My facebook profile"><i class="fa fa-facebook-square"></i> facebook.com/adrianblp</a></h3>
-    <h3><a href="https://www.linkedin.com/profile/view?id=139504600" title="My linkedin profile"><i class="fa fa-linkedin-square"></i> linkedin.com</a></h3>
+    <h3><a href="http://linkedin.com/in/adrianblp" title="My linkedin profile"><i class="fa fa-linkedin-square"></i> linkedin.com/in/adrianblp</a></h3>
   </section>
 
 </div>
@@ -151,7 +148,7 @@
   $(document).ready(function() {
     if(Modernizr.touch){
       $("#videowrapper video").hide();
-      $("#videowrapper").css("background", "linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)), url(/images/fallback3.jpg)")
+      $("#videowrapper").css("background", "linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)), url(/images/fallback3.jpg) #111")
       .css("background-position", "center center")
       .css("background-size", "cover")
       .css("min-height", "545px");
