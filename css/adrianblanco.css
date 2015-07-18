@@ -315,29 +315,32 @@ nav ul li a {
 }
 
 .social {
+  position: relative;
+  height: 100px;
+  padding-bottom: 40px !important;
   text-align: center;
 }
 
 .social a {
-  display: inline-block;
-  width: 24%;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  border-radius: 6px;
+  -webkit-transition: color 300ms ease-in-out;
+  transition: color 300ms ease-out;
+
+  background-color: #FFF;
+  -webkit-transition: background-color 300ms ease-in-out;
+  transition: background-color 300ms ease-in-out;
 }
 
-.social i, .social div {
-  -webkit-transition: opacity 300ms ease-out;
-  transition: opacity 300ms ease-out;
-}
-
-.social a:hover {
+.social a:hover, .social a:hover div{
   text-decoration: none;
-}
-
-.social a:hover i {
-  opacity: 0.5;
-}
-
-.social a:hover div {
-  opacity: 0.8;
+  background-color: #E22;
+  color: #FFF;
+  -webkit-transition: color 300ms ease-in-out;
+  transition: color 300ms ease-in-out;
 }
 
 .social i {
@@ -345,7 +348,14 @@ nav ul li a {
 }
 
 .social div {
-  opacity: 0;
-  text-align: center;
+  margin-top: 3px;
   font-weight: 400;
+  font-size: 16px;
+}
+
+/* Small mobile */
+@media only screen and (max-width: 500px){
+  .social div {
+    display: none;
+  }
 }
