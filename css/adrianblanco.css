@@ -308,3 +308,20 @@ nav ul li a {
     text-align: right;
   }
 }
+
+.social {
+  text-align: center;
+}
+
+.social a {
+  display: inline-block;
+  width: 20%;
+  font-size: 50px;
+
+  -webkit-transition: opacity 400ms ease-out;
+  transition: opacity 400ms ease-out;
+}
+
+.social a:hover {
+    opacity: 0.5;
+}
