@@ -191,11 +191,12 @@ section a:hover {
   text-decoration: underline;
 }
 
-.button {
+.btn {
   display: inline-block;
   margin-top: 15px;
-  padding: 18px 27px;
-  font-size: 20px;
+
+  font-family: "Roboto";
+  font-weight: 400;
   line-height: 1.33;
   border-radius: 6px;
   border: solid 3px #E22;
@@ -204,16 +205,21 @@ section a:hover {
   transition: all .3s ease-in-out;
 }
 
-.button {
-  font-family: "Roboto";
-  font-weight: 400;
-}
-
-.button:hover {
+.btn:hover {
   border: solid 3px #E22;
   background: #E22;
   color: #FFF;
   text-decoration: none;
+}
+
+.btn-lg {
+  padding: 18px 27px;
+  font-size: 20px;
+}
+
+.btn-sm {
+  padding: 14px 18px;
+  font-size: 16px;
 }
 
 ul {
@@ -315,13 +321,13 @@ nav ul li a {
 
 .social a {
   display: inline-block;
-  width: 20%;
+  width: 24%;
   font-size: 50px;
 
-  -webkit-transition: opacity 400ms ease-out;
-  transition: opacity 400ms ease-out;
+  -webkit-transition: opacity 300ms ease-out;
+  transition: opacity 300ms ease-out;
 }
 
 .social a:hover {
-    opacity: 0.5;
+    opacity: 0.3;
 }
