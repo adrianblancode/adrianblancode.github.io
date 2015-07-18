@@ -317,7 +317,7 @@ nav ul li a {
 .social {
   position: relative;
   height: 100px;
-  padding-bottom: 40px !important;
+  padding-bottom: 40px;
   text-align: center;
 }
 
@@ -350,10 +350,17 @@ nav ul li a {
   margin-top: 3px;
   font-weight: 400;
   font-size: 16px;
+  color: transparent;
 }
 
 /* Small mobile */
 @media only screen and (max-width: 500px){
+
+  .social {
+    height: 70px;
+    padding-bottom: 0px;
+  }
+
   .social div {
     display: none;
   }
