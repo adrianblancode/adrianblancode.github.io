@@ -259,7 +259,7 @@ nav ul li a {
 
 @media print, screen and (min-width: 2000px) {
   .down-arrow{
-    margin-bottom: 50px;
+    margin-bottom: 40px;
   }
 }
 
@@ -323,8 +323,7 @@ nav ul li a {
 
 .social a {
   position: absolute;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0px 2px;
   padding: 10px;
   border-radius: 6px;
   -webkit-transition: color 300ms ease-in-out;
