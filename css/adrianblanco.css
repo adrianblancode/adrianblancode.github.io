@@ -199,14 +199,13 @@ section a:hover {
   font-weight: 400;
   line-height: 1.33;
   border-radius: 6px;
-  border: solid 3px #E22;
+  border: solid 2px #E22;
   background: transparent;
   text-align: center;
   transition: all .3s ease-in-out;
 }
 
 .btn:hover {
-  border: solid 3px #E22;
   background: #E22;
   color: #FFF;
   text-decoration: none;
