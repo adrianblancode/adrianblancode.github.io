@@ -109,9 +109,9 @@
 
 #sidebar {
   width: 100%;
-  height: 50px;
+  height: 45px;
   position: fixed;
-  top: 0;
+  top: -2;
   left: 0;
   z-index: 100;
 
@@ -119,7 +119,7 @@
   -webkit-transition: background-color 600ms;
   transition: background-color 600ms;
   color: #FFF;
-  font-size: 22px;
+  font-size: 20px;
   letter-spacing: 1.1px;
 }
 
@@ -154,7 +154,7 @@
 }
 
 #logo {
-  width: 38px;
+  width: 35px;
   height: auto;
 }
 
@@ -232,13 +232,13 @@ section img {
 
 nav {
   display: block;
-  float: left;
+  float: right;
 
   text-align: right;
   background: none;
   position: absolute;
-  bottom: 14px;
-  left: 70px;
+  bottom: 13px;
+  right: 0px;
 }
 
 nav ul {
@@ -292,7 +292,7 @@ nav ul li a {
   nav {
     opacity: 0;
     position: relative;
-    height: 118px;
+    height: 110px;
     float: none;
     margin: 0;
     top: inherit;
@@ -349,7 +349,7 @@ nav ul li a {
 .social div {
   margin-top: 3px;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 15px;
   color: transparent;
 }
 
