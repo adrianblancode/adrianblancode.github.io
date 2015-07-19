@@ -113,7 +113,7 @@
   width: 100%;
   height: 45px;
   position: fixed;
-  top: -2;
+  top: 0;
   left: 0;
   z-index: 100;
 
@@ -259,12 +259,6 @@ nav ul li a {
   color: #FFF;
 }
 
-@media print, screen and (min-width: 2000px) {
-  .down-arrow{
-    margin-bottom: 40px;
-  }
-}
-
 @media print, screen and (max-width: 1200px) {
   .profile {
     width: 300px;
@@ -297,7 +291,7 @@ nav ul li a {
     height: 110px;
     float: none;
     margin: 0;
-    top: inherit;
+    top: -2px;
     left: inherit;
     width: 100%;
 
