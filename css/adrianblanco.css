@@ -259,12 +259,6 @@ nav ul li a {
   color: #FFF;
 }
 
-@media print, screen and (min-width: 2000px) {
-  .down-arrow{
-    margin-bottom: 40px;
-  }
-}
-
 @media print, screen and (max-width: 1200px) {
   .profile {
     width: 300px;
