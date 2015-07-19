@@ -75,6 +75,8 @@
   min-height: 540px;
   width: auto;
   height: auto;
+  margin-bottom: -100px;
+
   z-index: -100;
   -webkit-transform: translateX(-50%) translateY(0%);
   transform: translateX(-50%) translateY(0%);
