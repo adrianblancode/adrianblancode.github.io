@@ -1,15 +1,15 @@
 a h1, a h2, a h3, a h4, a h5, a h6 {
-  color: #F33547;
+  color: #F33446;
 }
 
 /* All highlights become red */
 ::selection {
-  background: #F33547;
+  background: #F33446;
   color: #FFF;
 }
 
 ::-moz-selection {
-  background: #F33547;
+  background: #F33446;
   color: #FFF
 }
 
@@ -66,7 +66,7 @@ a h1, a h2, a h3, a h4, a h5, a h6 {
 }
 
 .down-arrow:hover svg path {
-  fill: #F33547;
+  fill: #F33446;
   -webkit-transition: fill 800ms;
   transition: fill 800ms;
 }
@@ -173,7 +173,7 @@ a h1, a h2, a h3, a h4, a h5, a h6 {
 }
 
 #categories ul li a.active {
-  color: #F33547;
+  color: #F33446;
 }
 
 .heading {
@@ -197,7 +197,7 @@ i.zmdi{
 }
 
 i.fa, a, a:hover {
-  color: #F33547;
+  color: #F33446;
 }
 
 section a:hover {
@@ -212,14 +212,14 @@ section a:hover {
   font-weight: 400;
   line-height: 1.33;
   border-radius: 6px;
-  border: solid 2px #F33547;
+  border: solid 2px #F33446;
   background: transparent;
   text-align: center;
   transition: all .3s ease-in-out;
 }
 
 .btn:hover {
-  background: #F33547;
+  background: #F33446;
   color: #FFF;
   text-decoration: none;
 }
@@ -348,7 +348,7 @@ nav ul li a {
 
 .social a:hover, .social a:hover div{
   text-decoration: none;
-  background-color: #F33547;
+  background-color: #F33446;
   color: #FFF;
   -webkit-transition: color 300ms ease-in-out;
   transition: color 300ms ease-in-out;
