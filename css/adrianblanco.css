@@ -1,3 +1,7 @@
+a h1, a h2, a h3, a h4, a h5, a h6 {
+  color: #F33547;
+}
+
 /* All highlights become red */
 ::selection {
   background: #F33547;
