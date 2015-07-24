@@ -196,8 +196,11 @@ body {
 }
 
 a {
-  font-weight: 300;
   text-decoration:none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 a.white {
@@ -368,13 +371,13 @@ nav ul li a {
 }
 
 .social i {
-  font-size: 50px;
+  font-size: 60px;
 }
 
 .social div {
   margin-top: 3px;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 /* Small mobile */
@@ -458,9 +461,9 @@ nav ul li a {
 
 .overlay i {
   position: absolute;
-  left: calc(50% - 20px);
-  top: calc(50% - 30px);
-  font-size: 70px;
+  left: calc(50% - 30px);
+  top: calc(50% - 40px);
+  font-size: 90px;
   color: white;
 }
 
@@ -474,6 +477,10 @@ nav ul li a {
     height: 190px;
     width: 100%;
   }
+}
+
+.portfolio-footer {
+  text-align: center;
 }
 
 #portfolio .overlay-container {

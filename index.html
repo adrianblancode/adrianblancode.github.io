@@ -47,8 +47,8 @@ nav: home
     <h2 class="heading">Portfolio</h2>
   </div>
 
-  <div class="col-1-3" id="materialistModal">
-    <a href="#materialist" class="modal-link ">
+  <div class="col-1-3">
+    <a id="materialistModal" href="#materialist" class="modal-link ">
       <div class="overlay-container">
         <div class="overlay">
           <i class="zmdi zmdi-zoom-in"></i>
@@ -70,7 +70,9 @@ nav: home
   <div class="col-1-3">
     <a id="qwaitModal" href="#qwait" class="modal-link">
       <div class="overlay-container">
-        <div class="overlay"></div>
+        <div class="overlay">
+          <i class="zmdi zmdi-zoom-in"></i>
+        </div>
         <img src="/images/qwait-showcase.jpg" alt="QWait"/>
       </div>
     </a>
@@ -78,28 +80,37 @@ nav: home
   <div class="col-1-3">
     <a id="voxelModal" href="#voxel" class="modal-link">
       <div class="overlay-container">
-        <div class="overlay"></div>
+        <div class="overlay">
+          <i class="zmdi zmdi-zoom-in"></i>
+        </div>
         <img src="/images/voxel-renderer.png" alt="Voxel Renderer"/>
       </div>
     </a>
   </div>
   <div class="col-1-3">
-    <a id="simulated" href="#simulated" class="modal-link">
+    <a id="evolutionModal" href="#evolution" class="modal-link">
       <div class="overlay-container">
-        <div class="overlay"></div>
-        <img src="/images/simulated.png" alt="Simulated Evolution"/>
+        <div class="overlay">
+          <i class="zmdi zmdi-zoom-in"></i>
+        </div>
+        <img src="/images/evolution.png" alt="Simulated Evolution"/>
       </div>
     </a>
   </div>
   <div class="col-1-3">
-    <a id="simulated" href="#simulated" class="modal-link">
+    <a id="mandelbrotModal" href="#mandelbrot" class="modal-link">
       <div class="overlay-container">
-        <div class="overlay"></div>
+        <div class="overlay">
+          <i class="zmdi zmdi-zoom-in"></i>
+        </div>
         <img src="/images/mandelbrot.png" alt="Mandelbrot Generator 2000"/>
       </div>
     </a>
   </div>
 
+  <p class="portfolio-footer">The rest of my projects can be seen at <a href="https://github.com/adrianblp" title="My github profile">github.com/adrianblp</a></p>
+
+  <!-- Modals -->
   <div id="materialist">
     <div class="close-materialist modal-close"> 
         <i class="zmdi zmdi-close"></i>
@@ -112,6 +123,7 @@ nav: home
       </a>
       <p>Materialist is a task list for Android using Material Design, it has been created to provide a simple, minimalist and intuitive experience that's in the way as little as possible.</p>
 
+      <p><a href="https://play.google.com/store/apps/details?id=co.adrianblan.materialist" class="btn btn-sm" title="Materialist on Google Play"><i class="zmdi zmdi-google-play"></i>View on Google Play</a></p>
     </div>
   </div>
 
@@ -133,27 +145,62 @@ nav: home
   </div>
 
 
-  <!--section>
-    <a href="http://qwait.csc.kth.se"><h3>QWait</h3></a>
-    <a href="/images/qwait-showcase.jpg" data-lightbox="/images/qwait-showcase.jpg" data-title="QWait showcase">
-      <img src="/images/qwait-showcase.jpg" alt="QWait showcase"/>
-    </a>
-    <p>QWait is a responsive, web based queueing system which is used for lab sessions at KTH by both students and assistants. Among my responsibilities included frontend development (AngularJS, HTML) and UX design to provide a consistent and intuitive experience for all types of users and devices.</p>
-  </section>
-  <section>
+  <div id="qwait">
+    <div class="close-qwait modal-close"> 
+        <i class="zmdi zmdi-close"></i>
+    </div>
 
-    <a href="https://github.com/hlilje/dgi14-voxels" title="Voxel Renderer"><h3>Voxel Renderer</h3></a>
-    <a href="/images/voxel-renderer.png" data-lightbox="/images/voxel-renderer.jpg" data-title="Voxel Renderer">
-      <img src="/images/voxel-renderer.png" alt="Voxel Renderer"/>
-    </a>
-    <p>For the course Digital Graphics and Interaction at KTH, I and Hampus Liljekvist created a voxel renderer using C++, OpenGL and GLUT. It uses perlin noise to generate natural looking terrain using texturized voxels in a visual style similar to a popular mining and crafting simulator. This landscape can then be altered by adding or removing blocks in various ways.</p>
-  </section>
-  <section>
-    <a href="/content/Adrian_Blanco_Candidate_Thesis.pdf" title="My candidate thesis"><h3>Observing co-evolution in simulated bacteria <i class="zmdi zmdi-file"></i></h3></a>
-    <p>For my candidate thesis I developed a program which through genetic algorithms simulates an environment with artificial bacteria, which over time evolve to better adapt to their environments. The aim of this research was to observe co-evolution into stable ecosystems with heterogenous species.</p>
+    <div class="modal-content grid grid-pad">
+      <a href="http://qwait.csc.kth.se"><h3 class="heading">QWait</h3></a>
+      <a href="/images/qwait-showcase.jpg" data-lightbox="/images/qwait-showcase.jpg" data-title="QWait showcase">
+        <img src="/images/qwait-showcase.jpg" alt="QWait showcase"/>
+      </a>
+      <p>QWait is a responsive, web based queueing system which is used for lab sessions at KTH by both students and assistants. Among my responsibilities included frontend development (AngularJS, HTML) and UX design to provide a consistent and intuitive experience for all types of users and devices.</p>
+    </div>
+  </div>
 
-    <p>The rest of my projects can be seen at <a href="https://github.com/adrianblp" title="My github profile">github.com/adrianblp</a></p>
-  </section-->
+  <div id="voxel">
+    <div class="close-voxel modal-close"> 
+        <i class="zmdi zmdi-close"></i>
+    </div>
+    <div class="modal-content grid grid-pad">
+      <a href="https://github.com/hlilje/dgi14-voxels" title="Voxel Renderer"><h3 class="heading">Voxel Renderer</h3></a>
+      <a href="/images/voxel-renderer.png" data-lightbox="/images/voxel-renderer.jpg" data-title="Voxel Renderer">
+        <img src="/images/voxel-renderer.png" alt="Voxel Renderer"/>
+      </a>
+      <p>For the course Digital Graphics and Interaction at KTH, I and Hampus Liljekvist created a voxel renderer using C++, OpenGL and GLUT. It uses perlin noise to generate natural looking terrain using texturized voxels in a visual style similar to a popular mining and crafting simulator. This landscape can then be altered by adding or removing blocks in various ways.</p>
+    </div>
+  </div>
+
+  <div id="evolution">
+    <div class="close-evolution modal-close"> 
+        <i class="zmdi zmdi-close"></i>
+    </div>
+    <div class="modal-content grid grid-pad">
+      <a href="/content/Adrian_Blanco_Candidate_Thesis.pdf" title="My candidate thesis">
+        <h3 class="heading">Observing co-evolution in simulated bacteria <i class="zmdi zmdi-file"></i></h3>
+      </a>
+      <a href="/images/evolution.png" data-lightbox="/images/evolution.png" data-title="Simulated Evolution">
+        <img src="/images/evolution.png" alt="Simulated Evolution"/>
+      </a>
+      <p>For my candidate thesis I developed a program which through genetic algorithms simulates an environment with artificial bacteria, which over time evolve to better adapt to their environments. The aim of this research was to observe co-evolution into stable ecosystems with heterogenous species.</p>
+    </div>
+  </div>
+
+  <div id="mandelbrot">
+    <div class="close-mandelbrot modal-close"> 
+        <i class="zmdi zmdi-close"></i>
+    </div>
+    <div class="modal-content grid grid-pad">
+      <a href="https://github.com/adrianblp/Mandelbrot-Generator-2000" title="Mandelbrot Generator 2000">
+        <h3 class="heading">Mandelbrot Generator 2000</h3>
+      </a>
+      <a href="/images/mandelbrot.png" data-lightbox="/images/mandelbrot.png" data-title="Mandelbrot Generator 2000">
+        <img src="/images/mandelbrot.png" alt="Mandelbrot Generator 2000"/>
+      </a>
+      <p>This is a mandelbrot generator with GPU acceleration coded in Java, it also has support for several other features such as antialiasing, julia sets, fullscreen and saving pictures. This program was made by Adrian Blanco and Casper Winsnes for our Introduction to Computer Science class in our first year at KTH.</p>
+    </div>
+  </div>
 </div>
 
 <div id="contact" class="grid grid-pad">
