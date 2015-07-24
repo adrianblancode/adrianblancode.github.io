@@ -4,7 +4,7 @@ title: adrianblan.co
 nav: home
 ---
 <div id="home" class="header">
-  <div id="videogrid grid-pad">
+  <div id="video-container">
     <video autoplay loop class="coverr" poster="/images/typing.jpg">
         <source src="/images/typing.mp4" type="video/mp4" />
         <source src="/images/typing.webm" type="video/webm" />
@@ -26,6 +26,7 @@ nav: home
 </div>
 
 <div id="introduction" class="grid grid-pad">
+  <div class="col-1-1">
     <h2 class="heading">Introduction</h2>
     <p>My name is Adrian Blanco, I'm 23 years old and currently studying my fifth and final year towards my masters degree in Computer Science at the Royal Institute of Technology (KTH) in Stockholm, Sweden. What do I do? I code. I started my programming journey in high school with a calculator, and since that day I knew my true calling.</p>
 
@@ -39,6 +40,7 @@ nav: home
         <i class="zmdi zmdi-file"></i> View Resumé
       </a>
     </div>
+  </div>
 </div>
 
 <div id="portfolio" class="grid grid-pad">
@@ -51,6 +53,7 @@ nav: home
     <a id="materialistModal" href="#materialist" class="modal-link ">
       <div class="overlay-container">
         <div class="overlay">
+          <div class="overlay-title">Materialist</div>
           <i class="zmdi zmdi-zoom-in"></i>
         </div>
         <img src="/images/materialist.png" alt="Materialist"/>
@@ -61,6 +64,7 @@ nav: home
     <a id="noraokeModal" href="#noraoke" class="modal-link">
       <div class="overlay-container">
         <div class="overlay">
+          <div class="overlay-title">Noraoke</div>
           <i class="zmdi zmdi-zoom-in"></i>
         </div>
         <img src="/images/noraoke.jpg" alt="Noraoke"/>
@@ -71,6 +75,7 @@ nav: home
     <a id="qwaitModal" href="#qwait" class="modal-link">
       <div class="overlay-container">
         <div class="overlay">
+          <div class="overlay-title">QWait</div>
           <i class="zmdi zmdi-zoom-in"></i>
         </div>
         <img src="/images/qwait-showcase.jpg" alt="QWait"/>
@@ -81,6 +86,7 @@ nav: home
     <a id="voxelModal" href="#voxel" class="modal-link">
       <div class="overlay-container">
         <div class="overlay">
+          <div class="overlay-title">Voxel Renderer</div>
           <i class="zmdi zmdi-zoom-in"></i>
         </div>
         <img src="/images/voxel-renderer.png" alt="Voxel Renderer"/>
@@ -91,6 +97,7 @@ nav: home
     <a id="evolutionModal" href="#evolution" class="modal-link">
       <div class="overlay-container">
         <div class="overlay">
+          <div class="overlay-title">Simulated Evolution</div>
           <i class="zmdi zmdi-zoom-in"></i>
         </div>
         <img src="/images/evolution.png" alt="Simulated Evolution"/>
@@ -101,6 +108,7 @@ nav: home
     <a id="mandelbrotModal" href="#mandelbrot" class="modal-link">
       <div class="overlay-container">
         <div class="overlay">
+          <div class="overlay-title">Mandelbrot Generator 2000</div>
           <i class="zmdi zmdi-zoom-in"></i>
         </div>
         <img src="/images/mandelbrot.png" alt="Mandelbrot Generator 2000"/>
@@ -117,13 +125,15 @@ nav: home
     </div>
         
     <div class="modal-content grid grid-pad">
-      <a href="https://play.google.com/store/apps/details?id=co.adrianblan.materialist"><h3 class="heading">Materialist</h3></a>
-      <a href="/images/materialist.png" data-lightbox="/images/materialist.png" data-title="Materialist showcase">
-        <img src="/images/materialist.png" alt="Materialist showcase"/>
-      </a>
-      <p>Materialist is a task list for Android using Material Design, it has been created to provide a simple, minimalist and intuitive experience that's in the way as little as possible.</p>
+      <div class="col-1-1">
+        <a href="https://play.google.com/store/apps/details?id=co.adrianblan.materialist"><h3 class="heading">Materialist</h3></a>
+        <a href="/images/materialist.png" data-lightbox="/images/materialist.png" data-title="Materialist showcase">
+          <img src="/images/materialist.png" alt="Materialist showcase"/>
+        </a>
+        <p>Materialist is a task list for Android using Material Design, it has been created to provide a simple, minimalist and intuitive experience that's in the way as little as possible.</p>
 
-      <p><a href="https://play.google.com/store/apps/details?id=co.adrianblan.materialist" class="btn btn-sm" title="Materialist on Google Play"><i class="zmdi zmdi-google-play"></i>View on Google Play</a></p>
+        <p><a href="https://play.google.com/store/apps/details?id=co.adrianblan.materialist" class="btn btn-sm" title="Materialist on Google Play"><i class="zmdi zmdi-google-play"></i>View on Google Play</a></p>
+      </div>
     </div>
   </div>
 
@@ -134,13 +144,15 @@ nav: home
     </div>
         
     <div class="modal-content grid grid-pad">
-      <a href="https://github.com/adrianblp/Noraoke"><h3 class="heading">Noraoke</h3></a>
-      <a href="/images/noraoke.jpg" data-lightbox="/images/noraoke.jpg" data-title="Noraoke showcase">
-        <img src="/images/noraoke.jpg" alt="Noraoke showcase"/>
-      </a>
-      <p>Noraoke is an Android karaoke app prototype combining experiences and interactions of western karaoke and korean norebang. It explores the concept of having groups interacting through a shared playlist, with audio synchronizing across all devices through websockets for a more social karaoke experience.</p>
+      <div class="col-1-1">
+        <a href="https://github.com/adrianblp/Noraoke"><h3 class="heading">Noraoke</h3></a>
+        <a href="/images/noraoke.jpg" data-lightbox="/images/noraoke.jpg" data-title="Noraoke showcase">
+          <img src="/images/noraoke.jpg" alt="Noraoke showcase"/>
+        </a>
+        <p>Noraoke is an Android karaoke app prototype combining experiences and interactions of western karaoke and korean norebang. It explores the concept of having groups interacting through a shared playlist, with audio synchronizing across all devices through websockets for a more social karaoke experience.</p>
 
-      <p><a href="/content/Noraoke.apk" class="btn btn-sm" title="Download Noraoke"><i class="zmdi zmdi-download"></i>Download .apk</a></p>
+        <p><a href="/content/Noraoke.apk" class="btn btn-sm" title="Download Noraoke"><i class="zmdi zmdi-download"></i>Download .apk</a></p>
+      </div>
     </div>
   </div>
 
@@ -151,11 +163,13 @@ nav: home
     </div>
 
     <div class="modal-content grid grid-pad">
-      <a href="http://qwait.csc.kth.se"><h3 class="heading">QWait</h3></a>
-      <a href="/images/qwait-showcase.jpg" data-lightbox="/images/qwait-showcase.jpg" data-title="QWait showcase">
-        <img src="/images/qwait-showcase.jpg" alt="QWait showcase"/>
-      </a>
-      <p>QWait is a responsive, web based queueing system which is used for lab sessions at KTH by both students and assistants. Among my responsibilities included frontend development (AngularJS, HTML) and UX design to provide a consistent and intuitive experience for all types of users and devices.</p>
+      <div class="col-1-1">
+        <a href="http://qwait.csc.kth.se"><h3 class="heading">QWait</h3></a>
+        <a href="/images/qwait-showcase.jpg" data-lightbox="/images/qwait-showcase.jpg" data-title="QWait showcase">
+          <img src="/images/qwait-showcase.jpg" alt="QWait showcase"/>
+        </a>
+        <p>QWait is a responsive, web based queueing system which is used for lab sessions at KTH by both students and assistants. Among my responsibilities included frontend development (AngularJS, HTML) and UX design to provide a consistent and intuitive experience for all types of users and devices.</p>
+      </div>
     </div>
   </div>
 
@@ -164,11 +178,13 @@ nav: home
         <i class="zmdi zmdi-close"></i>
     </div>
     <div class="modal-content grid grid-pad">
-      <a href="https://github.com/hlilje/dgi14-voxels" title="Voxel Renderer"><h3 class="heading">Voxel Renderer</h3></a>
-      <a href="/images/voxel-renderer.png" data-lightbox="/images/voxel-renderer.jpg" data-title="Voxel Renderer">
-        <img src="/images/voxel-renderer.png" alt="Voxel Renderer"/>
-      </a>
-      <p>For the course Digital Graphics and Interaction at KTH, I and Hampus Liljekvist created a voxel renderer using C++, OpenGL and GLUT. It uses perlin noise to generate natural looking terrain using texturized voxels in a visual style similar to a popular mining and crafting simulator. This landscape can then be altered by adding or removing blocks in various ways.</p>
+      <div class="col-1-1">
+        <a href="https://github.com/hlilje/dgi14-voxels" title="Voxel Renderer"><h3 class="heading">Voxel Renderer</h3></a>
+        <a href="/images/voxel-renderer.png" data-lightbox="/images/voxel-renderer.jpg" data-title="Voxel Renderer">
+          <img src="/images/voxel-renderer.png" alt="Voxel Renderer"/>
+        </a>
+        <p>For the course Digital Graphics and Interaction at KTH, I and Hampus Liljekvist created a voxel renderer using C++, OpenGL and GLUT. It uses perlin noise to generate natural looking terrain using texturized voxels in a visual style similar to a popular mining and crafting simulator. This landscape can then be altered by adding or removing blocks in various ways.</p>
+      </div>
     </div>
   </div>
 
@@ -177,13 +193,15 @@ nav: home
         <i class="zmdi zmdi-close"></i>
     </div>
     <div class="modal-content grid grid-pad">
-      <a href="/content/Adrian_Blanco_Candidate_Thesis.pdf" title="My candidate thesis">
-        <h3 class="heading">Observing co-evolution in simulated bacteria <i class="zmdi zmdi-file"></i></h3>
-      </a>
-      <a href="/images/evolution.png" data-lightbox="/images/evolution.png" data-title="Simulated Evolution">
-        <img src="/images/evolution.png" alt="Simulated Evolution"/>
-      </a>
-      <p>For my candidate thesis I developed a program which through genetic algorithms simulates an environment with artificial bacteria, which over time evolve to better adapt to their environments. The aim of this research was to observe co-evolution into stable ecosystems with heterogenous species.</p>
+      <div class="col-1-1">
+        <a href="/content/Adrian_Blanco_Candidate_Thesis.pdf" title="My candidate thesis">
+          <h3 class="heading">Observing co-evolution in simulated bacteria <i class="zmdi zmdi-file"></i></h3>
+        </a>
+        <a href="/images/evolution.png" data-lightbox="/images/evolution.png" data-title="Simulated Evolution">
+          <img src="/images/evolution.png" alt="Simulated Evolution"/>
+        </a>
+        <p>For my candidate thesis I developed a program which through genetic algorithms simulates an environment with artificial bacteria, which over time evolve to better adapt to their environments. The aim of this research was to observe co-evolution into stable ecosystems with heterogenous species.</p>
+      </div>
     </div>
   </div>
 
@@ -192,35 +210,39 @@ nav: home
         <i class="zmdi zmdi-close"></i>
     </div>
     <div class="modal-content grid grid-pad">
-      <a href="https://github.com/adrianblp/Mandelbrot-Generator-2000" title="Mandelbrot Generator 2000">
-        <h3 class="heading">Mandelbrot Generator 2000</h3>
-      </a>
-      <a href="/images/mandelbrot.png" data-lightbox="/images/mandelbrot.png" data-title="Mandelbrot Generator 2000">
-        <img src="/images/mandelbrot.png" alt="Mandelbrot Generator 2000"/>
-      </a>
-      <p>This is a mandelbrot generator with GPU acceleration coded in Java, it also has support for several other features such as antialiasing, julia sets, fullscreen and saving pictures. This program was made by Adrian Blanco and Casper Winsnes for our Introduction to Computer Science class in our first year at KTH.</p>
+      <div class="col-1-1">
+        <a href="https://github.com/adrianblp/Mandelbrot-Generator-2000" title="Mandelbrot Generator 2000">
+          <h3 class="heading">Mandelbrot Generator 2000</h3>
+        </a>
+        <a href="/images/mandelbrot.png" data-lightbox="/images/mandelbrot.png" data-title="Mandelbrot Generator 2000">
+          <img src="/images/mandelbrot.png" alt="Mandelbrot Generator 2000"/>
+        </a>
+        <p>This is a mandelbrot generator with GPU acceleration coded in Java, it also has support for several other features such as antialiasing, julia sets, fullscreen and saving pictures. This program was made by Adrian Blanco and Casper Winsnes for our Introduction to Computer Science class in our first year at KTH.</p>
+      </div>
     </div>
   </div>
 </div>
 
 <div id="contact" class="grid grid-pad">
-  <h2 class="heading">Contact</h2>
-  <div class="social">
-  <a href="mailto:adrianblp@gmail.com" title="adrianblp@gmail.com" style="left: 0%; right: 75%">
-    <i class="zmdi zmdi-email"></i>
-    <div class="social-text">adrianblp<wbr>@gmail.com</div>
-  </a>
-  <a href="https://github.com/adrianblp" title="github.com/adrianblp" style="left: 25%; right: 50%">
-    <i class="zmdi zmdi-github-box"></i>
-    <div class="social-text">github.com<wbr>/adrianblp</div>
-  </a>
-  <a href="http://facebook.com/adrianblp" title="facebook.com/adrianblp" style="left: 50%; right: 25%">
-    <i class="zmdi zmdi-facebook-box"></i>
-    <div class="social-text">facebook.com<wbr>/adrianblp</div>
-  </a>
-  <a href="http://linkedin.com/in/adrianblp" title="linkedin.com/in/adrianblp" style="left: 75%; right: 0%">
-    <i class="zmdi zmdi-linkedin-box"></i>
-    <div class="social-text">linkedin.com<wbr>/in/adrianblp</div>
-  </a>
+  <div class="col-1-1">
+    <h2 class="heading">Contact</h2>
+    <div class="social">
+    <a href="mailto:adrianblp@gmail.com" title="adrianblp@gmail.com" style="left: 0%; right: 75%">
+      <i class="zmdi zmdi-email"></i>
+      <div class="social-text">adrianblp<wbr>@gmail.com</div>
+    </a>
+    <a href="https://github.com/adrianblp" title="github.com/adrianblp" style="left: 25%; right: 50%">
+      <i class="zmdi zmdi-github-box"></i>
+      <div class="social-text">github.com<wbr>/adrianblp</div>
+    </a>
+    <a href="http://facebook.com/adrianblp" title="facebook.com/adrianblp" style="left: 50%; right: 25%">
+      <i class="zmdi zmdi-facebook-box"></i>
+      <div class="social-text">facebook.com<wbr>/adrianblp</div>
+    </a>
+    <a href="http://linkedin.com/in/adrianblp" title="linkedin.com/in/adrianblp" style="left: 75%; right: 0%">
+      <i class="zmdi zmdi-linkedin-box"></i>
+      <div class="social-text">linkedin.com<wbr>/in/adrianblp</div>
+    </a>
+  </div>
 <div>
 

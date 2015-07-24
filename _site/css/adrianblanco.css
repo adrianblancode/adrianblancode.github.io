@@ -1,5 +1,6 @@
 body {
-  font: 20px "Roboto", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+  font-size: 20px;
+  font-family: "Roboto", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
   color: #334;
   line-height: 1.4;
   margin: 0px;
@@ -207,7 +208,7 @@ a.white {
   color: #FFF;
 }
 
-i.zmdi{
+.btn i.zmdi{
   margin-right: 3px;
 }
 
@@ -338,7 +339,7 @@ nav ul li a {
   }
 
   .heading {
-    font-size: 40px;
+    font-size: 38px;
   }
 }
 
@@ -352,7 +353,7 @@ nav ul li a {
 .social a {
   position: absolute;
   margin: 0px 2px;
-  padding: 10px;
+  padding: 8px;
   border-radius: 6px;
   -webkit-transition: color 300ms ease-in-out;
   transition: color 300ms ease-out;
@@ -406,7 +407,8 @@ nav ul li a {
 .modal-close i {
   position: absolute;
   top: 5px;
-  right: 25px;
+  right: 0px;
+  padding: 0 15px;
   -webkit-transition: transform 300ms ease-in-out;
   transition: transform 300ms ease-in-out;
 }
@@ -416,7 +418,7 @@ nav ul li a {
 }
 
 .modal-close i {
-  font-size: 80px;
+  font-size: 70px;
   color: #F33446;
   cursor: pointer;
 }
@@ -430,7 +432,7 @@ nav ul li a {
 }
 
 .modal-content.grid-pad {
-  padding-top: 100px;
+  padding-top: 70px;
 }
 
 .modal-content .btn i {
@@ -456,7 +458,7 @@ nav ul li a {
 }
 
 .overlay:hover {
-  opacity: 0.85;
+  opacity: 0.9;
 }
 
 .overlay i {
@@ -464,6 +466,14 @@ nav ul li a {
   left: calc(50% - 30px);
   top: calc(50% - 40px);
   font-size: 90px;
+  color: white;
+}
+
+.overlay-title {
+  position: absolute;
+  left: 10px;
+  bottom: 20px;
+  z-index: 20;
   color: white;
 }
 
