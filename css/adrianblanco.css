@@ -1,12 +1,12 @@
 body {
-  font: 17px/1.5 "Roboto", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
-  color: #666;
-  font-weight: 300;
+  font: 20px "Roboto", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+  color: #334;
+  line-height: 1.4;
   margin: 0px;
 }
 
-a h1, a h2, a h3, a h4, a h5, a h6 {
-  color: #F33446;
+.grid {
+  max-width: 900px !important;
 }
 
 /* All highlights become red */
@@ -95,16 +95,21 @@ a h1, a h2, a h3, a h4, a h5, a h6 {
 
 .profile {
   position: absolute;
-  width: 400px;
+  width: 500px;
   top: calc(50% - 200px);
-  left: calc(50% - 200px);
+  left: calc(50% - 250px);
   text-align: center;
 }
 
 .profile h1 {
-  font-size: 35px;
+  font-size: 60px;
   font-weight: 400;
   color: white;
+}
+
+.profile .subheading {
+  font-size: 35px;
+  color: #FFF;
 }
 
 .circular {
@@ -187,7 +192,7 @@ a h1, a h2, a h3, a h4, a h5, a h6 {
   margin-top: 30px;
   text-align: center;
   text-transform: uppercase;
-  font-size: 30px;
+  font-size: 45px;
 }
 
 a {
@@ -205,10 +210,6 @@ i.zmdi{
 
 i.fa, a, a:hover {
   color: #F33446;
-}
-
-section a:hover {
-  text-decoration: underline;
 }
 
 .btn {
@@ -246,10 +247,6 @@ ul {
   text-decoration: none;
 }
 
-section img {
-  margin-bottom: 0.5em;
-}
-
 nav {
   display: block;
   float: right;
@@ -284,13 +281,17 @@ nav ul li a {
   }
 
   .profile {
-    width: 300px;
-    top: calc(50% - 150px);
-    left: calc(50% - 150px);
+    width: 400px;
+    top: calc(50% - 170px);
+    left: calc(50% - 200px);
   }
 
   .profile h1 {
-    font-size: 28px;
+    font-size: 40px;
+  }
+
+  .profile .subheading {
+    font-size: 25px;
   }
 
   .circular {
@@ -304,6 +305,7 @@ nav ul li a {
 
 /* Mobile */
 @media only screen and (max-width: 767px){
+
   #mobile-nav {
     display: block;
   }
@@ -330,6 +332,10 @@ nav ul li a {
     float: none;
     margin-bottom: 20px;
     text-align: right;
+  }
+
+  .heading {
+    font-size: 40px;
   }
 }
 
@@ -382,4 +388,102 @@ nav ul li a {
   .social div {
     display: none;
   }
+}
+
+
+/* Modals */
+#portfolio > h2{
+  color: #FFF;
+}
+
+.modal-link > h2 {
+  color: #FFF;
+}
+
+.modal-close i {
+  position: absolute;
+  top: 5px;
+  right: 25px;
+  -webkit-transition: transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out;
+}
+
+.modal-close:hover i {
+  transform: rotate(90deg);
+}
+
+.modal-close i {
+  font-size: 80px;
+  color: #F33446;
+  cursor: pointer;
+}
+
+.modal-content img {
+  margin-bottom: 30px;
+}
+
+.modal-content h3:hover {
+  text-decoration: underline;
+}
+
+.modal-content.grid-pad {
+  padding-top: 100px;
+}
+
+.modal-content .btn i {
+  margin-right: 5px;
+}
+
+.overlay-container {
+  position: relative;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #F33446;
+  z-index: 2;
+
+  opacity:  0;
+  -webkit-transition: opacity 300ms ease-in-out;
+  transition: opacity 300ms ease-in-out;
+}
+
+.overlay:hover {
+  opacity: 0.85;
+}
+
+.overlay i {
+  position: absolute;
+  left: calc(50% - 20px);
+  top: calc(50% - 30px);
+  font-size: 70px;
+  color: white;
+}
+
+@media only screen and (min-width: 767px){
+
+  .modal-link {
+    margin-bottom: 15px;
+  }
+
+  .modal-link img {
+    height: 190px;
+    width: 100%;
+  }
+}
+
+#portfolio .overlay-container {
+  line-height: 0;
+}
+
+#portfolio.grid {
+  max-width: 1100px !important;
+}
+
+#introduction, #portfolio, #contact {
+  padding-bottom: 40px;
 }

@@ -6,9 +6,11 @@
   <title>404 | adrianblan.co</title>
   <link rel="stylesheet" href="/css/adrianblanco.css">
   <link rel="stylesheet" href="/css/github.css">
+  <link rel="stylesheet" href="/css/simplegrid.css">
   <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.1.1/css/material-design-iconic-font.min.css">
-  <link rel="stylesheet" href="/css/lightbox.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="/css/lightbox.css" type="text/css" media="screen"/>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
   <meta name="theme-color" content="#F44336"> 
   <!--[if lt IE 9]>
@@ -57,6 +59,7 @@
 <script src="/js/modernizr.js"></script>
 <script src="/js/scripts.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.0/jquery.scrollTo.min.js"></script>
+<script src="/js/animatedModal.min.js"></script>
 
 <script type="text/javascript">
   // Used to make sure that if the user is on mobile,
@@ -84,4 +87,21 @@
     })
 </script>
 
+<script>
+  var col = "#FFF";
+  //col = "#F33446";
+
+  $("#materialistModal").animatedModal({
+    modalTarget: 'materialist',
+    color: col,
+    animationDuration: "0.4s"
+  });
+
+  $("#noraokeModal").animatedModal({
+    modalTarget: 'noraoke',
+    color: col,
+    animationDuration: "0.4s"
+  });
+
+</script>
 </html>

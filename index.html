@@ -4,7 +4,7 @@ title: adrianblan.co
 nav: home
 ---
 <div id="home" class="header">
-  <div id="videowrapper">
+  <div id="videogrid grid-pad">
     <video autoplay loop class="coverr" poster="/images/typing.jpg">
         <source src="/images/typing.mp4" type="video/mp4" />
         <source src="/images/typing.webm" type="video/webm" />
@@ -13,7 +13,8 @@ nav: home
   </div>
   <div class="profile">
     <img class="circular" src="/images/me.jpg" alt="Profile image"/>
-    <h1>Adrian Blanco,<br>Software Developer</h1>
+    <h1>Adrian Blanco</h1>
+    <span class="subheading">Software Developer</span>
   </div>
   <div class="down-arrow" onclick="$(window).scrollTo($('#introduction'), 400, {offset: -50});">
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="43px" height="33px" viewBox="0 0 43 33" enable-background="new 0 0 43 33" xml:space="preserve">
@@ -24,48 +25,116 @@ nav: home
   </div>
 </div>
 
-<div id="introduction" class="wrapper">
-  <section>
+<div id="introduction" class="grid grid-pad">
     <h2 class="heading">Introduction</h2>
     <p>My name is Adrian Blanco, I'm 23 years old and currently studying my fifth and final year towards my masters degree in Computer Science at the Royal Institute of Technology (KTH) in Stockholm, Sweden. What do I do? I code. I started my programming journey in high school with a calculator, and since that day I knew my true calling.</p>
 
     <p>I have a strong theoretical background in Computer Science, so Java and C/C++ are my weapons of choice for solving problems. Whether it's high level or low level I love getting my hands dirty and making things work, especially if it involves learning new concepts. One of my passions is Human Computer Interaction, which is what I'm specializing in as a track in my degree. I'm always tinkering with something, whether it's coding with HTML/CSS, doing cool things with JavaScript, or just experimenting with Android development.
     </p>
 
-    <p>I've always had a passion for music, everything from Blues to Metal. In my free time I play guitar, and hopefully one day I will also learn how to play piano. When I'm feeling energetic I like to go the gym and lift heavy things up and down.</p>
+    <!--p>I've always had a passion for music, everything from Blues to Metal. In my free time I play guitar, and hopefully one day I will also learn how to play piano. When I'm feeling energetic I like to go the gym and lift heavy things up and down.</p-->
 
     <div style="text-align: center">
       <a href="/content/Adrian_Blanco_CV.pdf" class="btn btn-lg" title="View Resumé">
         <i class="zmdi zmdi-file"></i> View Resumé
       </a>
     </div>
-
-  </section>
 </div>
 
-<div id="portfolio" class="wrapper">
-  <header>
-    <h2 class="heading">Portfolio</h2>
-  </header>
-  <section>
-    <a href="https://play.google.com/store/apps/details?id=co.adrianblan.materialist"><h2>Materialist</h2></a>
-    <a href="/images/materialist.png" data-lightbox="/images/materialist.png" data-title="Materialist showcase">
-      <img src="/images/materialist.png" alt="Materialist showcase"/>
-    </a>
-    <p>Materialist is a task list for Android using Material Design, it has been created to provide a simple, minimalist and intuitive experience that's in the way as little as possible.</p>
-    <a href="https://play.google.com/store/apps/details?id=co.adrianblan.materialist"><img src="http://developer.android.com/images/brand/en_generic_rgb_wo_45.png"/></a>
-  </section>
-  <section>
-    <a href="https://github.com/adrianblp/Noraoke"><h2>Noraoke</h2></a>
-    <a href="/images/noraoke.jpg" data-lightbox="/images/noraoke.jpg" data-title="Noraoke showcase">
-      <img src="/images/noraoke.jpg" alt="Noraoke showcase"/>
-    </a>
-    <p>Noraoke is an Android karaoke app prototype combining experiences and interactions of western karaoke and korean norebang. It explores the concept of having groups interacting through a shared playlist, with audio synchronizing across all devices through websockets for a more social karaoke experience.</p>
+<div id="portfolio" class="grid grid-pad">
 
-    <p><a href="/content/Noraoke.apk" class="btn btn-sm" title="Download Noraoke"><i class="zmdi zmdi-download"></i> Download Noraoke</a></p>
-  </section>
-  <section>
-    <a href="http://qwait.csc.kth.se"><h2>QWait</h2></a>
+  <div class="col-1-1">
+    <h2 class="heading">Portfolio</h2>
+  </div>
+
+  <div class="col-1-3" id="materialistModal">
+    <a href="#materialist" class="modal-link ">
+      <div class="overlay-container">
+        <div class="overlay">
+          <i class="zmdi zmdi-zoom-in"></i>
+        </div>
+        <img src="/images/materialist.png" alt="Materialist"/>
+      </div>
+    </a>
+  </div>
+  <div class="col-1-3">
+    <a id="noraokeModal" href="#noraoke" class="modal-link">
+      <div class="overlay-container">
+        <div class="overlay">
+          <i class="zmdi zmdi-zoom-in"></i>
+        </div>
+        <img src="/images/noraoke.jpg" alt="Noraoke"/>
+      </div>
+    </a>
+  </div>
+  <div class="col-1-3">
+    <a id="qwaitModal" href="#qwait" class="modal-link">
+      <div class="overlay-container">
+        <div class="overlay"></div>
+        <img src="/images/qwait-showcase.jpg" alt="QWait"/>
+      </div>
+    </a>
+  </div>
+  <div class="col-1-3">
+    <a id="voxelModal" href="#voxel" class="modal-link">
+      <div class="overlay-container">
+        <div class="overlay"></div>
+        <img src="/images/voxel-renderer.png" alt="Voxel Renderer"/>
+      </div>
+    </a>
+  </div>
+  <div class="col-1-3">
+    <a id="simulated" href="#simulated" class="modal-link">
+      <div class="overlay-container">
+        <div class="overlay"></div>
+        <img src="/images/simulated.png" alt="Simulated Evolution"/>
+      </div>
+    </a>
+  </div>
+  <div class="col-1-3">
+    <a id="simulated" href="#simulated" class="modal-link">
+      <div class="overlay-container">
+        <div class="overlay"></div>
+        <img src="/images/mandelbrot.png" alt="Mandelbrot Generator 2000"/>
+      </div>
+    </a>
+  </div>
+
+  <div id="materialist">
+    <div class="close-materialist modal-close"> 
+        <i class="zmdi zmdi-close"></i>
+    </div>
+        
+    <div class="modal-content grid grid-pad">
+      <a href="https://play.google.com/store/apps/details?id=co.adrianblan.materialist"><h3 class="heading">Materialist</h3></a>
+      <a href="/images/materialist.png" data-lightbox="/images/materialist.png" data-title="Materialist showcase">
+        <img src="/images/materialist.png" alt="Materialist showcase"/>
+      </a>
+      <p>Materialist is a task list for Android using Material Design, it has been created to provide a simple, minimalist and intuitive experience that's in the way as little as possible.</p>
+
+    </div>
+  </div>
+
+  
+  <div id="noraoke">
+    <div class="close-noraoke modal-close"> 
+        <i class="zmdi zmdi-close"></i>
+    </div>
+        
+    <div class="modal-content grid grid-pad">
+      <a href="https://github.com/adrianblp/Noraoke"><h3 class="heading">Noraoke</h3></a>
+      <a href="/images/noraoke.jpg" data-lightbox="/images/noraoke.jpg" data-title="Noraoke showcase">
+        <img src="/images/noraoke.jpg" alt="Noraoke showcase"/>
+      </a>
+      <p>Noraoke is an Android karaoke app prototype combining experiences and interactions of western karaoke and korean norebang. It explores the concept of having groups interacting through a shared playlist, with audio synchronizing across all devices through websockets for a more social karaoke experience.</p>
+
+      <p><a href="/content/Noraoke.apk" class="btn btn-sm" title="Download Noraoke"><i class="zmdi zmdi-download"></i>Download .apk</a></p>
+    </div>
+  </div>
+
+
+  <!--section>
+    <a href="http://qwait.csc.kth.se"><h3>QWait</h3></a>
     <a href="/images/qwait-showcase.jpg" data-lightbox="/images/qwait-showcase.jpg" data-title="QWait showcase">
       <img src="/images/qwait-showcase.jpg" alt="QWait showcase"/>
     </a>
@@ -73,21 +142,21 @@ nav: home
   </section>
   <section>
 
-    <a href="https://github.com/hlilje/dgi14-voxels" title="Voxel Renderer"><h2>Voxel Renderer</h2></a>
+    <a href="https://github.com/hlilje/dgi14-voxels" title="Voxel Renderer"><h3>Voxel Renderer</h3></a>
     <a href="/images/voxel-renderer.png" data-lightbox="/images/voxel-renderer.jpg" data-title="Voxel Renderer">
       <img src="/images/voxel-renderer.png" alt="Voxel Renderer"/>
     </a>
     <p>For the course Digital Graphics and Interaction at KTH, I and Hampus Liljekvist created a voxel renderer using C++, OpenGL and GLUT. It uses perlin noise to generate natural looking terrain using texturized voxels in a visual style similar to a popular mining and crafting simulator. This landscape can then be altered by adding or removing blocks in various ways.</p>
   </section>
   <section>
-    <a href="/content/Adrian_Blanco_Candidate_Thesis.pdf" title="My candidate thesis"><h2>Observing co-evolution in simulated bacteria <i class="zmdi zmdi-file"></i></h2></a>
+    <a href="/content/Adrian_Blanco_Candidate_Thesis.pdf" title="My candidate thesis"><h3>Observing co-evolution in simulated bacteria <i class="zmdi zmdi-file"></i></h3></a>
     <p>For my candidate thesis I developed a program which through genetic algorithms simulates an environment with artificial bacteria, which over time evolve to better adapt to their environments. The aim of this research was to observe co-evolution into stable ecosystems with heterogenous species.</p>
 
     <p>The rest of my projects can be seen at <a href="https://github.com/adrianblp" title="My github profile">github.com/adrianblp</a></p>
-  </section>
+  </section-->
 </div>
 
-<div id="contact" class="wrapper">
+<div id="contact" class="grid grid-pad">
   <h2 class="heading">Contact</h2>
   <div class="social">
   <a href="mailto:adrianblp@gmail.com" title="adrianblp@gmail.com" style="left: 0%; right: 75%">
@@ -107,4 +176,4 @@ nav: home
     <div class="social-text">linkedin.com<wbr>/in/adrianblp</div>
   </a>
 <div>
-</div>
+

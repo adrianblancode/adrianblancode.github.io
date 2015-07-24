@@ -4,6 +4,7 @@
 <script src="/js/modernizr.js"></script>
 <script src="/js/scripts.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.0/jquery.scrollTo.min.js"></script>
+<script src="/js/animatedModal.min.js"></script>
 
 <script type="text/javascript">
   // Used to make sure that if the user is on mobile,
@@ -29,4 +30,22 @@
     lightbox.option({
       'resizeDuration': 0,
     })
+</script>
+
+<script>
+  var col = "#FFF";
+  //col = "#F33446";
+
+  $("#materialistModal").animatedModal({
+    modalTarget: 'materialist',
+    color: col,
+    animationDuration: "0.4s"
+  });
+
+  $("#noraokeModal").animatedModal({
+    modalTarget: 'noraoke',
+    color: col,
+    animationDuration: "0.4s"
+  });
+
 </script>
