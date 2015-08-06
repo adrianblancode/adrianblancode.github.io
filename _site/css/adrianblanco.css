@@ -458,7 +458,7 @@ nav ul li a {
 }
 
 .overlay:hover {
-  opacity: 0.9;
+  opacity: 0.8;
 }
 
 .overlay i {
@@ -466,14 +466,6 @@ nav ul li a {
   left: calc(50% - 30px);
   top: calc(50% - 40px);
   font-size: 90px;
-  color: white;
-}
-
-.overlay-title {
-  position: absolute;
-  left: 10px;
-  bottom: 20px;
-  z-index: 20;
   color: white;
 }
 
