@@ -73,7 +73,6 @@
 </div>
   </body>
   <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script type="text/javascript" src="/js/lightbox.js"></script>
 <script src="/js/scale.fix.js"></script>
 <script src="/js/modernizr.js"></script>
 <script src="/js/scripts.js"></script>
@@ -101,48 +100,54 @@
 </script>
 
 <script>
-    lightbox.option({
-      'resizeDuration': 0,
-    })
-</script>
-
-<script>
   var col = "#FFF";
   //col = "#F33446";
 
   $("#cheddarModal").animatedModal({
     modalTarget: 'cheddar',
     color: col,
+    animatedIn: "fadeIn",
+    animatedOut: "fadeOut",
     animationDuration: "0.4s"
   });
 
   $("#materialistModal").animatedModal({
     modalTarget: 'materialist',
     color: col,
+    animatedIn: "fadeIn",
+    animatedOut: "fadeOut",
     animationDuration: "0.4s"
   });
 
   $("#noraokeModal").animatedModal({
     modalTarget: 'noraoke',
     color: col,
+    animatedIn: "fadeIn",
+    animatedOut: "fadeOut",
     animationDuration: "0.4s"
   });
 
   $("#qwaitModal").animatedModal({
     modalTarget: 'qwait',
     color: col,
+    animatedIn: "fadeIn",
+    animatedOut: "fadeOut",
     animationDuration: "0.4s"
   });
 
   $("#voxelModal").animatedModal({
     modalTarget: 'voxel',
     color: col,
+    animatedIn: "fadeIn",
+    animatedOut: "fadeOut",
     animationDuration: "0.4s"
   });
 
   $("#evolutionModal").animatedModal({
     modalTarget: 'evolution',
     color: col,
+    animatedIn: "fadeIn",
+    animatedOut: "fadeOut",
     animationDuration: "0.4s"
   });
 

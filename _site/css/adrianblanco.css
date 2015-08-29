@@ -23,7 +23,6 @@ body {
 
 .header {
   position: relative;
-  margin-bottom: 20px;
   overflow: hidden;
   line-height: 0px;
 }
@@ -196,6 +195,11 @@ body {
   font-size: 45px;
 }
 
+.heading-modal {
+  text-align: center;
+  font-size: 40px;
+}
+
 a {
   text-decoration:none;
 }
@@ -228,6 +232,7 @@ i.fa, a, a:hover {
   background: transparent;
   text-align: center;
   transition: all .3s ease-in-out;
+  cursor: pointer;
 }
 
 .btn:hover {
@@ -276,6 +281,164 @@ nav ul li {
 nav ul li a {
   text-transform: uppercase;
   color: #FFF;
+}
+
+.social {
+  position: relative;
+  height: 100px;
+  padding-bottom: 40px;
+  text-align: center;
+}
+
+.social a {
+  position: absolute;
+  margin: 0px 2px;
+  padding: 8px;
+  border-radius: 6px;
+  -webkit-transition: color 300ms ease-in-out;
+  transition: color 300ms ease-out;
+
+  background-color: #FFF;
+  -webkit-transition: background-color 300ms ease-in-out;
+  transition: background-color 300ms ease-in-out;
+}
+
+.social a:hover, .social a:hover div{
+  text-decoration: none;
+  background-color: #F33446;
+  color: #FFF;
+  -webkit-transition: color 300ms ease-in-out;
+  transition: color 300ms ease-in-out;
+}
+
+.social i {
+  font-size: 60px;
+}
+
+.social div {
+  margin-top: 3px;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.portfolio-footer {
+  text-align: center;
+}
+
+#portfolio .overlay-container {
+  line-height: 0;
+}
+
+#portfolio.grid {
+  max-width: 1100px !important;
+}
+
+#introduction, #portfolio, #contact {
+  padding-bottom: 40px;
+}
+
+#portfolio > h2{
+  color: #FFF;
+}
+
+/* Small mobile */
+@media only screen and (max-width: 500px){
+
+  .social {
+    height: 70px;
+    padding-bottom: 0px;
+  }
+
+  .social div {
+    display: none;
+  }
+}
+
+
+/* Modals */
+
+.modal-container {
+  background-color: transparent !important;
+}
+
+.modal-background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: -1;
+}
+
+.modal-link > h2 {
+  color: #FFF;
+}
+
+.modal-close-main i {
+  position: absolute;
+  top: 5px;
+  right: 0px;
+  padding: 0 15px;
+  
+  font-size: 35px;
+  color: grey;
+  cursor: pointer;
+}
+
+.modal-content {
+  position: relative;
+  top: 100px;
+  padding-bottom: 25px;
+  background-color: white;
+  border-radius: 4px;
+
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.modal-content img {
+  margin-bottom: 30px;
+}
+
+.modal-content h3:hover {
+  text-decoration: underline;
+}
+
+.modal-content .btn {
+  margin-bottom: 5px;
+}
+
+.modal-content .btn i {
+  margin-right: 5px;
+}
+
+.overlay-container {
+  position: relative;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #F33446;
+  z-index: 2;
+
+  opacity:  0;
+  -webkit-transition: opacity 300ms ease-in-out;
+  transition: opacity 300ms ease-in-out;
+}
+
+.overlay:hover {
+  opacity: 0.8;
+}
+
+.overlay i {
+  position: absolute;
+  left: calc(50% - 30px);
+  top: calc(50% - 40px);
+  font-size: 90px;
+  color: white;
 }
 
 @media print, screen and (max-width: 1200px) {
@@ -341,132 +504,10 @@ nav ul li a {
   .heading {
     font-size: 38px;
   }
-}
 
-.social {
-  position: relative;
-  height: 100px;
-  padding-bottom: 40px;
-  text-align: center;
-}
-
-.social a {
-  position: absolute;
-  margin: 0px 2px;
-  padding: 8px;
-  border-radius: 6px;
-  -webkit-transition: color 300ms ease-in-out;
-  transition: color 300ms ease-out;
-
-  background-color: #FFF;
-  -webkit-transition: background-color 300ms ease-in-out;
-  transition: background-color 300ms ease-in-out;
-}
-
-.social a:hover, .social a:hover div{
-  text-decoration: none;
-  background-color: #F33446;
-  color: #FFF;
-  -webkit-transition: color 300ms ease-in-out;
-  transition: color 300ms ease-in-out;
-}
-
-.social i {
-  font-size: 60px;
-}
-
-.social div {
-  margin-top: 3px;
-  font-weight: 400;
-  font-size: 16px;
-}
-
-/* Small mobile */
-@media only screen and (max-width: 500px){
-
-  .social {
-    height: 70px;
-    padding-bottom: 0px;
+  .modal-content {
+    top: 0px;
   }
-
-  .social div {
-    display: none;
-  }
-}
-
-
-/* Modals */
-#portfolio > h2{
-  color: #FFF;
-}
-
-.modal-link > h2 {
-  color: #FFF;
-}
-
-.modal-close i {
-  position: absolute;
-  top: 5px;
-  right: 0px;
-  padding: 0 15px;
-  -webkit-transition: transform 300ms ease-in-out;
-  transition: transform 300ms ease-in-out;
-}
-
-.modal-close:hover i {
-  transform: rotate(90deg);
-}
-
-.modal-close i {
-  font-size: 70px;
-  color: #F33446;
-  cursor: pointer;
-}
-
-.modal-content img {
-  margin-bottom: 30px;
-}
-
-.modal-content h3:hover {
-  text-decoration: underline;
-}
-
-.modal-content.grid-pad {
-  padding-top: 70px;
-}
-
-.modal-content .btn i {
-  margin-right: 5px;
-}
-
-.overlay-container {
-  position: relative;
-  display: block;
-  margin-bottom: 20px;
-}
-
-.overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: #F33446;
-  z-index: 2;
-
-  opacity:  0;
-  -webkit-transition: opacity 300ms ease-in-out;
-  transition: opacity 300ms ease-in-out;
-}
-
-.overlay:hover {
-  opacity: 0.8;
-}
-
-.overlay i {
-  position: absolute;
-  left: calc(50% - 30px);
-  top: calc(50% - 40px);
-  font-size: 90px;
-  color: white;
 }
 
 @media only screen and (min-width: 767px){
@@ -479,20 +520,4 @@ nav ul li a {
     height: 190px;
     width: 100%;
   }
-}
-
-.portfolio-footer {
-  text-align: center;
-}
-
-#portfolio .overlay-container {
-  line-height: 0;
-}
-
-#portfolio.grid {
-  max-width: 1100px !important;
-}
-
-#introduction, #portfolio, #contact {
-  padding-bottom: 40px;
 }
