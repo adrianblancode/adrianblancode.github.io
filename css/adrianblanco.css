@@ -321,6 +321,15 @@ nav ul li a {
   font-size: 16px;
 }
 
+.portfolio-background {
+  background-color: #334055;
+  color: white;
+}
+
+.portfolio-background h2, .portfolio-background h3 {
+  color: white;
+} 
+
 .portfolio-footer {
   text-align: center;
 }
