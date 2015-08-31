@@ -407,6 +407,7 @@ nav ul li a {
 }
 
 .modal-content img {
+  max-width: 100%;
   margin-bottom: 30px;
 }
 
