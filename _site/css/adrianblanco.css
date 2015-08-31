@@ -371,7 +371,7 @@ nav ul li a {
 }
 
 .modal-background {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -408,10 +408,6 @@ nav ul li a {
 
 .modal-content img {
   margin-bottom: 30px;
-}
-
-.modal-content h3:hover {
-  text-decoration: underline;
 }
 
 .modal-content .btn {
