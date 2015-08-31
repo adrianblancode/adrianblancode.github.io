@@ -411,10 +411,6 @@ nav ul li a {
   margin-bottom: 30px;
 }
 
-.modal-content h3:hover {
-  text-decoration: underline;
-}
-
 .modal-content .btn {
   margin-bottom: 5px;
 }
