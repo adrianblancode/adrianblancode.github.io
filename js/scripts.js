@@ -69,3 +69,21 @@ function throttle (callback, limit) {
         }
     }
 }
+
+function callPlayer(func, args) {
+    var iframes = document.getElementsByTagName('iframe');
+    for (var i = 0; i < iframes.length; ++i) {
+        if (iframes[i]) {
+            var src = iframes[i].getAttribute('src');
+            if (src) {
+                if (src.indexOf('youtube.com/embed') != -1) {
+                    iframes[i].contentWindow.postMessage(JSON.stringify({
+                        'event': 'command',
+                        'func': func,
+                        'args': args || []
+                    }), "*");
+                }
+            }
+        }
+    }
+}

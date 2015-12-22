@@ -3,6 +3,7 @@
   <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name=”description” content=”Personal page of Stockholm based software developer Adrian Blanco”>
   <title>404 | adrianblan.co</title>
   <link rel="stylesheet" href="/css/adrianblanco.css">
   <link rel="stylesheet" href="/css/github.css">
@@ -98,6 +99,13 @@
   });
 </script>
 
+<script type="text/javascript">
+    // Pause video when closing video modals
+    $('.close-spinnulator, .close-breach').click(function(e) {
+      callPlayer("pauseVideo");
+    });
+</script>
+
 <script>
   var col = "#FFF";
   //col = "#F33446";
@@ -118,14 +126,6 @@
     animationDuration: "0.4s"
   });
 
-  $("#noraokeModal").animatedModal({
-    modalTarget: 'noraoke',
-    color: col,
-    animatedIn: "fadeIn",
-    animatedOut: "fadeOut",
-    animationDuration: "0.4s"
-  });
-
   $("#qwaitModal").animatedModal({
     modalTarget: 'qwait',
     color: col,
@@ -134,16 +134,24 @@
     animationDuration: "0.4s"
   });
 
-  $("#voxelModal").animatedModal({
-    modalTarget: 'voxel',
+  $("#spinnulatorModal").animatedModal({
+    modalTarget: 'spinnulator',
     color: col,
     animatedIn: "fadeIn",
     animatedOut: "fadeOut",
     animationDuration: "0.4s"
   });
 
-  $("#evolutionModal").animatedModal({
-    modalTarget: 'evolution',
+  $("#breachModal").animatedModal({
+    modalTarget: 'breach',
+    color: col,
+    animatedIn: "fadeIn",
+    animatedOut: "fadeOut",
+    animationDuration: "0.4s"
+  });
+
+  $("#voxelModal").animatedModal({
+    modalTarget: 'voxel',
     color: col,
     animatedIn: "fadeIn",
     animatedOut: "fadeOut",
