@@ -30,6 +30,7 @@ body {
 	} 
 
   function init() {
+  	preventLongTouch();
 	 doConnect();
   }
 
@@ -105,7 +106,7 @@ body {
       node.ontouchcancel = absorbEvent_;
     }
 
-    function init() {
+    function preventLongTouch() {
       preventLongPressMenu(document.getElementById('up'));
     }
   </script>
