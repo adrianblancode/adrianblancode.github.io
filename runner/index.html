@@ -2,82 +2,32 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>Accelerometer Javascript Test</title>
+<title>Runner</title>
 <meta name="viewport" content="minimal-ui, width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <style>
 body {
 	font-family: helvetica, arial, sans serif;
-}
-#sphere {
-	position: absolute;	
-	width: 50px;
-	height: 50px;
-	border-radius: 50px;
-	-webkit-radius: 50px;
-	background-color: blue;
 }
 </style>
 </head>
 
 <body>
 <div id="content">
-    <h1>Accelerometer Javascript Test</h1>
-    <div id="sphere"></div>
-<ul>
-	<li>Rotation: <span id="rotation"></span></li>
-</ul>
+<p>Rotation: <span id="rotation"></span></p>
+
+<img src="up-arrow.svg" onclick="javascript:doSend('jump')"style="width:100%";/>
 
 </div>
 <script type="text/javascript">
 
 	var rotation = 0;
 
-	var x = 0, y = 0,
-	    vx = 0, vy = 0,
-		ax = 0, ay = 0;
-		
-	var sphere = document.getElementById("sphere");
-
 	if (window.DeviceMotionEvent != undefined) {
 		window.ondevicemotion = function(e) {
-			ax = event.accelerationIncludingGravity.x * 5;
-	        ay = event.accelerationIncludingGravity.y * 5;
-
 			rotation = e.accelerationIncludingGravity.y;
 			document.getElementById("rotation").innerHTML = rotation;
 		}
-
-		setInterval( function() {
-			var landscapeOrientation = window.innerWidth/window.innerHeight > 1;
-			if ( landscapeOrientation) {
-				vx = vx + ay;
-				vy = vy + ax;
-			} else {
-				vy = vy - ay;
-				vx = vx + ax;
-			}
-			vx = vx * 0.98;
-			vy = vy * 0.98;
-			y = parseInt(y + vy / 50);
-			x = parseInt(x + vx / 50);
-			
-			boundingBoxCheck();
-			
-			sphere.style.top = y + "px";
-			sphere.style.left = x + "px";
-			
-		}, 25);
 	} 
-
-
-	function boundingBoxCheck(){
-		if (x<0) { x = 0; vx = -vx; }
-		if (y<0) { y = 0; vy = -vy; }
-		if (x>document.documentElement.clientWidth-20) { x = document.documentElement.clientWidth-20; vx = -vx; }
-		if (y>document.documentElement.clientHeight-20) { y = document.documentElement.clientHeight-20; vy = -vy; }
-		
-	}
-
 
   function init() {
 	 doConnect();
@@ -129,8 +79,9 @@ body {
 
   var interval = setInterval(
     function () { 
-      doSend(String(rotation));
+      doSend(String("rotation - " + rotation));
     },  0.1 * 1000);
+
 </script>
 
 </body>
