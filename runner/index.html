@@ -15,7 +15,7 @@ body {
 <div id="content">
 <p>Rotation: <span id="rotation"></span></p>
 
-<img src="up-arrow.svg" onclick="javascript:doSend('jump')"  ontouchstart="javascript:doSend('jump')" style="width: 25%";/>
+<img id="up" src="up-arrow.svg" onclick="javascript:doSend('jump')"  ontouchstart="javascript:doSend('jump')" style="width: 25%";/>
 
 </div>
 <script type="text/javascript">
@@ -78,8 +78,10 @@ body {
   window.addEventListener("load", init, false);
 
   var interval = setInterval(
-    function () { 
-      doSend(String("rotation - " + rotation));
+    function () {
+    	if(rotation != null){
+      		doSend(String("rotation - " + rotation));
+  		}
     },  0.1 * 1000);
 
 </script>
@@ -102,7 +104,7 @@ body {
     }
 
     function init() {
-      preventLongPressMenu(document.getElementById('theimage'));
+      preventLongPressMenu(document.getElementById('up'));
     }
   </script>
 
