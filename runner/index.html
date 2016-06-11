@@ -42,7 +42,7 @@ if (window.DeviceMotionEvent != undefined) {
 		ax = event.accelerationIncludingGravity.x * 5;
         ay = event.accelerationIncludingGravity.y * 5;
 
-		var rotation = e.accelerationIncludingGravity.y.toFixed(2);
+		var rotation = e.accelerationIncludingGravity.y;
 		document.getElementById("rotation").innerHTML = rotation;
 	}
 
@@ -87,7 +87,7 @@ function boundingBoxCheck(){
   }
 
   function doConnect() {
-  	
+
   	var url = "ws://178.62.226.87:8000/";
 
     websocket = new WebSocket(url);
