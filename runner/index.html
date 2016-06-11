@@ -79,6 +79,65 @@ function boundingBoxCheck(){
 
 </script>
 
+<script language="javascript" type="text/javascript">
+
+
+  function init() {
+	 document.myform.url.value = "ws://178.62.226.87:8000/"
+	 doConnect();
+  }
+
+  function doConnect() {
+    websocket = new WebSocket(document.myform.url.value);
+    websocket.onopen = function(evt) { onOpen(evt) };
+    websocket.onclose = function(evt) { onClose(evt) };
+    websocket.onmessage = function(evt) { onMessage(evt) };
+    websocket.onerror = function(evt) { onError(evt) };
+  }
+
+  function onOpen(evt)
+  {
+  writeToScreen("connected\n");
+  }
+
+  function onClose(evt)
+  {
+    writeToScreen("disconnected\n");
+  }
+
+  function onMessage(evt)
+  {
+    writeToScreen("response: " + evt.data + '\n');
+  }
+
+  function onError(evt)
+  {
+    writeToScreen('error: ' + evt.data + '\n');
+	 websocket.close();
+  }
+
+  function doSend(message)
+  {
+    writeToScreen("sent: " + message + '\n'); 
+    websocket.send(message);
+  }
+
+  function writeToScreen(message) {
+    console.log(message);
+  }
+
+  window.addEventListener("load", init, false);
+
+  function sendData() {
+		doSend(document.getElementById("rotation").innerHTML);
+   }
+
+  var interval = setInterval(
+    function () { 
+      doSend();
+    },  1 * 1000);
+</script>
+
 </body>
 </html>
 
