@@ -39,8 +39,11 @@ var sphere = document.getElementById("sphere");
 
 if (window.DeviceMotionEvent != undefined) {
 	window.ondevicemotion = function(e) {
+		ax = event.accelerationIncludingGravity.x * 5;
+        ay = event.accelerationIncludingGravity.y * 5;
+
 		var rotation = e.accelerationIncludingGravity.y.toFixed(2);
-		document.getElementById("Rotation").innerHTML = rotation;
+		document.getElementById("rotation").innerHTML = rotation;
 	}
 
 	setInterval( function() {
