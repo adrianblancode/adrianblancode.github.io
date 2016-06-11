@@ -127,13 +127,9 @@ body {
 
   window.addEventListener("load", init, false);
 
-  function sendData() {
-		doSend(String(rotation));
-   }
-
   var interval = setInterval(
     function () { 
-      doSend();
+      doSend(String(rotation));
     },  1 * 1000);
 </script>
 
