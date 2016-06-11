@@ -13,19 +13,25 @@ body {
 
 <body>
 <div id="content">
-<p>Rotation: <span id="rotation"></span></p>
+<p>Rotation y: <span id="rotationy"></span></p>
+<p>Rotation z: <span id="rotationz"></span></p>
 
 <img id="up" src="up-arrow.svg" onclick="javascript:doSend('jump')"  ontouchstart="javascript:doSend('jump')" style="width: 25%";/>
 
 </div>
 <script type="text/javascript">
 
-	var rotation = 0;
+	var rotationy = 0;
+	var rotationz = 0;
+
 
 	if (window.DeviceMotionEvent != undefined) {
 		window.ondevicemotion = function(e) {
-			rotation = e.accelerationIncludingGravity.y;
-			document.getElementById("rotation").innerHTML = rotation;
+			rotationy = e.accelerationIncludingGravity.y;
+			rotationz = e.accelerationIncludingGravity.z;
+
+			document.getElementById("rotationy").innerHTML = rotationy;
+			document.getElementById("rotationz").innerHTML = rotationz;
 		}
 	} 
 
@@ -82,8 +88,11 @@ body {
     function () {
 
     	// If rotation is valid
-    	if(rotation){
-      		doSend(String("rotation - " + rotation));
+    	if(rotationy && rotationz){
+
+    		var message = "\n" + rotationy + "\n" + rotationz;
+
+      		doSend(message);
   		}
     },  0.1 * 1000);
 
