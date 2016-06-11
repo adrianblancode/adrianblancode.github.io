@@ -83,12 +83,14 @@ function boundingBoxCheck(){
 
 
   function init() {
-	 document.myform.url.value = "ws://178.62.226.87:8000/"
 	 doConnect();
   }
 
   function doConnect() {
-    websocket = new WebSocket(document.myform.url.value);
+  	
+  	var url = "ws://178.62.226.87:8000/";
+
+    websocket = new WebSocket(url);
     websocket.onopen = function(evt) { onOpen(evt) };
     websocket.onclose = function(evt) { onClose(evt) };
     websocket.onmessage = function(evt) { onMessage(evt) };
