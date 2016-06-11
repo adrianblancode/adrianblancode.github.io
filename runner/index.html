@@ -79,7 +79,9 @@ body {
 
   var interval = setInterval(
     function () {
-    	if(rotation != null){
+
+    	// If rotation is valid
+    	if(rotation){
       		doSend(String("rotation - " + rotation));
   		}
     },  0.1 * 1000);
