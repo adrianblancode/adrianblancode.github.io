@@ -87,6 +87,7 @@ body {
   width: auto;
   height: auto;
   margin-bottom: -100px;
+  object-fit: inherit;
 
   z-index: -100;
   -webkit-transform: translateX(-50%) translateY(0%);
