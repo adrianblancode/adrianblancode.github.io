@@ -78,6 +78,10 @@ body {
   transition: fill 800ms;
 }
 
+#video-container {
+  background: linear-gradient(0, rgba(0, 0, 0, 0.3), transparent);
+}
+
 .coverr {
   position: relative;
   top: 50%;
