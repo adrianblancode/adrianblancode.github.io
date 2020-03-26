@@ -13,7 +13,7 @@ nav: home
   <div class="profile">
     <img class="circular" src="/images/me.jpg" alt="Profile image"/>
     <h1>Adrian Blanco</h1>
-    <span class="subheading">Software Developer</span>
+    <span class="subheading">Software Engineer</span>
   </div>
   <div class="down-arrow" onclick="$(window).scrollTo($('#introduction'), 400, {offset: -50});">
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="43px" height="33px" viewBox="0 0 43 33" enable-background="new 0 0 43 33" xml:space="preserve">
@@ -26,10 +26,15 @@ nav: home
 
 <div id="introduction" class="grid grid-pad">
   <div class="col-1-1">
-    <h2 class="heading">Introduction</h2>
-    <p style="text-align:center">Hi, I'm Adrian. I'm a Software Engineer from Stockholm experienced in building world class Android apps for hundreds of thousands of users.</p>
+    <h2 class="heading">Hello, I'm Adrian.</h2>
+    <p style="text-align:center">I'm a Software Engineer from Stockholm experienced in building world class Android apps for hundreds of thousands of users. Previously Software Engineer and Platform Lead @ <a href="https://bontouch.com" title="bontouch.com">Bontouch</a>.</p>
+
+    <p style="text-align:center">I have worked with a wide array of disciplines including mobile development, technical leadership, web development, audio analysis, and even co-founding a company creating interactive mixed reality experiences.</p>
+
+    <p style="text-align:center">If this sounds interesting, feel free to get in touch.</p>
+
     <div style="text-align:center">
-      <a href="/files/Adrian_Blanco_CV.pdf" class="btn btn-lg" title="View Resumé">
+      <a href="/files/Adrian_Blanco_CV.pdf" class="btn btn-lg" title="View CV">
         <i class="zmdi zmdi-file"></i> View CV
       </a>
     </div>
@@ -41,87 +46,59 @@ nav: home
 
     <div class="col-1-1">
       <h2 class="heading">Portfolio</h2>
+      <p style="text-align:center">These are some of the clients I have worked for:</p>
     </div>
 
-    <div class="col-1-3">
-      <h3>Cheddar</h3>
-      <a id="cheddarModal" href="#cheddar" class="modal-link">
+    <div class="col-1-2">
+      <a id="coop-logo" href="#coop" class="modal-link">
         <div class="overlay-container">
           <div class="overlay">
             <i class="zmdi zmdi-zoom-in"></i>
           </div>
-          <img src="/images/cheddar.png" alt="Cheddar"/>
+          <img src="/images/coop.svg" class="case-logo" alt="Coop"/>
         </div>
       </a>
     </div>
 
-    <div class="col-1-3">
-      <h3>Materialist</h3>
-      <a id="materialistModal" href="#materialist" class="modal-link ">
+    <div class="col-1-2">
+      <a id="goahead-logo" href="#goahead" class="modal-link ">
         <div class="overlay-container">
           <div class="overlay">
             <i class="zmdi zmdi-zoom-in"></i>
           </div>
-          <img src="/images/materialist.png" alt="Materialist"/>
+          <img src="/images/goahead.svg" class="case-logo" alt="GoAhead"/>
         </div>
       </a>
     </div>
 
-    <div class="col-1-3">
-      <h3>QWait</h3>
-      <a id="qwaitModal" href="#qwait" class="modal-link">
+    <div class="col-1-2">
+      <a id="sj-logo" href="#sj" class="modal-link">
         <div class="overlay-container">
           <div class="overlay">
             <i class="zmdi zmdi-zoom-in"></i>
           </div>
-          <img src="/images/qwait-showcase.jpg" alt="QWait"/>
+          <img src="/images/sj.svg" class="case-logo" alt="SJ"/>
         </div>
       </a>
     </div>
 
-    <div class="col-1-3">
-      <h3>Spinnulator</h3>
-      <a id="spinnulatorModal" href="#spinnulator" class="modal-link">
+    <div class="col-1-2">
+      <a id="whitelines-logo" href="#whitelines" class="modal-link">
         <div class="overlay-container">
           <div class="overlay">
             <i class="zmdi zmdi-zoom-in"></i>
           </div>
-          <img src="/images/spinnulator2.jpg" alt="Spinnulator"/>
+          <img src="/images/whitelines.svg" class="case-logo" alt="Whitelines"/>
         </div>
       </a>
     </div>
 
-    <div class="col-1-3">
-      <h3>BREACH</h3>
-      <a id="breachModal" href="#breach" class="modal-link">
-        <div class="overlay-container">
-          <div class="overlay">
-            <i class="zmdi zmdi-zoom-in"></i>
-          </div>
-          <img src="/images/breach.jpg" alt="BREACH"/>
-        </div>
-      </a>
-    </div>
-
-    <div class="col-1-3">
-      <h3>Voxel Renderer</h3>
-      <a id="voxelModal" href="#voxel" class="modal-link">
-        <div class="overlay-container">
-          <div class="overlay">
-            <i class="zmdi zmdi-zoom-in"></i>
-          </div>
-          <img src="/images/voxel-renderer.png" alt="Voxel Renderer"/>
-        </div>
-      </a>
-    </div>
-
-    <p class="portfolio-footer">The rest of my projects can be seen at <a href="https://github.com/adrianblancode" title="My github profile">github.com/adrianblancode</a></p>
+    <p class="portfolio-footer">My personal projects can be found at <a href="https://github.com/adrianblancode" title="My GitHub profile">github.com/adrianblancode</a></p>
   </div>
 </div>
 
 <div id="contact" class="grid grid-pad">
   <div class="col-1-1">
-    <h2 class="heading">Contact</h2>
     <div class="social">
       <a href="mailto:adrianblancode@gmail.com" title="adrianblancode@gmail.com" style="left: 0%; right: 67%">
         <i class="zmdi zmdi-email"></i>
@@ -140,142 +117,80 @@ nav: home
 </div>
 
 <!-- Modals -->
-<div id="cheddar" class="modal-container">
-  <div class="modal-background close-cheddar modal-close"></div>
+<div id="coop" class="modal-container">
+  <div class="modal-background close-coop modal-close"></div>
   <div class="modal-content grid grid-pad">
-    <div class="close-cheddar modal-close modal-close-main"> 
+    <div class="close-coop modal-close modal-close-main"> 
       <i class="zmdi zmdi-close"></i>
     </div>
 
     <div class="col-1-1">
-      <h3 class="heading-modal">Cheddar</h3>
-      <img src="/images/cheddar.png" alt="Cheddar"/>
-      <p>Cheddar is a lightweight reader for Hacker News, so you can read the latest news and comments from Hacker News on your mobile device. It is free, has no ads and uses Material Design. Cheddar has been developed with the purpose to provide a minimalist and intuitive experience, focusing on usability.</p>
+      <img src="/images/coop-showcase.png" alt="Coop Showcase"/>
 
-      <p>Awarded <a href="http://www.xda-developers.com/apps-of-the-week-material-facebook-hacker-news-web-making-and-pac-man/" title="XDA-Developers Feature">top app of the week by XDA-Developers</a>, writing ”Well-designed social news readers of this caliber do not come very often”.</p>
+      <p>Coop is a grocery store chain in the Nordics with a strong focus on online shopping.</p>
+
+      <p>I led the development of their new app for Android as platform lead, building one of the largest ecommerce grocery apps in the Nordics from the ground up and serving hundreds of thousands of users. As platform lead I ensured high technical quality through technical leadership, architecture, software engineering best practices, code reviews, among others.</p>
 
       <div>
-        <a href="https://play.google.com/store/apps/details?id=co.adrianblan.cheddar" class="btn btn-sm" title="Cheddar on Google Play"><i class="zmdi zmdi-google-play"></i> View on Google Play</a>
-      </div>
-      <div>
-        <a href="https://github.com/adrianblancode/Cheddar" class="btn btn-sm" title="Cheddar on GitHub"><i class="zmdi zmdi-github-box"></i> View on GitHub</a>
+        <a href="https://play.google.com/store/apps/details?id=se.nansen.coop" class="btn btn-sm" title="Coop on Google Play"><i class="zmdi zmdi-google-play"></i> View on Google Play</a>
       </div>
     </div>
   </div>
 </div>
 
-<div id="materialist" class="modal-container">
-  <div class="modal-background close-materialist modal-close"></div>
+<div id="goahead" class="modal-container">
+  <div class="modal-background close-goahead modal-close"></div>
   <div class="modal-content grid grid-pad">
-    <div class="close-materialist modal-close modal-close-main"> 
+    <div class="close-goahead modal-close modal-close-main"> 
       <i class="zmdi zmdi-close"></i>
     </div>
 
     <div class="col-1-1">
-      <h3 class="heading-modal">Materialist</h3>
-      <img src="/images/materialist.png" alt="Materialist showcase"/>
-      <p>Materialist is a task list for Android using Material Design, it has been created to provide a simple, minimalist and intuitive experience that's in the way as little as possible.</p>
+      <img src="/images/goahead-showcase.png" alt="GoAhead Showcase"/>
+      
+      <p>I worked with GoAhead as a developer for the ground up rewrite of their 12 bus apps handling ticketing and riding buses all over the UK.</p>
 
-      <div>
-        <a href="https://play.google.com/store/apps/details?id=co.adrianblan.materialist" class="btn btn-sm" title="Materialist on Google Play"><i class="zmdi zmdi-google-play"></i> View on Google Play</a>
-      </div>
-      <div>
-        <a href="https://github.com/adrianblancode/Materialist" class="btn btn-sm" title="Materialist on GitHub"><i class="zmdi zmdi-github-box"></i> View on GitHub</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div id="qwait" class="modal-container">
-  <div class="modal-background close-qwait modal-close"></div>
-  <div class="modal-content grid grid-pad">
-    <div class="close-qwait modal-close modal-close-main"> 
-      <i class="zmdi zmdi-close"></i>
-    </div>
-
-    <div class="col-1-1">
-
-      <h3 class="heading-modal">QWait</h3>
-
-      <img src="/images/qwait-showcase.jpg" alt="QWait showcase"/>
-
-      <p>QWait is a responsive, web based queueing system which is used for lab sessions at KTH by both students and assistants. Among my responsibilities included frontend development (AngularJS, HTML) and UX design to provide a consistent and intuitive experience for all types of users and devices.</p>
-
-      <div>
-        <a href="http://qwait.csc.kth.se" class="btn btn-sm" title="QWait Website"><i class="zmdi zmdi-globe"></i> QWait Website</a>
-      </div>
+      <p>The work was a close collaboration between the Stockholm and London offices, and during the final months of the project I relocated to the London office to lead the app experience for the Android platform. This included taking an overall responsibility for the usability of the final release, and coordinating quality improvement efforts between the Stockholm and London offices.</p>
 
     </div>
   </div>
 </div>
 
-<div id="spinnulator" class="modal-container">
-  <div class="modal-background close-spinnulator modal-close"></div>        
+<div id="sj" class="modal-container">
+  <div class="modal-background close-sj modal-close"></div>
   <div class="modal-content grid grid-pad">
-    <div class="close-spinnulator modal-close modal-close-main"> 
+    <div class="close-sj modal-close modal-close-main"> 
       <i class="zmdi zmdi-close"></i>
     </div>
 
     <div class="col-1-1">
-      <h3 class="heading-modal">Spinnulator</h3>
+      <img src="/images/sj-showcase.png" alt="SJ Showcase"/>
 
-      <div class='embed-container'>
-        <iframe src='https://www.youtube.com/embed/TO4Mj9dLjEw?enablejsapi=1' frameborder='0' allowfullscreen></iframe>
-      </div>
+      <p>I worked with Swedish Railways (SJ) with the development of their internal apps, used daily by SJ staff to keep the trains running smoothly.</p>
+      <p>Primarily I developed a suite of reporting apps from the ground up which were used to coordinate all maintenance and repairs of trains all across the country.</p>
 
-      <p>Spinnulator is a simulator using cycling on a spinning bike. The positions and movements of the players body are tracked by a Microsoft Kinect and translated into a virtual environment. The player moves forward by cycling and their momentum will be retained just as in the real world, the player turns by tilting their whole body. I worked with developing the functionality for player movement, interaction and motion simulation so that players would feel like they were moving naturally and intuitively inside the virtual environment.</p>
-
-      <div>
-        <a href="http://spinnulators.github.io/Spinnulator/" class="btn btn-sm" title="Spinnulator Website"><i class="zmdi zmdi-globe"></i> Spinnulator Website</a>
-      </div>
-      <div>
-        <a href="https://github.com/Spinnulators/Spinnulator" class="btn btn-sm" title="Spinnulator on GitHub"><i class="zmdi zmdi-github-box"></i> View on GitHub</a>
-      </div>
     </div>
   </div>
 </div>
 
-<div id="breach" class="modal-container">
-  <div class="modal-background close-breach modal-close"></div>
+<div id="whitelines" class="modal-container">
+  <div class="modal-background close-whitelines modal-close"></div>        
   <div class="modal-content grid grid-pad">
-    <div class="close-breach modal-close modal-close-main"> 
+    <div class="close-whitelines modal-close modal-close-main"> 
       <i class="zmdi zmdi-close"></i>
     </div>
 
     <div class="col-1-1">
-      <h3 class="heading-modal">BREACH</h3>
+      <img src="/images/whitelines-showcase.jpg" alt="Whitelines Showcase"/>
 
-      <div class='embed-container'>
-        <iframe src='https://www.youtube.com/embed/E9xpjsrUkdU?enablejsapi=1' frameborder='0' allowfullscreen></iframe>
-      </div>
+      <p>Whitelines is a collection of notebooks, working together with an app in order to scan and organize your notes.</p>
 
-      <p>BREACH is a couch-competitive multiplayer shooter. Two players enter an arena each with their own distinct characters, and have to use all the tools to their disposal to emerge victorious in combat. Rounds are short, packed with intense action and most importantly tons of epic moments. I worked with designing the core gameplay mechanics and interactions, and then developing the functionality, implementations and polish in order to achieve an exciting and intuitive experience for the user.</p>
+      <p>For the Android version of Whitelines Link, I worked with developing a new major release including redesigning the app with a new design language and implementing new major features for scanning notebooks.</p>
 
       <div>
-        <a href="http://simonfra.se/Breach/" class="btn btn-sm" title="BREACH Website"><i class="zmdi zmdi-globe"></i> BREACH Website</a>
+        <a href="https://play.google.com/store/apps/details?id=se.whitelines.link" class="btn btn-sm" title="Whitelines on Google Play"><i class="zmdi zmdi-google-play"></i> View on Google Play</a>
       </div>
-      <div>
-        <a href="https://github.com/TerribleProductions/BREACH" class="btn btn-sm" title="BREACH on GitHub"><i class="zmdi zmdi-github-box"></i> BREACH on GitHub</a>
-      </div>
-    </div>
-  </div>
-</div>
 
-<div id="voxel" class="modal-container">
-  <div class="modal-background close-voxel modal-close"></div>
-  <div class="modal-content grid grid-pad">
-    <div class="close-voxel modal-close modal-close-main"> 
-      <i class="zmdi zmdi-close"></i>
-    </div>
-
-    <div class="col-1-1">
-      <h3 class="heading-modal">Voxel Renderer</h3>
-      <img src="/images/voxel-renderer.png" alt="Voxel Renderer"/>
-      <p>For the course Digital Graphics and Interaction at KTH, I and Hampus Liljekvist created a voxel renderer using C++, OpenGL and GLUT. It uses perlin noise to generate natural looking terrain using texturized voxels in a visual style similar to a popular mining and crafting simulator. This landscape can then be altered by adding or removing blocks in various ways.</p>
-
-      <div>
-        <a href="https://github.com/adrianblancode/dgi14-voxels" class="btn btn-sm" title="Voxel Renderer on GitHub"><i class="zmdi zmdi-github-box"></i> View on GitHub</a>
-      </div>
     </div>
   </div>
 </div>
