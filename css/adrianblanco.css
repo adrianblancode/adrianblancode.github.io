@@ -203,12 +203,10 @@ body {
 .heading {
   margin-top: 30px;
   text-align: center;
-  text-transform: uppercase;
-  font-size: 45px;
+  font-size: 34px;
 }
 
 .heading-modal {
-  text-align: center;
   font-size: 40px;
 }
 
@@ -333,6 +331,10 @@ nav ul li a {
   font-size: 18px;
 }
 
+.social-text {
+  color: #FFF;
+}
+
 .portfolio-background {
   background-color: #334055;
   color: white;
@@ -350,8 +352,12 @@ nav ul li a {
   line-height: 0;
 }
 
-#introduction, #portfolio, #contact {
-  padding-bottom: 40px;
+#introduction, #portfolio {
+  padding-bottom: 45px;
+}
+
+#contact {
+  padding-bottom: 10px;
 }
 
 #portfolio > h2{
@@ -405,8 +411,8 @@ nav ul li a {
 
 .modal-content {
   position: relative;
-  top: 100px;
-  padding-bottom: 25px;
+  top: 30px;
+  padding-bottom: 10px;
   background-color: white;
   border-radius: 4px;
 
@@ -437,6 +443,7 @@ nav ul li a {
   width: 100%;
   height: 100%;
   background: #F33446;
+  border-radius: 6px;
   z-index: 2;
 
   opacity:  0;
@@ -533,10 +540,6 @@ nav ul li a {
     float: none;
     margin-bottom: 20px;
     text-align: right;
-  }
-
-  .heading {
-    font-size: 38px;
   }
 
   .modal-content {
