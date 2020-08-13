@@ -1,0 +1,24 @@
+@use 'base';
+
+a {
+    display: inline-block;
+  }
+  
+p a:after {
+    content: "";
+    display: block;
+    height: 4px;
+    width: 102%;
+    background: transparentize($color: #fff, $amount: 0.3);
+    margin-top: -6px;
+    margin-left: -2px;
+}
+
+::selection {
+    color: white;
+    background-color: #111;
+}
+
+a {
+    -webkit-tap-highlight-color: transparent;
+}

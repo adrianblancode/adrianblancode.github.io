@@ -1,0 +1,29 @@
+#app {
+    backdrop-filter: saturate(1.45) contrast(0.85) blur(0.5px);
+}
+
+.social-container:not(:first-child) {
+    margin-left: 32px;
+}
+
+.social-container .social {
+    min-width: 60px;
+    min-height: 60px;
+    padding: 12px;
+    box-sizing: border-box;
+    border-radius: 50%;
+}
+
+@media(hover: hover) {
+    .social:hover {   
+        background-color: transparentize($color: #fff, $amount: 0.4);
+        transition-duration: .2s;
+    }
+}
+
+@media(hover: none) {
+    .social:active {   
+        background-color: transparentize($color: #fff, $amount: 0.4);
+        transition-duration: .2s;
+    }
+}

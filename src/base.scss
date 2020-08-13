@@ -1,0 +1,40 @@
+// Set your brand colors
+$red: #F33446;
+$text-primary: #111;
+$text-secondary: #111;
+$text-highlight: #fff;
+$background: #fff;
+
+// Update Bulma's global variables
+$family-sans-serif: 'Avenir Medium', BlinkMacSystemFont, -apple-system, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+$primary: $red;
+$link: $text-primary;
+$widescreen-enabled: false;
+$fullhd-enabled: false;
+
+// Update some of Bulma's component variables
+$body-background-color: $background;
+$body-color: $text-secondary;
+$control-border-width: 2px;
+$input-border-color: transparent;
+$input-shadow: none;
+$link-hover: $text-highlight;
+
+$body-size: 24px;
+$title-color: $text-primary;
+$title-family: 'Avenir Black', sans-serif;
+$subtitle-color: $text-primary;
+$subtitle-family: 'Avenir Black', sans-serif;
+
+
+// Import only what you need from Bulma
+@import '../node_modules/bulma/sass/utilities/_all.sass';
+@import '../node_modules/bulma/sass/base/_all.sass';
+@import '../node_modules/bulma/sass/elements/container.sass';
+@import '../node_modules/bulma/sass/elements/title.sass';
+@import '../node_modules/bulma/sass/elements/content.sass';
+@import '../node_modules/bulma/sass/grid/columns.sass';
+@import '../node_modules/bulma/sass/layout/hero.sass';
+@import '../node_modules/bulma/sass/components/level.sass';
+@import '../node_modules/bulma/sass/helpers/spacing.sass';
+@import '../node_modules/bulma/sass/helpers/typography.sass';
