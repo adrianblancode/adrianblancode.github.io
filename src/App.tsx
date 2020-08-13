@@ -6,7 +6,7 @@ import './App.scss';
 
 function App() {
   useLayoutEffect(() => {
-    window.VANTA.FOG({
+    (window as any).VANTA.FOG({
       el: "#body",
       minHeight: 200.00,
       minWidth: 200.00,
