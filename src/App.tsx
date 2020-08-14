@@ -6,6 +6,12 @@ import './App.scss';
 
 function App() {
   useLayoutEffect(() => {
+
+    let landscape: boolean = window.innerWidth > window.innerHeight
+
+    // High zoom looks really busy in vertical
+    let zoom: number = landscape ? 1.0 : 0.3;
+
     (window as any).VANTA.FOG({
       el: "#root",
       minHeight: 200.00,
@@ -15,7 +21,7 @@ function App() {
       lowlightColor: 0x7020b0,
       baseColor: 0x221122,
       blurFactor: 0.35,
-      zoom: 1,
+      zoom: zoom,
       speed: 0.5
     })
 
