@@ -7,16 +7,18 @@ import './App.scss';
 function App() {
   useLayoutEffect(() => {
     (window as any).VANTA.FOG({
-      el: "#body",
+      el: "#root",
       minHeight: 200.00,
       minWidth: 200.00,
-      highlightColor: 0xff4060,
-      midtoneColor: 0xff9040,
-      baseColor: 0xffbada,
-      blurFactor: 0.3,
-      zoom: 2,
-      speed: 0.6
+      highlightColor: 0x101015,
+      midtoneColor: 0xd02040,
+      lowlightColor: 0x7020b0,
+      baseColor: 0x221122,
+      blurFactor: 0.35,
+      zoom: 1,
+      speed: 0.5
     })
+
   })
   return (
     <div id="app">
@@ -24,8 +26,10 @@ function App() {
         <div className="hero-body">
           <Intro />
         </div>
+        <section className="hero-footer"> 
+          <Footer />
+        </section>
       </section>
-      <Footer />
     </div>
   );
 }
@@ -34,9 +38,9 @@ function Intro() {
   return (
     <div className="container">
       <h1 className="title is-1 is-size-3-touch is-spaced">Hi, I'm Adrian! I build world-class Android apps.</h1>
-      <p className="mb-4">I am a Stockholm based developer currently working freelance. Previously I was working as a Software Engineer and Platform Lead at <a href="https://bontouch.com">Bontouch.</a></p>
-      <p className="mb-4">I have worked with a wide array of disciplines including mobile development, technical leadership, web development, audio analysis, and even co-founding a company creating interactive mixed reality experiences.</p>
-      <p className="mb-4">If this sounds interesting, feel free to <a href="/files/Adrian_Blanco_CV.pdf">view my CV</a> or just <a href="mailto:adrianblancode@gmail.com">say hello.</a></p>
+      <p className="mb-4">I am a Stockholm based developer currently working freelance, previously Software Engineer and Platform Lead at <a href="https://bontouch.com">Bontouch.</a></p>
+      <p className="mb-4">I have done everything from mobile development, technical leadership, web development, graphics programming, audio analysis, to even co-founding a company creating interactive mixed reality experiences.</p>
+      <p className="mb-4">If this sounds interesting, feel free to <a href="/files/Adrian_Blanco_CV.pdf">check out my CV</a> or just <a href="mailto:adrianblancode@gmail.com">say hello.</a></p>
       <p></p>
     </div>
   )
@@ -73,15 +77,14 @@ function Experience() {
 
 function Footer() {
   return (
-    <section>
       <div className="container pb-4">
         <div className="level">
           <div className="level-left">
             <div className="level-item">
-            <p className="is-size-7">Made with ❤️ by Adrian Blanco</p>
-              </div>
+              <p className="is-size-7">Made with ❤️ by Adrian Blanco</p>
             </div>
-            <div className="level-right">
+          </div>
+          <div className="level-right">
             <div className="level-item">
               <a href="https://github.com/adrianblancode" className="social-container">
                 <img src={github} className="social" alt="GitHub" />
@@ -96,7 +99,6 @@ function Footer() {
           </div>
         </div>
       </div>
-    </section>
   )
 }
 

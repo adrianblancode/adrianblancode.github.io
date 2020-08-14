@@ -1,12 +1,13 @@
 // Set your brand colors
 $red: #F33446;
-$text-primary: #111;
-$text-secondary: #111;
-$text-highlight: #fff;
-$background: #fff;
+$text-primary: #fff;
+$text-secondary: #fff;
+$text-highlight: #ccc;
+$background: #333;
 
 // Update Bulma's global variables
 $family-sans-serif: 'Avenir Medium', BlinkMacSystemFont, -apple-system, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+$family-bold: 'Avenir Black', BlinkMacSystemFont, -apple-system, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
 $primary: $red;
 $link: $text-primary;
 $widescreen-enabled: false;
@@ -22,9 +23,9 @@ $link-hover: $text-highlight;
 
 $body-size: 24px;
 $title-color: $text-primary;
-$title-family: 'Avenir Black', sans-serif;
+$title-family: $family-bold;
 $subtitle-color: $text-primary;
-$subtitle-family: 'Avenir Black', sans-serif;
+$subtitle-family: $family-bold;
 
 
 // Import only what you need from Bulma

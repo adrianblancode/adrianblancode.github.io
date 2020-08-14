@@ -9,14 +9,18 @@ p a:after {
     display: block;
     height: 4px;
     width: 102%;
-    background: transparentize($color: #fff, $amount: 0.3);
+    background: transparentize($color: #fff, $amount: 0.1);
     margin-top: -6px;
     margin-left: -2px;
 }
 
+p a:hover:after {
+    background: #ccc;
+}
+
 ::selection {
-    color: white;
-    background-color: #111;
+    color: #111;
+    background-color: #fff;
 }
 
 a {
