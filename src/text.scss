@@ -1,4 +1,4 @@
-@use 'base';
+@import './base.scss';
 
 a {
     display: inline-block;
@@ -9,18 +9,18 @@ p a:after {
     display: block;
     height: 4px;
     width: 102%;
-    background: transparentize($color: #fff, $amount: 0.1);
+    background: transparentize($color: $primary, $amount: 0.2);
     margin-top: -6px;
     margin-left: -2px;
 }
 
 p a:hover:after {
-    background: #ccc;
+    background: $primary;
 }
 
 ::selection {
-    color: #111;
-    background-color: #fff;
+    color: $background;
+    background-color: $text-primary;
 }
 
 a {

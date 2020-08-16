@@ -1,5 +1,33 @@
-#app {
-    backdrop-filter: saturate(1.2) brightness(0.90) blur(2px);
+@import './base.scss';
+
+.hero {
+    backdrop-filter: brightness(0.7) blur(2px);
+}
+
+.hero-body {
+    background: linear-gradient(180deg, transparentize($background, 1), transparentize($background, 0.8), transparentize($background, 0.5), transparentize($background, 0.2), $background);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: auto 70%;
+
+    p {
+        color: $text-primary;
+    }
+}
+
+@include tablet {
+    .hero-body {
+        mask:
+        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="rgba(255, 255, 255, 0.5)" d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/></svg>') 0/3% 3%,
+        linear-gradient(#fff,#fff);
+        mask-composite: exclude;
+        mask-repeat: no-repeat;
+        mask-position: center 93%;
+    }
+}
+
+.portfolio-image {
+    border-radius: 16px;
 }
 
 .social-container:not(:first-child) {
@@ -16,14 +44,37 @@
 
 @media(hover: hover) {
     .social:hover {   
-        background-color: transparentize($color: #fff, $amount: 0.4);
+        background-color: transparentize($color: $text-primary, $amount: 0.8);
         transition-duration: .2s;
     }
 }
 
 @media(hover: none) {
     .social:active {   
-        background-color: transparentize($color: #fff, $amount: 0.4);
+        background-color: transparentize($color: $text-primary, $amount: 0.8);
         transition-duration: .2s;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px)
+    }
+
+    to {
+        opacity: 1;
+        transform: none
+    }
+}
+
+@for $i from 0 to 5 {
+    .fadein-#{$i + 1} {
+        -webkit-animation-name: fadeInUp;
+        -moz-animation-name: fadeInUp;
+        animation-name: fadeInUp;
+        animation-fill-mode: both;
+        animation-duration: 0.8s;
+        animation-delay: 0.2s + $i * 0.1s;
     }
 }
