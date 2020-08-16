@@ -1,26 +1,30 @@
 {
   "files": {
-    "main.css": "/adrianblancode.github.io/static/css/main.e37a4d65.chunk.css",
-    "main.js": "/adrianblancode.github.io/static/js/main.3ae50fda.chunk.js",
-    "main.js.map": "/adrianblancode.github.io/static/js/main.3ae50fda.chunk.js.map",
+    "main.css": "/adrianblancode.github.io/static/css/main.2f42b9b0.chunk.css",
+    "main.js": "/adrianblancode.github.io/static/js/main.298a8a9c.chunk.js",
+    "main.js.map": "/adrianblancode.github.io/static/js/main.298a8a9c.chunk.js.map",
     "runtime-main.js": "/adrianblancode.github.io/static/js/runtime-main.4c979ece.js",
     "runtime-main.js.map": "/adrianblancode.github.io/static/js/runtime-main.4c979ece.js.map",
-    "static/js/2.9aefe35d.chunk.js": "/adrianblancode.github.io/static/js/2.9aefe35d.chunk.js",
-    "static/js/2.9aefe35d.chunk.js.map": "/adrianblancode.github.io/static/js/2.9aefe35d.chunk.js.map",
+    "static/js/2.a0fc3cee.chunk.js": "/adrianblancode.github.io/static/js/2.a0fc3cee.chunk.js",
+    "static/js/2.a0fc3cee.chunk.js.map": "/adrianblancode.github.io/static/js/2.a0fc3cee.chunk.js.map",
     "index.html": "/adrianblancode.github.io/index.html",
-    "precache-manifest.dc5afe88e5823b5658a01d7bc43daa78.js": "/adrianblancode.github.io/precache-manifest.dc5afe88e5823b5658a01d7bc43daa78.js",
+    "precache-manifest.a94a896c5d7e07018a22d329bfb2fec4.js": "/adrianblancode.github.io/precache-manifest.a94a896c5d7e07018a22d329bfb2fec4.js",
     "service-worker.js": "/adrianblancode.github.io/service-worker.js",
-    "static/css/main.e37a4d65.chunk.css.map": "/adrianblancode.github.io/static/css/main.e37a4d65.chunk.css.map",
-    "static/js/2.9aefe35d.chunk.js.LICENSE.txt": "/adrianblancode.github.io/static/js/2.9aefe35d.chunk.js.LICENSE.txt",
+    "static/css/main.2f42b9b0.chunk.css.map": "/adrianblancode.github.io/static/css/main.2f42b9b0.chunk.css.map",
+    "static/js/2.a0fc3cee.chunk.js.LICENSE.txt": "/adrianblancode.github.io/static/js/2.a0fc3cee.chunk.js.LICENSE.txt",
     "static/media/fonts.css": "/adrianblancode.github.io/static/media/AvenirLTW02-95Black.ef86cf16.woff2",
+    "static/media/coop-showcase.png": "/adrianblancode.github.io/static/media/coop-showcase.b2de768e.png",
     "static/media/github.svg": "/adrianblancode.github.io/static/media/github.f5ce1d9f.svg",
     "static/media/gmail.svg": "/adrianblancode.github.io/static/media/gmail.c71207d9.svg",
-    "static/media/linkedin.svg": "/adrianblancode.github.io/static/media/linkedin.d78b5788.svg"
+    "static/media/goahead-showcase.png": "/adrianblancode.github.io/static/media/goahead-showcase.474a0ba5.png",
+    "static/media/linkedin.svg": "/adrianblancode.github.io/static/media/linkedin.d78b5788.svg",
+    "static/media/sj-showcase.png": "/adrianblancode.github.io/static/media/sj-showcase.4066dbdd.png",
+    "static/media/whitelines-showcase.jpg": "/adrianblancode.github.io/static/media/whitelines-showcase.1363af0d.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.4c979ece.js",
-    "static/js/2.9aefe35d.chunk.js",
-    "static/css/main.e37a4d65.chunk.css",
-    "static/js/main.3ae50fda.chunk.js"
+    "static/js/2.a0fc3cee.chunk.js",
+    "static/css/main.2f42b9b0.chunk.css",
+    "static/js/main.298a8a9c.chunk.js"
   ]
 }
