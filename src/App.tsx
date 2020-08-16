@@ -1,7 +1,4 @@
 import React, { useEffect } from 'react';
-import gmail from './vectors/gmail.svg';
-import linkedin from './vectors/linkedin.svg';
-import github from './vectors/github.svg';
 import coop from './images/coop-showcase.png';
 import goahead from './images/goahead-showcase.png';
 import sj from './images/sj-showcase.png';
@@ -11,10 +8,8 @@ import './App.scss';
 function App() {
   useEffect(() => {
 
-    let landscape: boolean = window.innerWidth > window.innerHeight
-
-    // High zoom looks really busy in vertical
-    let zoom: number = landscape ? 1 : 0.4;
+    let widthRatio: number = window.innerWidth / window.innerHeight
+    let zoom: number = 2.5 - Math.max(1, 0.5 * widthRatio);
 
     (window as any).VANTA.FOG({
       el: "#vanta",
@@ -48,9 +43,9 @@ function App() {
 function Intro() {
   return (
     <div className="container">
-      <h1 className="title is-1 is-size-3-touch is-spaced fadein-1">Hi, I'm Adrian! I build world-class Android apps.</h1>
-      <p className="mb-4 fadein-2">I am a Stockholm based developer currently working freelance, previously Software Engineer and Platform Lead at <a href="https://bontouch.com">Bontouch.</a></p>
-      <p className="mb-4 fadein-3">I have worked with everything from mobile development, technical leadership, web development, graphics programming, audio analysis, to even co-founding a company creating interactive mixed reality experiences.</p>
+      <h1 className="title is-1 is-size-3-touch is-spaced fadein-1">Hi, I'm Adrian! I'm a Software Engineer building world-class apps.</h1>
+      <p className="mb-4 fadein-2">I am currently working freelance in Stockholm, previously Software Engineer and Platform Lead at <a href="https://bontouch.com">Bontouch.</a></p>
+      <p className="mb-4 fadein-3">I have worked with everything from Android development, technical leadership, web development, graphics programming, audio analysis, to even co-founding a company creating interactive mixed reality experiences.</p>
       <p className="mb-4 fadein-4">If this sounds interesting, feel free to <a href="/files/Adrian_Blanco_CV.pdf">check out my CV</a> or just <a href="mailto:adrianblancode@gmail.com">say hello.</a></p>
       <p></p>
     </div>
@@ -84,14 +79,13 @@ function Experience() {
           <div className="column is-6-tablet mb-4">
             <img src={sj} className="portfolio-image" alt="SJ Showcase" />
             <h3 className="subtitle is-6 mb-2 mt-4">Swedish Railways (SJ)</h3>
-            <p className="is-size-7 mb-1">For SJ I developed a suite of internal apps from the ground up. They are currently used by SJ staff to coordinate maintenance and repairs of trains all across Sweden.</p>
+            <p className="is-size-7 mb-1">I developed a suite of internal apps from the ground up for SJ. They are currently used daily by SJ staff to maintain and repair trains all across Sweden.</p>
           </div>
 
           <div className="column is-6-tablet mb-4">
             <img src={whitelines} className="portfolio-image" alt="Whitelines Showcase" />
             <h3 className="subtitle is-6 mb-2 mt-4">Whitelines</h3>
-            <p className="is-size-7 mb-1">Whitelines Link is an app to scan and organize your notes.</p>
-            <p className="is-size-7">For the Android version, developed a new major release including redesigning the app with a new design language and implementing new features for scanning notes.</p>
+            <p className="is-size-7 mb-1">Whitelines Link is an app to scan and organize your notes. For the Android version, I worked with developing a new major release including a redesign of the app with a new design language and new scanning features.</p>
           </div>
         </div>
       </div>
@@ -101,25 +95,26 @@ function Experience() {
 
 function Footer() {
   return (
-    <section className="section pb-4">
+    <section className="section footer">
       <div className="container">
         <div className="level">
           <div className="level-left">
             <div className="level-item">
-              <p className="is-size-7">Made with ❤️ by Adrian Blanco</p>
+                <p className="is-size-7">Adrian Blanco</p>
+            </div>
+            <div className="level-item">
+              <a className="is-size-7" href="mailto:adrianblancode@gmail.com">adrianblancode@gmail.com</a>
             </div>
           </div>
           <div className="level-right">
+          <div className="level-item">
+              <a className="is-size-7" href="/files/Adrian_Blanco_CV.pdf">CV</a>
+            </div>
             <div className="level-item">
-              <a href="https://github.com/adrianblancode" className="social-container">
-                <img src={github} className="social" alt="GitHub" />
-              </a>
-              <a href="https://linkedin.com/in/adrianblancode" className="social-container">
-                <img src={linkedin} className="social" alt="LinkedIn" />
-                </a>
-              <a href="mailto:adrianblancode@gmail.com" className="social-container">
-                <img src={gmail} className="social" alt="Email" />
-              </a>
+              <a className="is-size-7" href="https://github.com/adrianblancode">GitHub</a>
+            </div>
+            <div className="level-item">
+              <a className="is-size-7" href="https://linkedin.com/in/adrianblancode" >LinkedIn</a>
             </div>
           </div>
         </div>

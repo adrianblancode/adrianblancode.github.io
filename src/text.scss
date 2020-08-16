@@ -1,21 +1,23 @@
 @import './base.scss';
 
-a {
-    display: inline-block;
-  }
+a { display: inline-block; }
   
-p a:after {
+a:after {
     content: "";
     display: block;
-    height: 4px;
+    height: 3px;
     width: 102%;
     background: transparentize($color: $primary, $amount: 0.2);
     margin-top: -6px;
-    margin-left: -2px;
+    margin-left: -1%;
 }
 
-p a:hover:after {
-    background: $primary;
+a:hover {
+    transition-duration: 0.3s;
+}
+
+a:hover:after {
+    background: $text-secondary;
 }
 
 ::selection {
