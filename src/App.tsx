@@ -1,11 +1,11 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, MutableRefObject } from 'react';
 import coop from './images/coop-showcase.png';
 import goahead from './images/goahead-showcase.png';
 import sj from './images/sj-showcase.png';
 import whitelines from './images/whitelines-showcase.jpg';
 import './App.scss';
 
-const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop)   
+const scrollToRef = (ref: MutableRefObject<any>) => window.scrollTo(0, ref.current.offsetTop)   
 
 function App() {
   useEffect(() => {
@@ -33,7 +33,7 @@ function App() {
   }, [])
 
   const experienceRef = useRef(null)
-  const scrollToExperience = () => scrollToRef(experienceRef)
+  const scrollToExperience: (() => void) = () => scrollToRef(experienceRef)
 
   return (
     <div id="app">
@@ -53,7 +53,7 @@ function App() {
   )
 }
 
-function Chevron({clickListener}) {
+function Chevron({ clickListener }: { clickListener: () => void }) {
   return (
     <div className="is-hidden-touch chevron-down fadein-5">
       <a onClick={clickListener}>
