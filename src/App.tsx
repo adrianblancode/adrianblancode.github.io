@@ -8,8 +8,13 @@ import './App.scss';
 function App() {
   useEffect(() => {
 
-    let widthRatio: number = window.innerWidth / window.innerHeight
-    let zoom: number = 2.5 - Math.max(1, 0.5 * widthRatio);
+    let widthRatio: number = Math.max(2, Math.min(0.5, window.innerWidth / window.innerHeight)); // [0.5, 2]
+    
+    let scaleRatio = widthRatio - 1; // [-0.5, 1]
+    
+    // Low for vertical, high for horizontal [0, 1]
+    if (scaleRatio < 0) { scaleRatio *= 2}
+    scaleRatio = (scaleRatio + 1) / 2;
 
     (window as any).VANTA.FOG({
       el: "#vanta",
@@ -18,10 +23,10 @@ function App() {
       highlightColor: 0xff2060,
       midtoneColor: 0xde3163,
       lowlightColor: 0x772088,
-      baseColor: 0x25004a,
+      baseColor: 0x30004a,
       blurFactor: 0.35,
-      zoom: zoom,
-      speed: 0.6
+      zoom: 2.2 - 1 * scaleRatio,
+      speed: 4 - 3.3 * scaleRatio
     })
   }, [])
 
@@ -44,7 +49,7 @@ function Intro() {
   return (
     <div className="container">
       <h1 className="title is-1 is-size-3-touch is-spaced fadein-1">Hi, I'm Adrian! I'm a Software Engineer building world-class apps.</h1>
-      <p className="mb-4 fadein-2">I am currently working freelance in Stockholm, previously Software Engineer and Platform Lead at <a href="https://bontouch.com">Bontouch.</a></p>
+      <p className="mb-4 fadein-2">I'm currently working freelance in Stockholm, previously Software Engineer and Platform Lead at <a href="https://bontouch.com">Bontouch.</a></p>
       <p className="mb-4 fadein-3">I have worked with everything from Android development, technical leadership, web development, graphics programming, audio analysis, to even co-founding a company creating interactive mixed reality experiences.</p>
       <p className="mb-4 fadein-4">If this sounds interesting, feel free to <a href="/files/Adrian_Blanco_CV.pdf">check out my CV</a> or just <a href="mailto:adrianblancode@gmail.com">say hello.</a></p>
       <p></p>

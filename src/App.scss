@@ -1,14 +1,14 @@
 @import './base.scss';
 
 .hero {
-    backdrop-filter: brightness(0.7) blur(2px);
+    backdrop-filter: brightness(1) blur(2px);
 }
 
 .hero-body {
     background: linear-gradient(180deg, transparentize($background, 1), transparentize($background, 0.8), transparentize($background, 0.5), transparentize($background, 0.2), $background);
     background-repeat: no-repeat;
     background-position: bottom;
-    background-size: auto 70%;
+    background-size: auto 90%;
 
     p {
         color: $text-primary;
@@ -18,7 +18,7 @@
 @include tablet {
     .hero-body {
         mask:
-        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="rgba(255, 255, 255, 0.5)" d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/></svg>') 0/3% 3%,
+        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="rgba(255, 255, 255, 0.35)" d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/></svg>') 0/3% 3%,
         linear-gradient(#fff,#fff);
         mask-composite: exclude;
         mask-repeat: no-repeat;
