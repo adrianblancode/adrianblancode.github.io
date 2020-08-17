@@ -27,6 +27,10 @@ $title-family: $family-bold;
 $subtitle-color: $text-primary;
 $subtitle-family: $family-heavy;
 
+html {
+    scroll-behavior: smooth;
+}
+
 .mt-8 {
     margin-top: 2rem !important;
 }
@@ -43,3 +47,4 @@ $subtitle-family: $family-heavy;
 @import '../node_modules/bulma/sass/components/level.sass';
 @import '../node_modules/bulma/sass/helpers/spacing.sass';
 @import '../node_modules/bulma/sass/helpers/typography.sass';
+@import '../node_modules/bulma/sass/helpers/visibility.sass';

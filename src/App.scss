@@ -7,23 +7,36 @@
 .hero-body {
     background: linear-gradient(180deg, transparentize($background, 1), transparentize($background, 0.8), transparentize($background, 0.5), transparentize($background, 0.2), $background);
     background-repeat: no-repeat;
-    background-position: bottom;
+    background-position-y: 101%;
     background-size: auto 90%;
+
+    // Fix gap in background rendering
+    margin-bottom: -1px;
 
     p {
         color: $text-primary;
     }
 }
 
-@include tablet {
-    .hero-body {
-        mask:
-        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="rgba(255, 255, 255, 0.35)" d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/></svg>') 0/3% 3%,
-        linear-gradient(#fff,#fff);
-        mask-composite: exclude;
-        mask-repeat: no-repeat;
-        mask-position: center 93%;
+.chevron-down {
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+
+    a { 
+        padding: 16px; 
+    
+        &:hover {
+            transform: translateY(6px);
+            transition-duration: 0.5s;
+        } 
+
+        &:hover svg path {
+            fill: $text-secondary;
+            transition: fill 800ms;
+        } 
     }
+    
 }
 
 @keyframes fadeInUp {
@@ -57,7 +70,7 @@
 
     @include desktop {
         .level-item:not(:first-child) {
-            margin-left: 16px;
+            margin-left: 24px;
         }
     }
 

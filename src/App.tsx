@@ -1,9 +1,11 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import coop from './images/coop-showcase.png';
 import goahead from './images/goahead-showcase.png';
 import sj from './images/sj-showcase.png';
 import whitelines from './images/whitelines-showcase.jpg';
 import './App.scss';
+
+const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop)   
 
 function App() {
   useEffect(() => {
@@ -30,6 +32,9 @@ function App() {
     })
   }, [])
 
+  const experienceRef = useRef(null)
+  const scrollToExperience = () => scrollToRef(experienceRef)
+
   return (
     <div id="app">
       <div id="vanta">
@@ -37,18 +42,33 @@ function App() {
           <div className="hero-body">
             <Intro />
           </div>
+          <Chevron clickListener={scrollToExperience} />
         </section>
       </div>
-      <Experience />
+      <div ref={experienceRef}>
+        <Experience />
+      </div>
       <Footer />
     </div>
-  );
+  )
+}
+
+function Chevron({clickListener}) {
+  return (
+    <div className="is-hidden-touch chevron-down fadein-5">
+      <a onClick={clickListener}>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <path fill="white" d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/>
+        </svg>
+      </a>
+    </div>
+  )
 }
 
 function Intro() {
   return (
     <div className="container">
-      <h1 className="title is-1 is-size-3-touch is-spaced fadein-1">Hi, I'm Adrian! I'm a Software Engineer building world-class apps.</h1>
+      <h1 className="title is-1 is-size-3-touch is-spaced fadein-1">Hi, I'm Adrian! I'm a Software Engineer making awesome apps.</h1>
       <p className="mb-4 fadein-2">I'm currently working freelance in Stockholm, previously Software Engineer and Platform Lead at <a href="https://bontouch.com">Bontouch.</a></p>
       <p className="mb-4 fadein-3">I have worked with everything from Android development, technical leadership, web development, graphics programming, audio analysis, to even co-founding a company creating interactive mixed reality experiences.</p>
       <p className="mb-4 fadein-4">If this sounds interesting, feel free to <a href="/files/Adrian_Blanco_CV.pdf">check out my CV</a> or just <a href="mailto:adrianblancode@gmail.com">say hello.</a></p>
@@ -57,10 +77,9 @@ function Intro() {
   )
 }
 
-
 function Experience() {
   return (
-    <section className="section">
+    <section className="section experience">
       <div className="container">
         <h4 className="title is-5">Recent Projects</h4>
         <div className="columns is-variable is-4">
@@ -76,7 +95,7 @@ function Experience() {
             <img src={goahead} className="portfolio-image" alt="GoAhead Showcase" />
             <h3 className="subtitle is-6 mb-2 mt-4">GoAhead</h3>
             <p className="is-size-7 mb-1">I worked with GoAhead as a developer for the ground up rewrite of their 12 bus apps handling passenger travel and tickets for buses all over the UK.</p>
-            <p className="is-size-7">The work was a close collaboration between the Stockholm and London offices, and during the final months of the project I relocated to the London office to lead the app experience for the Android platform.</p>
+            <p className="is-size-7">During the final months of the project I relocated to the London office to lead the app experience for the Android platform.</p>
           </div>
         </div>
         <div className="columns is-variable is-4">
@@ -84,13 +103,13 @@ function Experience() {
           <div className="column is-6-tablet mb-4">
             <img src={sj} className="portfolio-image" alt="SJ Showcase" />
             <h3 className="subtitle is-6 mb-2 mt-4">Swedish Railways (SJ)</h3>
-            <p className="is-size-7 mb-1">I developed a suite of internal apps from the ground up for SJ. They are currently used daily by SJ staff to maintain and repair trains all across Sweden.</p>
+            <p className="is-size-7 mb-1">I developed a suite of internal apps from the ground up for SJ, currently used daily by SJ staff to maintain and repair trains all across Sweden.</p>
           </div>
 
           <div className="column is-6-tablet mb-4">
             <img src={whitelines} className="portfolio-image" alt="Whitelines Showcase" />
             <h3 className="subtitle is-6 mb-2 mt-4">Whitelines</h3>
-            <p className="is-size-7 mb-1">Whitelines Link is an app to scan and organize your notes. For the Android version, I worked with developing a new major release including a redesign of the app with a new design language and new scanning features.</p>
+            <p className="is-size-7 mb-1">Whitelines Link is an app to scan and organize your notes. For the Android version, I developed a new major release including a redesign of the app with a new design language and new scanning features.</p>
           </div>
         </div>
       </div>
@@ -108,18 +127,26 @@ function Footer() {
                 <p className="is-size-7">Adrian Blanco</p>
             </div>
             <div className="level-item">
-              <a className="is-size-7" href="mailto:adrianblancode@gmail.com">adrianblancode@gmail.com</a>
+              <p className="is-size-7">
+                <a href="mailto:adrianblancode@gmail.com">adrianblancode@gmail.com</a>
+              </p>
             </div>
           </div>
           <div className="level-right">
           <div className="level-item">
-              <a className="is-size-7" href="/files/Adrian_Blanco_CV.pdf">CV</a>
+            <p className="is-size-7">
+              <a href="/files/Adrian_Blanco_CV.pdf">CV</a>
+            </p>
             </div>
             <div className="level-item">
-              <a className="is-size-7" href="https://github.com/adrianblancode">GitHub</a>
+              <p className="is-size-7">
+                <a href="https://github.com/adrianblancode">GitHub</a>
+              </p>
             </div>
             <div className="level-item">
-              <a className="is-size-7" href="https://linkedin.com/in/adrianblancode" >LinkedIn</a>
+              <p className="is-size-7">
+                <a href="https://linkedin.com/in/adrianblancode" >LinkedIn</a>
+              </p>
             </div>
           </div>
         </div>
