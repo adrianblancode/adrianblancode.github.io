@@ -19,12 +19,14 @@
 }
 
 .chevron-down {
+    $padding: 16px;
+
     position: absolute;
-    left: 50%;
-    bottom: 5%;
+    left: calc(50% - #{$padding + 12px});
+    bottom: calc(5% - #{$padding});
 
     a { 
-        padding: 16px; 
+        padding: $padding; 
     
         &:hover {
             transform: translateY(6px);
