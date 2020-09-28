@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.12951287.chunk.css",
-    "main.js": "/static/js/main.6fe547c7.chunk.js",
-    "main.js.map": "/static/js/main.6fe547c7.chunk.js.map",
+    "main.css": "/static/css/main.02e4e818.chunk.css",
+    "main.js": "/static/js/main.4c780c5a.chunk.js",
+    "main.js.map": "/static/js/main.4c780c5a.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.7bc9e1fa.js",
     "runtime-main.js.map": "/static/js/runtime-main.7bc9e1fa.js.map",
     "static/js/2.8c936435.chunk.js": "/static/js/2.8c936435.chunk.js",
     "static/js/2.8c936435.chunk.js.map": "/static/js/2.8c936435.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.5b99bacb653bbdf116be5288d484fe53.js": "/precache-manifest.5b99bacb653bbdf116be5288d484fe53.js",
+    "precache-manifest.5f0668ff128d2fde0add24666e180b23.js": "/precache-manifest.5f0668ff128d2fde0add24666e180b23.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.12951287.chunk.css.map": "/static/css/main.12951287.chunk.css.map",
+    "static/css/main.02e4e818.chunk.css.map": "/static/css/main.02e4e818.chunk.css.map",
     "static/js/2.8c936435.chunk.js.LICENSE.txt": "/static/js/2.8c936435.chunk.js.LICENSE.txt",
-    "static/media/fonts.css": "/static/media/AvenirRoman.47793e6c.woff",
+    "static/media/fonts.css": "/static/media/AvenirLTW02-95Black.ef86cf16.woff2",
     "static/media/coop-showcase.png": "/static/media/coop-showcase.b2de768e.png",
     "static/media/goahead-showcase.png": "/static/media/goahead-showcase.474a0ba5.png",
     "static/media/sj-showcase.png": "/static/media/sj-showcase.4066dbdd.png",
@@ -21,7 +21,7 @@
   "entrypoints": [
     "static/js/runtime-main.7bc9e1fa.js",
     "static/js/2.8c936435.chunk.js",
-    "static/css/main.12951287.chunk.css",
-    "static/js/main.6fe547c7.chunk.js"
+    "static/css/main.02e4e818.chunk.css",
+    "static/js/main.4c780c5a.chunk.js"
   ]
 }
