@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f0464fbfc16cd1ad371585ca213b146a",
+    "revision": "f590e76167b892126f1c96705a402c47",
     "url": "/index.html"
   },
   {
-    "revision": "af1bfb26ca5614eaf3f4",
+    "revision": "409362d6104d72a6bf5c",
     "url": "/static/css/main.02e4e818.chunk.css"
   },
   {
-    "revision": "7b1e7992f774fef362d0",
-    "url": "/static/js/2.8c936435.chunk.js"
+    "revision": "5e3bf7c9655f9c650237",
+    "url": "/static/js/2.8192a89d.chunk.js"
   },
   {
     "revision": "e88a3e95b5364d46e95b35ae8c0dc27d",
-    "url": "/static/js/2.8c936435.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.8192a89d.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "af1bfb26ca5614eaf3f4",
-    "url": "/static/js/main.4c780c5a.chunk.js"
+    "revision": "409362d6104d72a6bf5c",
+    "url": "/static/js/main.dde58092.chunk.js"
   },
   {
     "revision": "67c5fc703d04ef02ca32",
@@ -64,8 +64,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/goahead-showcase.474a0ba5.png"
   },
   {
-    "revision": "4066dbdd0f6018cb77cd0f128327b2d7",
-    "url": "/static/media/sj-showcase.4066dbdd.png"
+    "revision": "eeba6a30b9e0b81764a118a075c2fc32",
+    "url": "/static/media/paypal-logo.eeba6a30.png"
+  },
+  {
+    "revision": "878c46adf2cf666f6d36971c63f3e60d",
+    "url": "/static/media/sj-logo.878c46ad.png"
+  },
+  {
+    "revision": "7afa7de0a75c9262c7aa9c7599b82101",
+    "url": "/static/media/tekniska-logo.7afa7de0.jpg"
   },
   {
     "revision": "1363af0d43c06f41a685f3be537d5339",
