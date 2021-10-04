@@ -2,4 +2,8 @@
 
 My personal page, made with React and TypeScript.
 
-All of this info is probably better found on my LinkedIn anyway.
+### Build
+
+`npm run start` to start server at `localhost:3000`
+
+`npm run deploy` to deploy to Github pages
