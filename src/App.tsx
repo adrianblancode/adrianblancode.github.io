@@ -30,7 +30,7 @@ function App() {
       baseColor: 0x30004a,
       blurFactor: 0.35,
       zoom: 2.2 - 1 * scaleRatio,
-      speed: 4 - 3.3 * scaleRatio
+      speed: 4 - 1 * scaleRatio
     })
   }, [])
 
@@ -72,7 +72,7 @@ function Intro() {
     <div className="container">
       <h1 className="title is-1 is-size-3-touch is-spaced fadein-1">Hi, I'm Adrian! I'm a Software Engineer making awesome apps.</h1>
       <p className="mb-4 fadein-2">I'm currently working freelance at <a href="https://paypal.com/">PayPal</a> in Stockholm, previously Software Engineer and Platform Lead at <a href="https://bontouch.com/">Bontouch</a>.</p>
-      <p className="mb-4 fadein-3">I have a background in building and leading Android apps for hundreds of thousands of users, and for the last four years I have worked with some of Sweden's most popular apps, using Kotlin, Java, RxJava, Coroutines and Dagger.</p>
+      <p className="mb-4 fadein-3">I have a background in building and leading Android apps for hundreds of thousands of users, and for the last five years I have worked with some of Sweden's most popular apps, using Kotlin, Java, RxJava, Coroutines and Dagger.</p>
       <p className="mb-4 fadein-4">Interested? Feel free to check out my <a href="/files/Adrian_Blanco_CV.pdf">CV</a> or just <a href="mailto:adrianblancode@gmail.com">say hello.</a></p>
       <p></p>
     </div>
@@ -89,7 +89,7 @@ function Experience() {
           <div className="column is-6-tablet mb-4">
             <img src={paypal} className="portfolio-image" alt="PayPal logo" />
             <h3 className="subtitle is-6 mb-2 mt-4">PayPal</h3>
-            <p className="is-size-7 mb-1">Working on the iZettle Android platform.</p>
+            <p className="is-size-7 mb-1">Working on the Zettle Android platform.</p>
           </div>
           
           <div className="column is-6-tablet mb-4">
