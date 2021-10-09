@@ -30,7 +30,7 @@ function App() {
       baseColor: 0x30004a,
       blurFactor: 0.35,
       zoom: 2.2 - 1 * scaleRatio,
-      speed: 4 - 1 * scaleRatio
+      speed: 4 - 2 * scaleRatio
     })
   }, [])
 
