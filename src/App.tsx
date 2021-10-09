@@ -1,4 +1,6 @@
-import React, { useEffect, useRef, MutableRefObject } from 'react';
+import React, { useState, useEffect, useRef, MutableRefObject } from 'react';
+import * as THREE from 'three'
+import FOG from 'vanta/dist/vanta.fog.min'
 import paypal from './images/paypal-logo.png';
 import coop from './images/coop-showcase.png';
 import sj from './images/sj-logo.png';
@@ -10,29 +12,37 @@ import './App.scss';
 const scrollToRef = (ref: MutableRefObject<any>) => window.scrollTo(0, ref.current.offsetTop)   
 
 function App() {
+
+  const [vantaEffect, setVantaEffect] = useState<any>(null)
   useEffect(() => {
+    if (!vantaEffect) {
 
-    let widthRatio: number = Math.max(2, Math.min(0.5, window.innerWidth / window.innerHeight)); // [0.5, 2]
-    
-    let scaleRatio = widthRatio - 1; // [-0.5, 1]
-    
-    // Low for vertical, high for horizontal [0, 1]
-    if (scaleRatio < 0) { scaleRatio *= 2}
-    scaleRatio = (scaleRatio + 1) / 2;
+      let widthRatio: number = Math.max(2, Math.min(0.5, window.innerWidth / window.innerHeight)); // [0.5, 2]
+        
+      let scaleRatio = widthRatio - 1; // [-0.5, 1]
+      
+      // Low for vertical, high for horizontal [0, 1]
+      if (scaleRatio < 0) { scaleRatio *= 2}
+      scaleRatio = (scaleRatio + 1) / 2;
 
-    (window as any).VANTA.FOG({
-      el: "#vanta",
-      minHeight: 200.00,
-      minWidth: 200.00,
-      highlightColor: 0xff2060,
-      midtoneColor: 0xde3163,
-      lowlightColor: 0x772088,
-      baseColor: 0x30004a,
-      blurFactor: 0.35,
-      zoom: 2.2 - 1 * scaleRatio,
-      speed: 4 - 2 * scaleRatio
-    })
-  }, [])
+      setVantaEffect(FOG({
+        el: "#vanta",
+        THREE: THREE,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        highlightColor: 0xff2060,
+        midtoneColor: 0xde3163,
+        lowlightColor: 0x772088,
+        baseColor: 0x30004a,
+        blurFactor: 0.35,
+        zoom: 2.2 - 1 * scaleRatio,
+        speed: 4 - 2 * scaleRatio
+      }))
+    }
+    return () => {
+      if (vantaEffect) vantaEffect.destroy()
+    }
+  }, [vantaEffect])
 
   const experienceRef = useRef(null)
   const scrollToExperience: (() => void) = () => scrollToRef(experienceRef)
@@ -58,11 +68,11 @@ function App() {
 function Chevron({ clickListener }: { clickListener: () => void }) {
   return (
     <div className="is-hidden-touch chevron-down fadein-5">
-      <a onClick={clickListener}>
+      <button onClick={clickListener}>
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
           <path fill="white" d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/>
         </svg>
-      </a>
+      </button>
     </div>
   )
 }
