@@ -18,7 +18,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "^3.4.3",
-    "three": "^0.133.1",
+    "three": "^0.137.0",
     "typescript": "^3.7.5",
     "vanta": "^0.5.21"
   },
