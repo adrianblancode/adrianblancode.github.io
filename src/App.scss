@@ -1,20 +1,54 @@
 @import './base.scss';
 
-.hero {
-    backdrop-filter: brightness(1) blur(2px);
+#vanta-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.vanta-canvas {
+    filter: brightness(1.2) contrast(1.2) saturate(1.2);
+    image-rendering: pixelated;
+}
+
+.hero-bg-grid {
+    background: url(https://sourcefoundry.org/hack/assets/plugins/revolution-slider/rs-plugin/assets/gridtile.png);
+    background-size: 300% 8px;
+    opacity: 0.025;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    image-rendering: pixelated;
+}
+
+.hero-bg-gradient {
+    background: linear-gradient(180deg, transparentize($background, 1), transparentize($background, 0.7), transparentize($background, 0.5), transparentize($background, 0.35), transparentize($background, 0.2), $background);
+    background-repeat: no-repeat;
+    background-position-y: 101%;
+    background-size: auto 70%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
 }
 
 .hero-body {
-    background: linear-gradient(180deg, transparentize($background, 1), transparentize($background, 0.8), transparentize($background, 0.5), transparentize($background, 0.2), $background);
-    background-repeat: no-repeat;
-    background-position-y: 101%;
-    background-size: auto 90%;
 
     // Fix gap in background rendering
     margin-bottom: -1px;
 
+    h1 {
+        text-shadow: 3px 4px 20px transparentize($background, 0.5);
+    }
+
     p {
         color: $text-primary;
+        text-shadow: 2px 3px 8px transparentize($background, 0.5);
     }
 }
 
@@ -23,10 +57,10 @@
 
     position: absolute;
     left: calc(50% - #{$padding + 12px});
-    bottom: calc(5% - #{$padding});
+    bottom: -20px;
 
     button { 
-        padding: $padding; 
+        padding: $padding;
         background-color: transparent;
         border: none;
         cursor: pointer;
@@ -42,6 +76,34 @@
         } 
     }
     
+}
+
+.hero-foot {
+
+    @include desktop {
+        .level-item:not(:first-child) {
+            margin-left: 24px;
+        }
+    }
+
+    a {
+        height: 1.5em;
+    }
+
+    a::after {
+        height: 2px;
+        margin-top: -4px;
+    }
+}
+
+.projectitem {
+    p:not(:last-child) {
+        margin-bottom: 12px;
+    }
+}
+
+.portfolio-image {
+    border-radius: 16px;
 }
 
 @keyframes fadeInUp {
@@ -62,29 +124,7 @@
         -moz-animation-name: fadeInUp;
         animation-name: fadeInUp;
         animation-fill-mode: both;
-        animation-duration: 0.8s;
-        animation-delay: 0.2s + $i * 0.1s;
-    }
-}
-
-.portfolio-image {
-    border-radius: 16px;
-}
-
-.footer {
-
-    @include desktop {
-        .level-item:not(:first-child) {
-            margin-left: 24px;
-        }
-    }
-
-    a {
-        height: 1.5em;
-    }
-
-    a::after {
-        height: 2px;
-        margin-top: -4px;
+        animation-duration: 1s;
+        animation-delay: 1s + 0.3s * $i;
     }
 }
