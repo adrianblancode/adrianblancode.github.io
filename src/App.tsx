@@ -77,7 +77,7 @@ function Intro() {
     <div className="container">
       <h1 className="title is-2 is-size-4-touch mb-0 fadein-1">Hey, I'm Adrian Blanco.</h1>
       <h1 className="title is-2 is-size-4-touch fadein-1">I convert coffee into code.</h1>
-      <p className="mb-4 fadein-2">I'm a Software Engineer based in 🇸🇪, currently on vacation.</p>
+      <p className="mb-4 fadein-2">I'm a Software Engineer based in <span role="img" aria-label="Sweden">🇸🇪</span>, currently on vacation.</p>
       <p className="mb-4 fadein-3">For the past six years I've worked on everything related to Android, from apps to operating systems. Most recently I worked on the Zettle Terminal hardware at PayPal.</p>
       <p></p>
     </div>
