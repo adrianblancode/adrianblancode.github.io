@@ -55,11 +55,11 @@ function Vanta() {
         midtoneColor: 0xde3163,
         lowlightColor: 0x772088,
         baseColor: 0x30004a,
-        blurFactor: 0.35,
-        zoom: 0.35,
-        scale: 16,
+        blurFactor: 0.4,
+        zoom: 0.55,
+        scale: 12,
         scaleMobile: 16,
-        speed: -0.6
+        speed: -0.4
       }))
     }
     return () => {
