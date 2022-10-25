@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './base.scss';
 import './text.scss';
-import './fonts.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 

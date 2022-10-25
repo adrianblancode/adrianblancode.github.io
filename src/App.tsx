@@ -46,21 +46,25 @@ function Vanta() {
   const [vantaEffect, setVantaEffect] = useState<any>(null)
   useEffect(() => {
     if (!vantaEffect) {
-      setVantaEffect(FOG({
-        el: "#vanta-container",
-        THREE: THREE,
-        minHeight: 200.00,
-        minWidth: 200.00,
-        highlightColor: 0xff2060,
-        midtoneColor: 0xde3163,
-        lowlightColor: 0x772088,
-        baseColor: 0x30004a,
-        blurFactor: 0.4,
-        zoom: 0.55,
-        scale: 12,
-        scaleMobile: 16,
-        speed: -0.4
-      }))
+      try {
+        setVantaEffect(FOG({
+          el: "#vanta-container",
+          THREE: THREE,
+          minHeight: 200.00,
+          minWidth: 200.00,
+          highlightColor: 0xff2060,
+          midtoneColor: 0xde3163,
+          lowlightColor: 0x772088,
+          baseColor: 0x30004a,
+          blurFactor: 0.4,
+          zoom: 0.55,
+          scale: 16,
+          scaleMobile: 16,
+          speed: -0.4
+        }))
+      } catch (e) {
+        console.error("Failed to create vanta effect: ", e)
+      }
     }
     return () => {
       if (vantaEffect) vantaEffect.destroy()
@@ -75,10 +79,10 @@ function Vanta() {
 function Intro() {
   return (
     <div className="container">
-      <h1 className="title is-2 is-size-4-touch mb-0 fadein-1">Hey, I'm Adrian Blanco.</h1>
-      <h1 className="title is-2 is-size-4-touch fadein-1">I convert coffee into code.</h1>
-      <p className="mb-4 fadein-2">I'm a Software Engineer based in <span role="img" aria-label="Sweden">🇸🇪</span>, currently on vacation.</p>
-      <p className="mb-4 fadein-3">For the past six years I've worked on everything related to Android, from apps to operating systems. Most recently I worked on the Zettle Terminal hardware at PayPal.</p>
+      <h1 className="title is-3 is-size-4-touch fadein-1 mb-1">Hey, I'm Adrian Blanco.</h1>
+      <h1 className="title is-3 is-size-4-touch fadein-1">I convert coffee to code.</h1>
+      <p className="mb-4 fadein-2">I'm a Software Engineer from <span role="img" aria-label="Sweden">🇸🇪</span>.</p>
+      <p className="mb-4 fadein-3">For the past six years I've worked on everything related to Android, from apps to operating systems.</p>
       <p></p>
     </div>
   )
@@ -129,6 +133,13 @@ function Chevron({ clickListener }: { clickListener: () => void }) {
   )
 }
 
+interface ProjectItemProps{
+  imgSrc: string,
+  imgAltText: string,
+  title: string,
+  descriptions: string[]
+}
+
 const Experience = forwardRef<HTMLDivElement>((props, ref) => {
 
   const projectItems: ProjectItemProps[] = [
@@ -136,29 +147,42 @@ const Experience = forwardRef<HTMLDivElement>((props, ref) => {
       imgSrc : paypal,
       imgAltText : "PayPal logo",
       title : "PayPal",
-      descriptions : ["Worked on building the AOSP based operating system for the Zettle Terminal hardware."]
+      descriptions : [
+        "Zettle Terminal is PayPal's leading payment terminal.",
+        "I worked on building the operating system for the Zettle Terminal hardware, based on AOSP.",
+        "I developed new payment features for the Zettle Android SDK serving millions of users, such as accessibility payment flows, tipping for global markets and Venmo payments for the US market.",
+        // "Developed Venmo payments in Zettle Android for the US market"
+        "<a href=\"https://www.youtube.com/watch?v=00LU2zrlL5U\">Zettle Terminal at YouTube</a>"
+      ]
     },
     {
       imgSrc : coop,
       imgAltText : "Coop Showcase",
       title : "Coop",
       descriptions : [
-        "Coop is a grocery store chain in the Nordics with a strong focus on online shopping.",
-        "I led the development of their new app for Android as platform lead, building one of the largest ecommerce grocery apps in the Nordics from the ground up and serving hundreds of thousands of users. As platform lead I ensured high technical quality through technical leadership, architecture, software engineering best practices, code reviews, among others."
+        "Coop is one of the largest grocery store chains in the Nordics, with a strong focus on online shopping.",
+        "I led the development of the new Coop app for Android as platform lead, building one of the largest ecommerce apps in the Nordics from the ground up and serving hundreds of thousands of users.",
+        "As platform lead I ensured high technical quality through technical leadership, architecture, software engineering best practices, code reviews, among others.",
+        "<a href=\"https://play.google.com/store/apps/details?id=se.nansen.coop\">Coop at Google Play</a>"
       ]
     },
     {
       imgSrc : sj,
       imgAltText : "SJ logo",
       title : "Swedish Railways (SJ)",
-      descriptions : ["I developed a suite of internal apps from the ground up for SJ, currently used daily by SJ staff to maintain and repair trains all across Sweden."]
+      descriptions : [
+        "SJ is the largest train operator in Sweden.",
+        "I worked with developing the internal apps for SJ that are used for scanning tickets and managing trains all across Sweden.",
+        "<a href=\"https://www.bbc.com/news/av/technology-41178142\">SJ ticket scanning app featured on BBC</a>"
+      ]
     },
     {
       imgSrc : goahead,
       imgAltText : "GoAhead Showcase",
       title : "GoAhead",
       descriptions : [
-        "I worked with GoAhead as a developer for the ground up rewrite of their bus apps handling passenger travel and tickets for buses all over the UK.",
+        "GoAhead is one of the largest bus operators in the UK.",
+        "I worked with GoAhead as a developer for the ground up rewrite of their bus apps handling passenger travel and tickets for buses all across the UK.",
         "During the final months of the project I relocated to the London office to lead the app experience for the Android platform."
       ]
     },
@@ -166,34 +190,33 @@ const Experience = forwardRef<HTMLDivElement>((props, ref) => {
       imgSrc : whitelines,
       imgAltText : "Whitelines Showcase",
       title : "Whitelines",
-      descriptions : ["Whitelines Link is an app to scan and organize your notes. For the Android version, I developed a new major release including a redesign of the app with a new design language and new scanning features."]
+      descriptions : [
+        "Whitelines Link is an app to scan and organize your notes.",
+        "For the Android version, I developed a new major release including a redesign of the app with a new design language and new scanning features.",
+        "<a href=\"https://play.google.com/store/apps/details?id=se.whitelines.link\">Whitelines Link at Google Play</a>"
+      ]
     },
     {
       imgSrc : tekniska,
       imgAltText : "Tekniska Museet logo",
       title : "Swedish National Museum of Science and Technology (Tekniska Museet)",
-      descriptions : ["I developed interactive mixed reality experiences using Kinect and Unity, which were featured in an exhibit about the history of video games."]
+      descriptions : [
+        "I developed interactive mixed reality experiences using Kinect and Unity, which were featured in an exhibit about the history of video games.",
+        "<a href=\"https://www.tekniskamuseet.se/en/discover/exhibitions/play-beyond-play/\">Play Beyond Play at Tekniska Museet</a>"
+      ]
     },
   ]
-
-  let pairs: ProjectItemProps[][] = []
-  for (let i = 0; i < projectItems.length; i += 2) {
-    pairs.push([projectItems[i], projectItems[i + 1]])
-  }
 
   return (
     <div ref={ref}>
       <section className="section experience">
         <div className="container">
-          <h4 className="title is-5">Projects</h4>
+          <h2 className="title is-5">My work</h2>
 
           {
-            pairs.map((pair, i) => {
+            projectItems.map((item, i) => {
               return (
-                <div className="columns is-variable is-4" key={i}>
-                  <ProjectItem {...pair[0]} key={"p1" + i}/>
-                  <ProjectItem {...pair[1]} key={"p2" + i}/>
-                </div>
+                  <ProjectItem {...item} key={"p" + i}/>
               )
             })
           }
@@ -204,29 +227,28 @@ const Experience = forwardRef<HTMLDivElement>((props, ref) => {
   )
 })
 
-interface ProjectItemProps{
-  imgSrc: string,
-  imgAltText: string,
-  title: string,
-  descriptions: string[]
-}
-
 function ProjectItem(props: ProjectItemProps) {
 
   return (
-    <div className="projectitem column is-6-tablet mb-4">
-      <img src={props.imgSrc} className="portfolio-image" alt={props.imgAltText} />
-      <h3 className="subtitle is-6 mb-2 mt-4">{props.title}</h3>
+    <div className="columns mb-6 is-4 is-variable">
+      <div className="projectitem column is-4-tablet mt-1">
+        <a href={props.imgSrc} target="_blank" rel="noopener noreferrer">
+          <img src={props.imgSrc} className="portfolio-image" alt={props.imgAltText} />
+        </a>
+      </div>
+      <div className="projectitem column is-8-tablet ">
+        <h3 className="subtitle is-6 mb-2">{props.title}</h3>
 
-      {
-        props.descriptions.map((desc, i) => {
-          return (
-            <p className="is-size-7" key={i}>{desc}</p>
-          )
-        })
-      }
+        {
+          props.descriptions.map((desc, i) => {
+            return (
+              <p className="is-size-7" key={i} dangerouslySetInnerHTML={{__html: desc}} />
+            )
+          })
+        }
 
     </div>
+  </div>
   )
 }
 
