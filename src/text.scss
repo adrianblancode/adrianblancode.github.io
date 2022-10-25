@@ -5,10 +5,10 @@ a { display: inline-block; }
 p a:after {
     content: "";
     display: block;
-    height: 3px;
+    height: 2px;
     width: 102%;
     background: transparentize($color: $primary, $amount: 0.2);
-    margin-top: -6px;
+    margin-top: -3px;
     margin-left: -1%;
 }
 
