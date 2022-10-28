@@ -14,15 +14,14 @@
 }
 
 .hero-bg-grid {
-    background: url(https://sourcefoundry.org/hack/assets/plugins/revolution-slider/rs-plugin/assets/gridtile.png);
-    background-size: 300% 8px;
-    opacity: 0.025;
+    background: url(./images/gridtile.png);
+    background-size: 9000% 9.2px;
+    opacity: 0.05;
     position: absolute;
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
-    image-rendering: pixelated;
 }
 
 .hero-bg-gradient {
