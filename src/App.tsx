@@ -1,6 +1,7 @@
 import React, { useState, useEffect, forwardRef, RefObject, createRef } from 'react'
 import * as THREE from 'three'
 import FOG from 'vanta/dist/vanta.fog.min'
+import ok from './images/ok_logo.png'
 import paypal from './images/paypal-logo.png'
 import coop from './images/coop-showcase.png'
 import sj from './images/sj-logo.png'
@@ -81,8 +82,8 @@ function Intro() {
     <div className="container">
       <h1 className="title is-3 is-size-4-touch fadein-1 mb-1">Hey, I'm Adrian Blanco.</h1>
       <h1 className="title is-3 is-size-4-touch fadein-1">I convert coffee to code.</h1>
-      <p className="mb-4 fadein-2">I'm a Software Engineer from <span role="img" aria-label="Sweden">🇸🇪</span>.</p>
-      <p className="mb-4 fadein-3">For the past six years I've worked on everything related to Android, from apps to operating systems.</p>
+      <p className="mb-4 fadein-2">I'm a Software Engineer from <span role="img" aria-label="Sweden">🇸🇪</span>, living in Copenhagen.</p>
+      <p className="mb-4 fadein-3">For the past decade I've worked on everything related to Android, from apps to operating systems.</p>
       <p></p>
     </div>
   )
@@ -96,7 +97,7 @@ function Footer({ onChevronClicked }: { onChevronClicked: () => void }) {
           <div className="level-right">
             <div className="level-item">
               <p className="is-size-7">
-                <a href="/files/Adrian_Blanco_CV.pdf">CV</a>
+                <a href={`${process.env.PUBLIC_URL}/files/Adrian_Blanco_CV.pdf`} target="_blank" rel="noopener noreferrer">CV</a>
               </p>
             </div>
             <div className="level-item">
@@ -143,6 +144,15 @@ interface ProjectItemProps{
 const Experience = forwardRef<HTMLDivElement>((props, ref) => {
 
   const projectItems: ProjectItemProps[] = [
+    {
+      imgSrc : ok,
+      imgAltText : "OK logo",
+      title : "OK",
+      descriptions : [
+        "Leading the development of the OK apps as platform lead for Android.",
+        "<a href=\"https://play.google.com/store/apps/details?id=dk.ok.android.findtank&hl=da\">OK at Google Play</a>"
+      ]
+    },
     {
       imgSrc : paypal,
       imgAltText : "PayPal logo",
