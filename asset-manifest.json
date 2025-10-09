@@ -1,19 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.efbf4d70.css",
-    "main.js": "/static/js/main.1f0e0394.js",
+    "main.css": "/static/css/main.012b18fd.css",
+    "main.js": "/static/js/main.9290b9f9.js",
     "static/media/goahead-showcase.png": "/static/media/goahead-showcase.ecbb811d49a59e359431.png",
     "static/media/whitelines-showcase.jpg": "/static/media/whitelines-showcase.998f169a8c8c2964cf2f.jpg",
     "static/media/coop-showcase.png": "/static/media/coop-showcase.1b13e394547c68ded3d5.png",
     "static/media/tekniska-logo.jpg": "/static/media/tekniska-logo.2663b904c342456a12ac.jpg",
+    "static/media/ok_logo.png": "/static/media/ok_logo.afce13d88acf3796b53d.png",
     "static/media/paypal-logo.png": "/static/media/paypal-logo.b346552e9c9b80216e86.png",
     "static/media/sj-logo.png": "/static/media/sj-logo.203ded4b965dd092505b.png",
     "index.html": "/index.html",
-    "main.efbf4d70.css.map": "/static/css/main.efbf4d70.css.map",
-    "main.1f0e0394.js.map": "/static/js/main.1f0e0394.js.map"
+    "main.012b18fd.css.map": "/static/css/main.012b18fd.css.map",
+    "main.9290b9f9.js.map": "/static/js/main.9290b9f9.js.map"
   },
   "entrypoints": [
-    "static/css/main.efbf4d70.css",
-    "static/js/main.1f0e0394.js"
+    "static/css/main.012b18fd.css",
+    "static/js/main.9290b9f9.js"
   ]
 }
