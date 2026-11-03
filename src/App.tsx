@@ -1,6 +1,4 @@
-import { useEffect, useRef, type Ref, type RefObject } from 'react'
-import * as THREE from 'three'
-import FOG from 'vanta/src/vanta.fog.js'
+import BlueprintHero from './blueprint/BlueprintHero'
 import ok from './images/ok_logo.png'
 import paypal from './images/paypal-logo.png'
 import coop from './images/coop-showcase.png'
@@ -10,130 +8,11 @@ import whitelines from './images/whitelines-showcase.jpg'
 import tekniska from './images/tekniska-logo.jpg'
 import './App.scss'
 
-const scrollToRef = (ref: RefObject<HTMLElement | null>) => {
-  if (ref.current) window.scrollTo(0, ref.current.offsetTop)
-}
-
 function App() {
-
-  const experienceRef = useRef<HTMLDivElement>(null)
-  const scrollToExperience: () => void = () => scrollToRef(experienceRef)
-
   return (
     <div id="app">
-      <Hero onChevronClicked={scrollToExperience}/>
-      <Experience ref={experienceRef} />
-    </div>
-  )
-}
-
-function Hero({ onChevronClicked }: { onChevronClicked: () => void }) {
-
-  return (
-    <section className="hero is-fullheight">
-      <div className="hero-body">
-        <Vanta />
-        <div className="hero-bg-grid"/>
-        <div className="hero-bg-gradient"/>
-        <Intro />
-      </div>
-      <div className="hero-foot">
-        <Footer onChevronClicked={onChevronClicked}/>
-      </div>
-    </section>
-  )
-}
-
-function Vanta() {
-
-  const containerRef = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    // Vanta passes hex colors straight to its shader, so stop three.js from
-    // converting them to linear color space (the default since three r152)
-    THREE.ColorManagement.enabled = false
-
-    let effect: ReturnType<typeof FOG> | undefined
-    try {
-      effect = FOG({
-        el: containerRef.current,
-        THREE: THREE,
-        minHeight: 200.00,
-        minWidth: 200.00,
-        highlightColor: 0xff2060,
-        midtoneColor: 0xde3163,
-        lowlightColor: 0x772088,
-        baseColor: 0x30004a,
-        blurFactor: 0.4,
-        zoom: 0.55,
-        scale: 16,
-        scaleMobile: 16,
-        speed: -0.4
-      })
-    } catch (e) {
-      console.error("Failed to create vanta effect: ", e)
-    }
-    return () => effect?.destroy()
-  }, [])
-
-  return (
-    <div id="vanta-container" ref={containerRef}/>
-  )
-}
-
-function Intro() {
-  return (
-    <div className="container">
-      <h1 className="title is-3 is-size-4-touch fadein-1 mb-1">Hey, I'm Adrian Blanco.</h1>
-      <h1 className="title is-3 is-size-4-touch fadein-1">I convert coffee to code.</h1>
-      <p className="mb-4 fadein-2">I'm a Software Engineer from <span role="img" aria-label="Sweden">🇸🇪</span>, living in Copenhagen.</p>
-      <p className="mb-4 fadein-3">For the past decade I've worked on everything related to Android, from apps to operating systems.</p>
-      <p></p>
-    </div>
-  )
-}
-
-function Footer({ onChevronClicked }: { onChevronClicked: () => void }) {
-  return (
-      <div className="container is-fluid mb-5 fadein-5">
-        <div className="level">
-          <div className="level-left" />
-          <div className="level-right">
-            <div className="level-item">
-              <p className="is-size-7">
-                <a href={`${import.meta.env.BASE_URL}files/Adrian_Blanco_CV.pdf`} target="_blank" rel="noopener noreferrer">CV</a>
-              </p>
-            </div>
-            <div className="level-item">
-              <p className="is-size-7">
-                <a href="https://github.com/adrianblancode">GitHub</a>
-              </p>
-            </div>
-            <div className="level-item">
-              <p className="is-size-7">
-                <a href="https://linkedin.com/in/adrianblancode">LinkedIn</a>
-              </p>
-            </div>
-            <div className="level-item">
-              <p className="is-size-7">
-                <a href="mailto:adrianblancode@gmail.com">Email</a>
-              </p>
-            </div>
-          </div>
-        </div>
-        <Chevron clickListener={onChevronClicked} />
-      </div>
-  )
-}
-
-function Chevron({ clickListener }: { clickListener: () => void }) {
-  return (
-    <div className="is-hidden-touch chevron-down fadein-5">
-      <button onClick={clickListener}>
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path fill="white" d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/>
-        </svg>
-      </button>
+      <BlueprintHero />
+      <Experience />
     </div>
   )
 }
@@ -145,7 +24,7 @@ interface ProjectItemProps{
   descriptions: string[]
 }
 
-function Experience({ ref }: { ref: Ref<HTMLDivElement> }) {
+function Experience() {
 
   const projectItems: ProjectItemProps[] = [
     {
@@ -222,8 +101,8 @@ function Experience({ ref }: { ref: Ref<HTMLDivElement> }) {
   ]
 
   return (
-    <div ref={ref}>
-      <section className="section experience">
+    <div>
+      <section className="section experience" id="work">
         <div className="container">
           <h2 className="title is-5">My work</h2>
 

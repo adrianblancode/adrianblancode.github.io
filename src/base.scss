@@ -21,12 +21,9 @@
     $subtitle-color: $text-primary
 );
 @use "bulma/sass/grid/columns";
-@use "bulma/sass/layout/hero";
 @use "bulma/sass/layout/section";
-@use "bulma/sass/layout/level";
 @use "bulma/sass/helpers/spacing";
 @use "bulma/sass/helpers/typography";
-@use "bulma/sass/helpers/visibility";
 
 // The site is always dark, so use Bulma's dark theme whatever the OS setting is
 :root {

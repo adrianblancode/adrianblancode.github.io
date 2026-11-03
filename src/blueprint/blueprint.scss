@@ -1,0 +1,63 @@
+// The design was built on browser defaults, so undo Bulma's resets inside it
+.blueprint {
+    font-size: 16px;
+    line-height: normal;
+    color: #000;
+
+    &,
+    *,
+    *::before,
+    *::after {
+        box-sizing: content-box;
+        -webkit-user-select: none;
+        user-select: none;
+        -webkit-user-drag: none;
+    }
+
+    img {
+        pointer-events: none;
+    }
+}
+
+@keyframes hintNudge {
+    0% { transform: translateY(-3px); opacity: 0.25; }
+    45% { opacity: 1; }
+    100% { transform: translateY(9px); opacity: 0; }
+}
+
+// Sits opposite the night toggle, and follows its theme
+.blueprint-links {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    z-index: 5;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    font-weight: 500;
+
+    a {
+        display: inline;
+        color: #0F172A;
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 4px;
+        transition: color 400ms ease;
+
+        &:hover {
+            color: #2F5BFF;
+            transition-duration: 150ms;
+        }
+
+        .is-night & {
+            color: #F2F2F3;
+
+            &:hover {
+                color: #8DA6FF;
+            }
+        }
+    }
+}
