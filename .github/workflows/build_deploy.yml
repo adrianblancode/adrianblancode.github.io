@@ -8,50 +8,33 @@ on:
     branches:
       - master
 
+permissions:
+  contents: write
+
 jobs:
   build:
-    name: Build
+    name: Build and deploy
     runs-on: ubuntu-latest
-    
+
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
-    
+      uses: actions/checkout@v7
+
     - name: Install Node.js
-      uses: actions/setup-node@v1
+      uses: actions/setup-node@v7
       with:
-        node-version: 14.x
-    
+        node-version-file: .nvmrc
+        cache: npm
+
     - name: Install NPM packages
       run: npm ci
-    
+
     - name: Build project
       run: npm run build
-    
-    #- name: Run tests
-    #  run: npm run test
-
-    - name: Upload production-ready build files
-      uses: actions/upload-artifact@v2
-      with:
-        name: production-files
-        path: ./build
-  
-  deploy:
-    name: Deploy
-    needs: build
-    runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/master'
-    
-    steps:
-    - name: Download artifact
-      uses: actions/download-artifact@v2
-      with:
-        name: production-files
-        path: ./build
 
     - name: Deploy to gh-pages
-      uses: peaceiris/actions-gh-pages@v3
+      if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+      uses: peaceiris/actions-gh-pages@v4
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./build

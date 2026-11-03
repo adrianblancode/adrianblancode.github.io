@@ -1,18 +1,23 @@
-@import './base.scss';
+@use "sass:color";
+@use "variables" as *;
 
-a { display: inline-block; }
-  
+a {
+    display: inline-block;
+    color: $text-primary;
+}
+
 p a:after {
     content: "";
     display: block;
     height: 2px;
     width: 102%;
-    background: transparentize($color: $primary, $amount: 0.2);
+    background: color.adjust($accent, $alpha: -0.2);
     margin-top: -3px;
     margin-left: -1%;
 }
 
 a:hover {
+    color: $text-secondary;
     transition-duration: 0.3s;
 }
 

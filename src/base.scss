@@ -1,31 +1,39 @@
-// Set your brand colors
-$text-primary: #fff;
-$text-secondary: #bbb;
-$background: #111;
-$accent: #fff;
+@use "variables" as *;
 
-// Update Bulma's global variables
-$family-sans-serif: 'Jetbrains Mono', BlinkMacSystemFont, -apple-system, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
-$family-bold: 'Jetbrains Mono', BlinkMacSystemFont, -apple-system, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
-$family-heavy: 'Jetbrains Mono', BlinkMacSystemFont, -apple-system, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
-$primary: $accent;
-$link: $text-primary;
-$widescreen-enabled: false;
-$fullhd-enabled: false;
+// Configure Bulma and load only the parts the site uses
+@use "bulma/sass/utilities" with (
+    $family-primary: $font-family,
+    $widescreen-enabled: false,
+    $fullhd-enabled: false
+);
+@use "bulma/sass/base" with (
+    $body-background-color: $background,
+    $body-color: $text-secondary,
+    $body-size: 24px
+);
+@use "bulma/sass/themes/light";
+@use "bulma/sass/themes/dark";
+@use "bulma/sass/themes/setup";
+@use "bulma/sass/layout/container";
+@use "bulma/sass/elements/title" with (
+    $title-color: $text-primary,
+    $title-weight: 600,
+    $subtitle-color: $text-primary
+);
+@use "bulma/sass/grid/columns";
+@use "bulma/sass/layout/hero";
+@use "bulma/sass/layout/section";
+@use "bulma/sass/layout/level";
+@use "bulma/sass/helpers/spacing";
+@use "bulma/sass/helpers/typography";
+@use "bulma/sass/helpers/visibility";
 
-// Update some of Bulma's component variables
-$body-background-color: $background;
-$body-color: $text-secondary;
-$control-border-width: 2px;
-$input-border-color: transparent;
-$input-shadow: none;
-$link-hover: $text-secondary;
-
-$body-size: 24px;
-$title-color: $text-primary;
-$title-family: $family-bold;
-$subtitle-color: $text-primary;
-$subtitle-family: $family-heavy;
+// The site is always dark, so use Bulma's dark theme whatever the OS setting is
+:root {
+    @include light.light-theme;
+    @include dark.dark-theme;
+    @include setup.setup-theme;
+}
 
 html {
     scroll-behavior: smooth;
@@ -35,17 +43,3 @@ html {
 .mt-8 {
     margin-top: 2rem !important;
 }
-
-// Import only what you need from Bulma
-@import '../node_modules/bulma/sass/utilities/_all.sass';
-@import '../node_modules/bulma/sass/base/_all.sass';
-@import '../node_modules/bulma/sass/elements/container.sass';
-@import '../node_modules/bulma/sass/elements/title.sass';
-@import '../node_modules/bulma/sass/elements/content.sass';
-@import '../node_modules/bulma/sass/grid/columns.sass';
-@import '../node_modules/bulma/sass/layout/hero.sass';
-@import '../node_modules/bulma/sass/layout/section.sass';
-@import '../node_modules/bulma/sass/components/level.sass';
-@import '../node_modules/bulma/sass/helpers/spacing.sass';
-@import '../node_modules/bulma/sass/helpers/typography.sass';
-@import '../node_modules/bulma/sass/helpers/visibility.sass';

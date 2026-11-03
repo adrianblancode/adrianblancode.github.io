@@ -6,4 +6,6 @@ My personal page, made with React and TypeScript.
 
 ### How to build
 
-`npm run start` to start server at `localhost:3000`
+`nvm use && npm install`, then `npm start` to start a dev server at `localhost:3000`.
+
+`npm run build` type-checks and builds the site into `build/`.

@@ -1,4 +1,6 @@
-@import './base.scss';
+@use "sass:color";
+@use "bulma/sass/utilities/mixins" as mx;
+@use "variables" as *;
 
 #vanta-container {
     position: absolute;
@@ -25,7 +27,7 @@
 }
 
 .hero-bg-gradient {
-    background: linear-gradient(180deg, transparentize($background, 1), transparentize($background, 0.7), transparentize($background, 0.5), transparentize($background, 0.35), transparentize($background, 0.2), $background);
+    background: linear-gradient(180deg, color.adjust($background, $alpha: -1), color.adjust($background, $alpha: -0.7), color.adjust($background, $alpha: -0.5), color.adjust($background, $alpha: -0.35), color.adjust($background, $alpha: -0.2), $background);
     background-repeat: no-repeat;
     background-position-y: 101%;
     background-size: auto 70%;
@@ -42,12 +44,12 @@
     margin-bottom: -1px;
 
     h1 {
-        text-shadow: 3px 4px 20px transparentize($background, 0.5);
+        text-shadow: 3px 4px 20px color.adjust($background, $alpha: -0.5);
     }
 
     p {
         color: $text-primary;
-        text-shadow: 2px 3px 8px transparentize($background, 0.5);
+        text-shadow: 2px 3px 8px color.adjust($background, $alpha: -0.5);
     }
 }
 
@@ -79,7 +81,7 @@
 
 .hero-foot {
 
-    @include desktop {
+    @include mx.desktop {
         .level-item:not(:first-child) {
             margin-left: 24px;
         }

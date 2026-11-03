@@ -1,6 +1,6 @@
-import React, { useState, useEffect, forwardRef, RefObject, createRef } from 'react'
+import { useEffect, useRef, type Ref, type RefObject } from 'react'
 import * as THREE from 'three'
-import FOG from 'vanta/dist/vanta.fog.min'
+import FOG from 'vanta/src/vanta.fog.js'
 import ok from './images/ok_logo.png'
 import paypal from './images/paypal-logo.png'
 import coop from './images/coop-showcase.png'
@@ -10,11 +10,13 @@ import whitelines from './images/whitelines-showcase.jpg'
 import tekniska from './images/tekniska-logo.jpg'
 import './App.scss'
 
-const scrollToRef = (ref: RefObject<any>) => window.scrollTo(0, ref.current.offsetTop)   
+const scrollToRef = (ref: RefObject<HTMLElement | null>) => {
+  if (ref.current) window.scrollTo(0, ref.current.offsetTop)
+}
 
 function App() {
 
-  const experienceRef = createRef<HTMLDivElement>()
+  const experienceRef = useRef<HTMLDivElement>(null)
   const scrollToExperience: () => void = () => scrollToRef(experienceRef)
 
   return (
@@ -44,36 +46,38 @@ function Hero({ onChevronClicked }: { onChevronClicked: () => void }) {
 
 function Vanta() {
 
-  const [vantaEffect, setVantaEffect] = useState<any>(null)
+  const containerRef = useRef<HTMLDivElement>(null)
+
   useEffect(() => {
-    if (!vantaEffect) {
-      try {
-        setVantaEffect(FOG({
-          el: "#vanta-container",
-          THREE: THREE,
-          minHeight: 200.00,
-          minWidth: 200.00,
-          highlightColor: 0xff2060,
-          midtoneColor: 0xde3163,
-          lowlightColor: 0x772088,
-          baseColor: 0x30004a,
-          blurFactor: 0.4,
-          zoom: 0.55,
-          scale: 16,
-          scaleMobile: 16,
-          speed: -0.4
-        }))
-      } catch (e) {
-        console.error("Failed to create vanta effect: ", e)
-      }
+    // Vanta passes hex colors straight to its shader, so stop three.js from
+    // converting them to linear color space (the default since three r152)
+    THREE.ColorManagement.enabled = false
+
+    let effect: ReturnType<typeof FOG> | undefined
+    try {
+      effect = FOG({
+        el: containerRef.current,
+        THREE: THREE,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        highlightColor: 0xff2060,
+        midtoneColor: 0xde3163,
+        lowlightColor: 0x772088,
+        baseColor: 0x30004a,
+        blurFactor: 0.4,
+        zoom: 0.55,
+        scale: 16,
+        scaleMobile: 16,
+        speed: -0.4
+      })
+    } catch (e) {
+      console.error("Failed to create vanta effect: ", e)
     }
-    return () => {
-      if (vantaEffect) vantaEffect.destroy()
-    }
-  }, [vantaEffect])
+    return () => effect?.destroy()
+  }, [])
 
   return (
-    <div id="vanta-container"/>
+    <div id="vanta-container" ref={containerRef}/>
   )
 }
 
@@ -97,7 +101,7 @@ function Footer({ onChevronClicked }: { onChevronClicked: () => void }) {
           <div className="level-right">
             <div className="level-item">
               <p className="is-size-7">
-                <a href={`${process.env.PUBLIC_URL}/files/Adrian_Blanco_CV.pdf`} target="_blank" rel="noopener noreferrer">CV</a>
+                <a href={`${import.meta.env.BASE_URL}files/Adrian_Blanco_CV.pdf`} target="_blank" rel="noopener noreferrer">CV</a>
               </p>
             </div>
             <div className="level-item">
@@ -141,7 +145,7 @@ interface ProjectItemProps{
   descriptions: string[]
 }
 
-const Experience = forwardRef<HTMLDivElement>((props, ref) => {
+function Experience({ ref }: { ref: Ref<HTMLDivElement> }) {
 
   const projectItems: ProjectItemProps[] = [
     {
@@ -235,7 +239,7 @@ const Experience = forwardRef<HTMLDivElement>((props, ref) => {
       </section>
     </div>
   )
-})
+}
 
 function ProjectItem(props: ProjectItemProps) {
 
